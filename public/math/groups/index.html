@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dave&#x27;s College Notes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>What I learned in College</h1>
+    </header>
+    
+
+<h1>Group Theory</h1>
+
+<h1 id="preliminaries">Preliminaries</h1>
+<h2 id="common-sets">Common Sets</h2>
+<ul>
+<li>
+<p>Integers: $\mathbb Z = \{0, \pm 1, \pm 2, \dots \}$</p>
+</li>
+<li>
+<p>Rationals:
+$\mathbb Q = \{\frac{a}{b} : a,b\in \mathbb Z, b \neq 0\}$</p>
+</li>
+<li>
+<p>Reals: $\mathbb R = \{$all decimal expansions$\}$</p>
+</li>
+<li>
+<p>Complex: $\mathbb C = \{a + bi : a,b \in \mathbb R, i^2 = -1\}$</p>
+</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<h4 id="definition">Definition</h4>
+<p>For a function $f : A \rightarrow B$, $f$ is the <em>function name</em>, $A$ is
+the <em>domain</em>, and $B$ is the <em>codomain</em>.</p>
+<h4 id="mapping">Mapping</h4>
+<p>For a function $f : a \mapsto b$, we say that $f$ maps $a \in A$ to
+$b \in B$.</p>
+<h4 id="image">Image</h4>
+<p>The <em>image</em> of a function is the set of all outputs of the function.
+This is also known as the range.</p>
+<h4 id="preimage-and-fiber">Preimage and Fiber</h4>
+<p>The <em>preimage</em> of a function is the set of all inputs to the function.
+The <em>fiber</em> of a value is the set of inputs that map to that value.</p>
+<h4 id="injectivity">Injectivity</h4>
+<p>Let $f$ be <em>injective</em> if for all $a, b$, then $f(a) = f(b)$ implies
+$a = b$. We also say $f$ is <em>one-to-one</em>.</p>
+<h4 id="surjectivity">Surjectivity</h4>
+<p>Let $f$ be <em>surjective</em> if for all elements in the codomain, there
+exists an element in the domain that maps to it. We also say $f$ is
+<em>onto</em>.</p>
+<h4 id="bijectivity">Bijectivity</h4>
+<p>Let $f$ be <em>bijective</em> if it is both injective and surjective.</p>
+<h2 id="equivalence-relations">Equivalence Relations</h2>
+<h4 id="definition-1">Definition</h4>
+<p>Let $a$ be related $b$, denoted $a \sim b$ . Then $a \sim b$ is an
+<em>equivalence relation</em> if and only if the following are true:</p>
+<ol>
+<li>
+<p>Reflexivity: $a \sim a$</p>
+</li>
+<li>
+<p>Symmetry: $a \sim b \implies b \sim a$</p>
+</li>
+<li>
+<p>Transitivity: $(a \sim b) \wedge (b \sim c) \implies a \sim c$</p>
+</li>
+</ol>
+<p>We say that $a$ is <em>equivalent</em> to $b$.</p>
+<h4 id="integers-modulo-n">Integers Modulo $n$</h4>
+<p>Define $a \sim b$ only if $a \equiv b \pmod n$. Define
+$\mathbb Z/n\mathbb Z$ to be the set of $n$ distinct integers $a_i &gt; 0$
+such that $a_i \sim i$ for $0 \leq i &lt; n$. We call
+$\mathbb Z/n\mathbb Z$ the <em>set of integers modulo $n$</em>. Every $a_i$
+represents a single value from a <em>residue class</em>. The least value of
+these $a_i$ is called the <em>least residue</em>.</p>
+<h4 id="integers-modulo-n-cross">Integers Modulo $n$ Cross</h4>
+<p>Define $(\mathbb Z/n\mathbb Z)^\times$ to be the set of all elements of
+$\mathbb Z/n\mathbb Z$ with multiplicative inverses. This also happens
+to be the set of all elements that are relatively prime to $n$.</p>
+<h1 id="group-introduction">Group Introduction</h1>
+<h2 id="binary-operation">Binary Operation</h2>
+<h4 id="definition-2">Definition</h4>
+<p>A <em>binary operation</em> $\cdot$ on a set $G$ is a function as follows:
+$$\cdot : G \times G \rightarrow G$$ Typically we will not write
+$\cdot(a, b)$ but instead $a \cdot b$.</p>
+<h4 id="closure">Closure</h4>
+<p>A binary operation is by definition <em>closed</em> on the set it acts upon.</p>
+<h4 id="associativity">Associativity</h4>
+<p>A binary operation is <em>associative</em> if the following is true:
+$$a \cdot (b \cdot c) = (a \cdot b) \cdot c$$</p>
+<h4 id="commutivity">Commutivity</h4>
+<p>A binary operation is <em>commutative</em> if the following is true:
+$$a \cdot b = b \cdot a$$</p>
+<h2 id="groups">Groups</h2>
+<h4 id="definition-3">Definition</h4>
+<p>An ordered pair $(G, \cdot)$ of a set and a binary operation on the set
+is a <em>group</em> if the following are satisfied:</p>
+<ol>
+<li>
+<p>Associativity:
+$\forall a, b, c \in G : a \cdot (b \cdot c) = (a \cdot b) \cdot c$</p>
+</li>
+<li>
+<p>Identity:
+$\exists e \in G, \forall a \in G : a \cdot e = e \cdot a = a$</p>
+</li>
+<li>
+<p>Inverse:
+$\exists a^{-1} \in G, \forall a \in G : a \cdot a^{-1} = a^{-1} \cdot a = e$</p>
+</li>
+</ol>
+<h4 id="abelian">Abelian</h4>
+<p>A group is called <em>abelian</em> if any two elements of the group commute.</p>
+<h4 id="properties-of-the-group">Properties of the Group</h4>
+<p>If $G$ is a group under operation $\cdot$ then</p>
+<ol>
+<li>
+<p>The identity is unique.</p>
+</li>
+<li>
+<p>The inverse is unique for every element.</p>
+</li>
+<li>
+<p>$(a^{-1})^{-1} = a$</p>
+</li>
+<li>
+<p>$(a \cdot b)^{-1} = b^{-1} \cdot a^{-1}$</p>
+</li>
+</ol>
+<h4 id="cancellation-laws">Cancellation Laws</h4>
+<p>Let $a, b \in G$, then $ax = b, ya = b$ have unique solutions for
+$x, y$. In other words, the <em>left and right cancellation laws</em> exists
+for groups: $$au = av \implies u = v$$ $$ub = vb \implies u = v$$</p>
+<h4 id="order">Order</h4>
+<p>The <em>order of an element</em> $x$ is the smallest positive integer $n$ such
+that
+$$x^n = \underbrace{x \cdot x \cdot x \cdot \dots \cdot x}_\text{n elements} = e$$
+If does not exist a finite $n$, then the element has <em>infinite order</em>.
+The order of $x$ is also denoted $|x|$. The <em>order of a group</em> is the
+cardinality of the set.</p>
+<h2 id="subgroups">Subgroups</h2>
+<h4 id="definition-4">Definition</h4>
+<p>A subset $H$ of a group $G$ is a <em>subgroup</em> of $G$ if it closed under
+the binary operation of $G$ and satisfies the axioms to be a group under
+the binary operation of $G$.</p>
+<h4 id="how-to-prove-h-is-a-subgroup">How to prove $H$ is a subgroup</h4>
+<p>$H$ is a subgroup of $G$ if for any $h, k \in H$, then $h \cdot k \in H$
+and $e \in H$.</p>
+<h2 id="dihedral-groups">Dihedral Groups</h2>
+<h4 id="definition-5">Definition</h4>
+<p>The <em>dihedral group $D_{ 2n}$</em> is a group of symmetries of an $n$-sided
+regular polygon. Formally we express this group in <em>group presentation</em>
+as follows:
+$$D_{2n} = \langle r, s : r^n = s^2 = 1, rs = sr^{-1}\rangle$$</p>
+<h4 id="how-to-identify">How to Identify</h4>
+<p>Using the following steps, we can identify if a group of is a dihedral
+group:</p>
+<ol>
+<li>
+<p>$1, r, r^2, \dots, r^{n-1}$ are distinct; $r^n = 1$</p>
+</li>
+<li>
+<p>$s^2 = 1$</p>
+</li>
+<li>
+<p>$s \neq r^i, \forall i$</p>
+</li>
+<li>
+<p>$sr^i \neq sr^j, \forall i, j$</p>
+</li>
+<li>
+<p>$rs = sr^{-1}$</p>
+</li>
+<li>
+<p>$r^is = sr^{-i}$</p>
+</li>
+</ol>
+<h2 id="symmetric-groups">Symmetric Groups</h2>
+<h4 id="definition-6">Definition</h4>
+<p>Let $\Omega = \{1, 2, \dots, n\}$. Let $S_n$ be the set of all
+bijections from $\Omega$ to itself, or in other words, the set of all
+permutations of $\Omega$. Then we call $S_n$ a <em>symmetric group of
+degree $n$</em>. Note that the order of $S_n$ is $n!$.</p>
+<h4 id="cycle-decomposition">Cycle Decomposition</h4>
+<p>Let the <em>cycle decomposition</em> of an element of $S_n$ be the composition
+of cycles. A <em>cycle</em> is a string of integers $(a_1, a_2, \dots, a_m)$
+such that $a_i \mapsto a_{i+1}$ and $a_m \mapsto a_1$. By convention, we
+do not write cycles such as $(a_i)$, in other words when
+$a_i \mapsto a_i$, as it is implied.</p>
+<h4 id="length">Length</h4>
+<p>The <em>length</em> of a cycle is number of integers within it.</p>
+<h4 id="disjoint-cycles">Disjoint Cycles</h4>
+<p>Two cycles are called <em>disjoint</em> if there are no integers in common.
+Disjoint cycles commute.</p>
+<h2 id="quarternions">Quarternions</h2>
+<h4 id="definition-7">Definition</h4>
+<p>We define the <em>Quartenions</em> as the group represented by the following
+group representation: 
+$$\begin{aligned} Q_8 = \langle &amp;1, -1, i, -i, j, -j, k, -k : \\ &amp;i^2 = j^2 = k^2 = -1, \\ &amp;-1 \cdot a = a \cdot -1 = -a, \forall a \in Q_8, \\ &amp;i \cdot j = k, j \cdot k = i, k \cdot i = j, j \cdot i = -k, k \cdot j = -i, i \cdot k = -j \rangle\end{aligned}$$ </p>
+<h2 id="isomorphisms">Isomorphisms</h2>
+<h4 id="homomorphism">Homomorphism</h4>
+<p>Let $(G, \bullet), (H, \circ)$ be groups and $x,y \in G$. Then
+$\varphi: G \rightarrow H$ is a <em>homomorphism</em> if
+$$\varphi(x \bullet y) = \varphi(x) \circ \varphi(y).$$ Shorthand
+notations is used where the operations are omitted and implied.</p>
+<h4 id="isomorphism">Isomorphism</h4>
+<p>Let $\varphi: G \rightarrow H$ be an <em>isomorphism</em> if and only if
+$\varphi$ is both a homomorphism and a bijection. If there exists a
+isomorpism between groups $G$ and $H$ then we say those groups are
+<em>isomorphic</em>.</p>
+<h4 id="order-1">Order</h4>
+<p>If $\varphi: G \rightarrow H$ is an isomorphism, then
+$|\varphi(x)| = |x|$.</p>
+<h2 id="small-order-group-structure">Small Order Group Structure</h2>
+<h4 id="groups-of-order-1">Groups of Order 1</h4>
+<p>All groups of order 1 are of the form $(\{e\}, \circ)$. This is also
+called the <em>trivial group</em>.</p>
+<h4 id="groups-of-order-2">Groups of Order 2</h4>
+<p>All groups of order 2 are of the form $(\{e, a\}, \circ)$ such that
+$a^2 = 1$.</p>
+<h4 id="groups-of-order-3">Groups of Order 3</h4>
+<p>All groups of order 3 are of the form $(\{e, a, b\}, \circ)$ such that
+$a^{-1} = b$.</p>
+<h4 id="groups-of-order-4">Groups of Order 4</h4>
+<p>All groups of order 4 are of the form $(\{e, a, b, c\}, \circ)$ such
+that either $a^{-1} = b$ and $c^2 = 1$, which is isomorphic to
+$\mathbb{Z}/n\mathbb{Z}$ or $a^2 = b^2 = c^2 = e$, which is isomorphic
+to $(\mathbb Z/n\mathbb Z)^\times$.</p>
+<h4 id="commutivity-1">Commutivity</h4>
+<p>All groups of order 4 or less are abelian.</p>
+<h2 id="group-actions">Group Actions</h2>
+<h4 id="definition-8">Definition</h4>
+<p>A <em>group action</em> is a map from $G \times A \rightarrow A$ satisfying the
+following:</p>
+<ol>
+<li>
+<p>$g_1 \cdot (g_2 \cdot a) = (g_1 \cdot g_2) \cdot a$</p>
+</li>
+<li>
+<p>$e_G \cdot a = a \cdot e_G = a$</p>
+</li>
+</ol>
+<p>We say that <em>$G$ acts on $A$</em>.</p>
+<h4 id="trivial-action">Trivial Action</h4>
+<p>The <em>trivial group action</em> is $g \cdot a \mapsto a$ for all
+$g \in G, a \in A$.</p>
+<h4 id="faith">Faith</h4>
+<p>A group action is called <em>faithful</em> if it maps every element of $G$ to a
+unique permutation of $A$.</p>
+<h4 id="kernal">Kernal</h4>
+<p>The kernal of the action of $G$ onto $A$ is defined as
+$$\{g \in G : g \cdot a = a, \forall a \in A\}$$</p>
+<h4 id="orbit">Orbit</h4>
+<p>The <em>orbit</em> of an element $a \in A$ under the action of $G$, is every
+element in $A$ obtained by an element of $g$ acting on $a$, as follows:
+$$G\cdot a = \{b \in A : g \cdot a = b \text{ for some } g \in G\}$$</p>
+<h1 id="subgroups-1">Subgroups</h1>
+<h2 id="review">Review</h2>
+<h4 id="alternate-definition">Alternate Definition</h4>
+<p>A subset of $H$ of group $G$ is a subgroup if and only if</p>
+<ol>
+<li>
+<p>$H \neq \emptyset$</p>
+</li>
+<li>
+<p>$\forall x,y \in H, xy^{-1} \in H$</p>
+</li>
+</ol>
+<p>We will donate $H$ as a proper subgroup of $G$ as $H &lt; G$.</p>
+<h4 id="transitivity">Transitivity</h4>
+<p>If $H &lt; K$ and $K &lt; G$ then $H &lt; G$.</p>
+<h2 id="notable-subgroups">Notable Subgroups</h2>
+<h4 id="centralizer">Centralizer</h4>
+<p>Define the <em>centralizer</em> of $A$ in $G$ to be the following:
+$$C_G(A) = \{g \in G : ga = ag, \forall a \in A\}$$</p>
+<h4 id="center">Center</h4>
+<p>Define the <em>center</em> of group $G$ to be the following:
+$$Z(G) = \{g \in G : gx = xg, \forall x \in G\}$$</p>
+<h4 id="normalizer">Normalizer</h4>
+<p>Define the <em>normalizer</em> of $A$ in $G$ to be the following:
+$$N_G(A) = \{g \in G : gAg^{-1} = A\}$$ such that
+$$gAg^{-1} = \{gag^{-1} : a \in A\}$$</p>
+<h4 id="stabilizer">Stabilizer</h4>
+<p>Let $G$ be a group acting on a set $S$. Define the <em>stabilizer</em> of
+$s \in G$ for some fixed $s \in S$ to be the following:
+$$G_S = \{g\in G : g \cdot s = s\}$$</p>
+<h2 id="cyclic-groups">Cyclic Groups</h2>
+<h4 id="generator">Generator</h4>
+<p>A <em>generator</em> $\langle x \rangle$ is defined as the following:
+$$\langle x \rangle = \{x^n : n \in \mathbb Z\}$$ We say the set
+$\langle x \rangle$ is <em>generated</em> by $x$.</p>
+<h4 id="cyclic-group">Cyclic Group</h4>
+<p>A group $H$ is <em>cyclic</em> if $H$ can be generated by a single element.</p>
+<h4 id="countable">Countable</h4>
+<p>All cyclic groups are either finite or countably infinite.</p>
+<h4 id="abelian-1">Abelian</h4>
+<p>Cyclic groups are abelian.</p>
+<h4 id="cyclic-groups-of-equal-order">Cyclic Groups of Equal Order</h4>
+<p>If two cyclic groups have the same order, then they are isomorphic.</p>
+<h4 id="subgroups-of-cyclic-groups">Subgroups of Cyclic Groups</h4>
+<p>Let $H = \langle x \rangle$ be a cyclic group. Then</p>
+<ol>
+<li>
+<p>Every subgroup of $H$ is cyclic.</p>
+</li>
+<li>
+<p>If $|H| = \infty$, then
+$\langle x^a \rangle \neq \langle x^b \rangle$ for $a \neq b$.</p>
+</li>
+<li>
+<p>If $|H| = n &lt; \infty$, then for $a \in \mathbb Z$ dividing $n$,
+there is a unique subgroup of $H$ with order $a$.</p>
+</li>
+</ol>
+<h1 id="quotient-groups-and-homomorphisms">Quotient Groups and Homomorphisms</h1>
+<h2 id="quotient-groups">Quotient Groups</h2>
+<h4 id="definition-9">Definition</h4>
+<p>Let $\varphi : G \rightarrow H$ be a homomorphism with kernal $K$. Then
+define the <em>quotient group</em> $G/K$ to be the group whose elements are the
+fibers of $\varphi$, the sets of elements of $G$ that map to a single
+element of $H$, with group operation defined such that if $X$ is the
+fiber above $a$ and $Y$ is the fiber above $b$, then $XY$ is the fiber
+above $ab$.</p>
+<h4 id="cosets">Cosets</h4>
+<p>Let $N \leq G$ and $g \in G$. Then the <em>left coset</em> of $N$ is the
+following: $$gN = \{gn : n \in N\}$$ Let the <em>right coset</em> of $N$ be the
+following: $$Ng = \{ng : n \in N\}$$</p>
+<h4 id="alternative-definition-of-quotient-group">Alternative Definition of Quotient Group</h4>
+<p>Let $G$ be a group where $K$ is the kernal of a homomorphism on the
+group. Then the set elements of the cosets that solve
+$$uK \circ vK = (uv)K$$ forms the <em>quotient group</em> $G/K$.</p>
+<h4 id="coset-factoring">Coset Factoring</h4>
+<p>The property that $uK \circ vK = (uv)K$ is well defined if and only if
+$gng^{-1} \in N$ for all $g\in G, n \in N$.</p>
+<h4 id="normal-subgroups">Normal Subgroups</h4>
+<p>For $N \leq G$, $N$ is <em>normal</em> if every element normalizes $G$. That is
+that $gNg^{-1} = N$ for all $g \in G$. We write $N \trianglelefteq G$.</p>
+<h4 id="equivalent-statements-on-normality">Equivalent Statements on Normality</h4>
+<p>The following are equivalent:</p>
+<ul>
+<li>
+<p>$N \trianglelefteq G$</p>
+</li>
+<li>
+<p>$N_G(N) = G$</p>
+</li>
+<li>
+<p>$gN = Ng$ for all $g \in G$</p>
+</li>
+<li>
+<p>The operation on the set of left cosets of $N$ is a subgroup</p>
+</li>
+<li>
+<p>$gNg^{-1} \subseteq N$ for all $g \in G$</p>
+</li>
+</ul>
+<h2 id="simple-groups">Simple Groups</h2>
+<h4 id="lagrange-s-theorem-again">Lagrange’s Theorem Again</h4>
+<p>The cardinality of any subgroup of $G$ divides the cardinality of $G$
+and the number of left cosets of the subgroup is their quotient if $G$
+is finite.</p>
+<h4 id="index">Index</h4>
+<p>The <em>index</em> of a subgroup $H$ is the number of cosets of $H$ in $G$. We
+write the index as the following: $$[G:H] = \frac{|G|}{|H|}$$ Note the
+equality is only true if $G$ is finite.</p>
+<h4 id="order-of-an-element">Order of an Element</h4>
+<p>If $G$ is finite, then the order of an element $x$ must divide the order
+of $G$.</p>
+<h4 id="prime-order">Prime Order</h4>
+<p>If $G$ is a group with prime order $p$, then $G$ is cyclic and
+$G \cong \mathbb Z_p$.</p>
+<h4 id="subgroups-of-index-2">Subgroups of Index 2</h4>
+<p>Any subgroup of index 2 must be normal.</p>
+<h4 id="simple-groups-1">Simple Groups</h4>
+<p>Any non-trivial group is called <em>simple</em> if the only subgroups are the
+trivial group and the group itself.</p>
+<h4 id="converse-of-lagrange-s-theorem">Converse of Lagrange’s Theorem</h4>
+<p>You are guaranteed that there exists a subgroup of order for every
+integer that divides the cardinality of the group only if the group is a
+finite abelian group.</p>
+<h4 id="cauchy-s-theorem">Cauchy’s Theorem</h4>
+<p>If $G$ is finite and $p$ is a prime dividing $|G|$, then $G$ has an
+element of order $p$.</p>
+<h4 id="sylow-theorem">Sylow Theorem</h4>
+<p>If $G$ is a finite group of order $p^\alpha m$, where $p$ is a prime
+such that $p \nmid m$, then $G$ has a subgroup of order $p^\alpha$.</p>
+<h4 id="product-of-subgroups">Product of Subgroups</h4>
+<p>We define $HK$ for subgroups $H, K$ of $G$ as the following:
+$$HK = \bigcup_{h \in H}hK = \{hk : h \in H, k \in K\}$$</p>
+<h2 id="the-isomorphism-theorems">The Isomorphism Theorems</h2>
+<h4 id="the-first-isomorphism-theorem">The First Isomorphism Theorem</h4>
+<p>If $\varphi : G \rightarrow H$ is a homomorphism, then
+$ker \varphi \trianglelefteq G$, $\varphi(G) \leq H$, and
+$G/ker \varphi \cong \varphi(G)$. This is the group theory analog to the
+rank nullity theorem.</p>
+<h4 id="the-second-diamond-isomorphism-theorem">The Second (Diamond) Isomorphism Theorem</h4>
+<p>Let $A \leq G, B \leq G$ and assume $A \leq N_G(B)$. Then $AB$ is a
+subgroup of $G$, $B \trianglelefteq AB$, $A\cap B \trianglelefteq A$,
+and $AB/B \cong A/A\cap B$.</p>
+<h4 id="the-third-isomorphism-theorem">The Third Isomorphism Theorem</h4>
+<p>Let $H \trianglelefteq G, K \trianglelefteq G$ where $H \leq K$. Then
+$K/H \trianglelefteq G/H$ and $(G/H)/(K/H) \cong (G/K)$.</p>
+<h2 id="the-holder-program">The Holder Program</h2>
+<h4 id="a-weak-cauchy-s-theorem">A Weak Cauchy’s Theorem</h4>
+<p>If $G$ is a finite abelian group and $p$ is a prime dividing $|G|$, then
+$G$ contains an element of order $p$.</p>
+<h4 id="the-holder-program-1">The Holder Program</h4>
+<p>The goal of the Holder Program is to classify all finite simple groups
+and to find ways of putting the simple groups together to form other
+groups.</p>
+<h4 id="the-classifications-of-finite-simple-groups">The Classifications of Finite Simple Groups</h4>
+<p>There are 18 infinite families of simple groups and 26 simple groups
+that do not belong to these such that every finite simple group is
+isomorphic to a group in the list.</p>
+<h2 id="the-alternating-group">The Alternating Group</h2>
+<h4 id="transposition">Transposition</h4>
+<p>A <em>transposition</em> is a 2-cycle.</p>
+<h4 id="a-parity-function">A Parity Function</h4>
+<p>Define the function $\epsilon : S_n \rightarrow \{\pm 1\}$ to be the
+following: $$\epsilon(\sigma) = \begin{cases}
+1, &amp;\text{if $\sigma$ is the product of even number of transpositions} \
+-1, &amp;\text{if $\sigma$ is the product of odd number of transpositions}
+\end{cases}$$ We call the output of $\epsilon$ the sign of $\sigma$.</p>
+<h4 id="the-alternating-group-1">The Alternating Group</h4>
+<p>The <em>alternating group</em> $A_n$ is the subgroup of even permutations of
+$S_n$.</p>
+<h4 id="normal-and-simple">Normal and Simple</h4>
+<p>The alternating group $A_n$ is normal in $S_n$ and is simple for
+$n \geq 5$.</p>
+<h1 id="group-actions-1">Group Actions</h1>
+<h2 id="revisit">Revisit</h2>
+<h4 id="definition-10">Definition</h4>
+<p>A <em>group action</em> is a homomorphism from a group $G$ to the symmetric
+group of a set $A$. We say that $G$ acts on $A$.</p>
+<h4 id="orbit-1">Orbit</h4>
+<p>Let $a \in A$ such that $G$ acts on $A$, then the orbit of $a$ is the
+image of all elements in $G$ acting on $a$:
+$$O_a = \{b \in A : g \cdot a = b, \forall g \in G\}$$</p>
+<h4 id="cayley-s-theorem">Cayley’s Theorem</h4>
+<p>Every group is isomorphic to the subgroup of a symmetric group. Note
+that this isn’t necessarily the smallest group.</p>
+<h4 id="orbit-stabilizer-theorem">Orbit-Stabilizer Theorem</h4>
+<p>Let $G$ act on $A$ and let $x \in A$. Then the size of the orbit of $x$
+is the same as the index of the stabilizer of $x$: $$|O_x| = |G:G_x|$$</p>
+<h4 id="transitivity-1">Transitivity</h4>
+<p>A group acts <em>transitively</em> if there is only one orbit induced by the
+action.</p>
+<h2 id="conjugacy">Conjugacy</h2>
+<h4 id="definition-11">Definition</h4>
+<p>Two elements $a,b$ are called <em>conjugate</em> to each other if there exists
+some $x \in G$ such that $$xax{^{-1}}= b.$$</p>
+<h4 id="conjugacy-classes">Conjugacy Classes</h4>
+<p>Elements that are conjugate to each other are part of the same
+<em>conjugacy class</em>. The orbits of the conjugation action of a group onto
+itself are also the conjugacy classes of that group. Conjugacy classes
+partition the group. The identity is always in its own conjugacy class.</p>
+<h4 id="conjugate-permutations">Conjugate Permutations</h4>
+<p>Two elements in $S_n$ are conjugate if and only if they have the same
+cycle structure, or the same number of cycles of a given length.</p>
+<h4 id="class-equation">Class Equation</h4>
+<p>The following is true for a group $G$:
+$$|G| = |Z(G)| + \sum_{i=1}^r[G:C_G(g_i)]$$</p>
+<h2 id="sylow-theorems">Sylow Theorems</h2>
+<h4 id="p-group">$p$-group</h4>
+<p>If $|G| = p^\alpha$ for some prime $p$ then $G$ is called a <em>$p$-group</em>.</p>
+<h4 id="p-subgroup">$p$-subgroup</h4>
+<p>If a subgroup of a group is a $p$-group, then it is called a
+<em>$p$-subgroup</em>. Note that it does not necessarily need to be a subgroup
+of a $p$-group.</p>
+<h4 id="sylow-p-subgroup">Sylow $p$-subgroup</h4>
+<p>If a $p$-subgroup has order $p^\alpha$ such that $|G| = p^\alpha m$
+where $p$ does not divide $m$, then we call this a <em>Sylow $p$-subgroup</em>.</p>
+<h4 id="sylow-theorem-1">Sylow Theorem</h4>
+<p>Let $G$ be a group of order $p^\alpha m$ where $p$ is prime,
+$\alpha &gt; 0$, and $p$ does not divide $m$. Define $n_p$ to be the number
+of Sylow $p$-subgroups. Then the following are true.</p>
+<ol>
+<li>
+<p>Group $G$ contains a Sylow $p$-subgroup.</p>
+</li>
+<li>
+<p>Any two Sylow $p$-subgroups are conjugate.</p>
+</li>
+<li>
+<p>Where $P$ is any Sylow $p$-subgroup, then $n_p \equiv 1 \pmod p$ and
+$n_p = [G~:~N_G(P)]$.</p>
+</li>
+</ol>
+<h4 id="unique-sylow-p-subgroup">Unique Sylow $p$-subgroup</h4>
+<p>If $H$ is the unique Sylow $p$-subgroup of $G$ for some prime $p$, then
+$H$ is normal in $G$.</p>
+<h2 id="finitely-generated-abelian-groups">Finitely Generated Abelian Groups</h2>
+<h4 id="finitely-generated-group">Finitely Generated Group</h4>
+<p>A group is <em>finitely generated</em> if $G = \langle A \rangle$ where
+$|A| = n &lt; \infty$.</p>
+<h4 id="fundamental-theorem-of-finitely-generated-abelian-groups">Fundamental Theorem of Finitely Generated Abelian Groups</h4>
+<p>If $G$ is a finitely generated abelian group, then
+$$G \cong \mathbb Z^r \times Z_{n_1} \times Z_{n_2} \times \dots \times Z_{n_s}$$
+for integers $r \geq 0$, $n_i \geq 2$, and $n_{j+1}$ divides $n_j$ for
+$1 \leq j \leq s - 1$. This expression is unique. Thus, every finitely
+generated abelian group is the product of cyclic groups.</p>
+
+
+
+    <script>renderMathInElement(document.body, {delimiters:
+        [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\[", right: "\]", display: true}
+        ]
+    });</script>
+<script src="/livereload.js?port=1024&amp;mindelay=10"></script></body>
+</html>

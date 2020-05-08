@@ -6,4 +6,19 @@
             
         </url>
     
+        <url>
+            <loc>http://127.0.0.1:1111/about/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/math/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/math/groups/</loc>
+            
+        </url>
+    
 </urlset>

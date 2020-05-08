@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ config.title }}</title>
+    <title>Dave&#x27;s College Notes</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
@@ -14,23 +14,13 @@
     <header>
         <h1>What I learned in College</h1>
     </header>
-    {% block content %}
-    <section>
-        <section>
-            <h2>Mathematics</h2>
-            {% set math = get_section(path = "math/_index.md") %}
-            {% for page in math.pages %}
-                <li><a href="{{ page.permalink }}"> {{ page.title }} </a></li>
-            {% endfor %}
-        </section>
-        <section>
-            <h2>Computer Science</h2>
-        </section>
-        <section>
-            <h2>Statistics</h2>
-        </section>
-    </section>
-    {% endblock content %}
+    
+
+<h1>About</h1>
+
+
+
+
     <script>renderMathInElement(document.body, {delimiters:
         [
             {left: "$$", right: "$$", display: true},
@@ -38,5 +28,5 @@
             {left: "\[", right: "\]", display: true}
         ]
     });</script>
-</body>
+<script src="/livereload.js?port=1024&amp;mindelay=10"></script></body>
 </html>
