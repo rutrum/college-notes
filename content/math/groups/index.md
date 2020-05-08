@@ -1,5 +1,6 @@
 +++
 title = "Group Theory"
+description = "groups, homomorphisms, centralizers, stabilizers, Silow p-groups"
 +++
 
 Preliminaries
