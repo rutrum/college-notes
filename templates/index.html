@@ -16,23 +16,22 @@
         <h1><a href="/">What I Learned in College</a>{% block subtitle %}{% endblock subtitle %}</h1>
     </header>
     {% block content %}
-    <section>
-        <section class="field">
-            <h2>Mathematics</h2>
-            {% set math = get_section(path = "math/_index.md") %}
-            {% for page in math.pages %}
-                <div class="course">
-                    <a href="{{ page.permalink }}"> {{ page.title }} </a>
-                    <p>{{ page.description }}</p>
+    <section class="fields">
+        {% set fields=["math", "cs", "stats"] %}
+        {% for field in fields %}
+            <section class="field">
+                {% set section = get_section(path = field ~ "/_index.md") %}
+                <h2>{{ section.title }}</h2>
+                <div class="courses">
+                {% for page in section.pages %}
+                    <a href="{{ page.permalink }}"><div class="course">
+                        <p class="course-title">{{ page.title }}</p>
+                        <p class="course-desc">{{ page.description }}</p>
+                    </div></a>
+                {% endfor %}
                 </div>
-            {% endfor %}
-        </section>
-        <section class="field">
-            <h2>Computer Science</h2>
-        </section>
-        <section class="field">
-            <h2>Statistics</h2>
-        </section>
+            </section>
+        {% endfor %}
     </section>
     {% endblock content %}
     <script>renderMathInElement(document.body, {delimiters:
