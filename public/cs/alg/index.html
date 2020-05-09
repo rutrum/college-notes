@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dave&#x27;s College Notes</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="/">What I Learned in College</a>: Algorithms
+</h1>
+    </header>
+    
+
+<div class="note-page">
+<nav>
+<ul>
+
+    <li>
+        <a href="http://127.0.0.1:1111/cs/alg/#order">Order</a>
+        
+            <ul>
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#order-notation">Order Notation</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#notation-table">Notation Table</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#rules-of-order">Rules of Order</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#techniques-for-determining-complexity">Techniques For Determining Complexity</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#master-theorem">Master Theorem</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#summations">Summations</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/cs/alg/#greedy-algorithms">Greedy Algorithms</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#data-compression">Data Compression</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/cs/alg/#divide-and-conquer">Divide and Conquer</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/cs/alg/#backtracking">Backtracking</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/cs/alg/#branch-and-bound">Branch and Bound</a>
+        
+            <ul>
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/cs/alg/#computational-complexity-and-intractibility">Computational Complexity and Intractibility</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#some-problems">Some Problems</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#types-of-algorithms">Types of Algorithms</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/alg/#sets-of-problems">Sets of Problems</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+</ul>
+</nav>
+
+
+<div class="notes">
+<h1 id="order">Order</h1>
+<h2 id="order-notation">Order Notation</h2>
+<h4 id="big-oh-notation">Big-Oh Notation</h4>
+<p>For a given complexity function $f(n)$, define $O(f(n))$ as the set of
+complexity functions $g(n)$ such that there exists constants $c &gt; 0$ and
+$N \in \mathbb Z^+$ such that $\forall n \geq N$,
+$g(n) \leq c \cdot f(n)$.</p>
+<h4 id="little-oh-notation">Little-oh Notation</h4>
+<p>For a given complexity function $f(n)$, define $O(f(n))$ as the set of
+complexity functions $g(n)$ such that there exists constants $c &gt; 0$ and
+$N \in \mathbb Z^+$ such that $\forall n \geq N$, $g(n) &lt; c \cdot f(n)$.</p>
+<h4 id="big-omega-notation">Big-Omega Notation</h4>
+<p>For a given complexity function $f(n)$, define $O(f(n))$ as the set of
+complexity functions $g(n)$ such that there exists constants $c &gt; 0$ and
+$N \in \mathbb Z^+$ such that $\forall n \geq N$,
+$g(n) \geq c \cdot f(n)$.</p>
+<h4 id="little-omega-notation">Little-omega Notation</h4>
+<p>For a given complexity function $f(n)$, define $O(f(n))$ as the set of
+complexity functions $g(n)$ such that there exists constants $c &gt; 0$ and
+$N \in \mathbb Z^+$ such that $\forall n \geq N$, $g(n) &gt; c \cdot f(n)$.</p>
+<h4 id="theta-notation">Theta Notation</h4>
+<p>For a given complexity function $f(n)$, define $O(f(n))$ as the set of
+complexity functions $g(n)$ such that there exists constants
+$d \geq c &gt; 0$ and $N \in \mathbb Z^+$ such that $\forall n \geq N$,
+$c \cdot f(n) \leq g(n) \leq d \cdot f(n)$.</p>
+<h2 id="notation-table">Notation Table</h2>
+<table><thead><tr><th>Name</th><th>Notation</th><th>Idea</th></tr></thead><tbody>
+<tr><td>big-Oh</td><td>$g(n) \in O(f(n))$</td><td>$g(n) \leq c \cdot f(n)$</td></tr>
+<tr><td>little-oh</td><td>$g(n) \in o(f(n))$</td><td>$g(n) &lt; c \cdot f(n)$</td></tr>
+<tr><td>big-Omega</td><td>$g(n) \in \Omega(f(n))$</td><td>$g(n) \geq c \cdot f(n)$</td></tr>
+<tr><td>little-omega</td><td>$g(n) \in \omega(f(n))$</td><td>$g(n) &gt; c \cdot f(n)$</td></tr>
+<tr><td>theta</td><td>$g(n) \in \Theta(f(n))$</td><td>$c \cdot f(n) \leq g(n) \leq d \cdot f(n)$</td></tr>
+</tbody></table>
+<h2 id="rules-of-order">Rules of Order</h2>
+<h4 id="oh-and-omega-are-inverses">Oh and Omega are Inverses</h4>
+<p>$g(n) \in O(f(n)) \Leftrightarrow f(n) \in \Omega(g(n))$</p>
+<h4 id="theta-and-theta-are-inverses">Theta and Theta are Inverses</h4>
+<p>$g(n) \in \Theta(f(n)) \Leftrightarrow f(n) \in \Theta(g(n))$</p>
+<h4 id="bases-of-logs-are-constants">Bases of Logs are Constants</h4>
+<p>For any $a, b &gt; 1$, $\log_an \in \Theta(\log_bn)$.</p>
+<h4 id="bases-of-exponents-are-not">Bases of Exponents are Not</h4>
+<p>For any $0 &lt; a &lt; b$, $a^n \in o(b^n)$.</p>
+<h4 id="factorials-grow-fast">Factorials Grow Fast</h4>
+<p>For any $a &gt; 0$, $a^n \in o(n!)$.</p>
+<h2 id="techniques-for-determining-complexity">Techniques For Determining Complexity</h2>
+<h4 id="limit-of-quotient">Limit of Quotient</h4>
+<p>$$\lim_{n\rightarrow\infty} \frac{g(n)}{f(n)}=
+\begin{cases} 
+0 &amp; \implies g(n) \in o(f(n)) \
+\infty &amp; \implies g(n) \in \omega(f(n)) \
+c&gt;0 &amp; \implies g(n) \in \Theta(f(n))
+\end{cases}$$</p>
+<h4 id="l-hopital-s-rule">L'Hopital's Rule</h4>
+<p>You can invoke L'Hopital's rule only if</p>
+<ul>
+<li>
+<p>$f(n)$ and $g(n)$ are both differentiable</p>
+</li>
+<li>
+<p>$\displaystyle \lim_{n\rightarrow\infty}f(n) = \lim_{n\rightarrow\infty}g(n) = \infty$</p>
+</li>
+<li>
+<p>$\displaystyle \lim_{n\rightarrow\infty^+} \frac{g(n)}{f(n)}$ exists</p>
+</li>
+</ul>
+<p>L'Hopital's rule can be used to simplify the limit of a ratio, and is as
+follows:
+$$\lim_{n\rightarrow\infty} \frac{g(n)}{f(n)}=\lim_{n\rightarrow\infty} \frac{g'(n)}{f'(n)}$$</p>
+<h2 id="master-theorem">Master Theorem</h2>
+<h4 id="definition">Definition</h4>
+<p>Give a recurrence relation of the form $$\begin{aligned}
+T(n) &amp;= a\cdot T\left(\frac{n}{b}\right) + c\cdot n^k \\
+T(1) &amp;= d
+\end{aligned}$$ where $n &gt; 1$, $n$ is multiple of $b$,
+$b \geq 2$, $a &gt; 0$, $c &gt; 0$, and $d \geq 0$, then the following is
+true. $$T(n) \in \begin{cases}
+\Theta(n^k) &amp;\text{if } \log_ba &lt; k \\
+\Theta(n^k\log n) &amp;\text{if } \log_ba = k \\
+\Theta(n^{\log_ba}) &amp;\text{if } \log_ba &gt; k 
+\end{cases}$$</p>
+<h2 id="summations">Summations</h2>
+<h4 id="arithmetic-series">Arithmetic Series</h4>
+<p>$$\sum_{i=1}^n i^d = \Theta(n^{d+1})$$</p>
+<h4 id="geometric-series">Geometric Series</h4>
+<p>$$\sum_{i=1}^n i^dx^i = \frac{x^{n+1}-1}{x-1} = \Theta(x^n)$$</p>
+<h4 id="harmonic-series">Harmonic Series</h4>
+<p>$$\sum_{i=1}^n i^d\frac{1}{n} = \Theta(\log n)$$</p>
+<h1 id="greedy-algorithms">Greedy Algorithms</h1>
+<h4 id="paradigm-for-algorithms">Paradigm for Algorithms</h4>
+<ol>
+<li>
+<p>Idea/intuition</p>
+</li>
+<li>
+<p>Pseudocode</p>
+</li>
+<li>
+<p>Real code</p>
+</li>
+<li>
+<p>Evaluate experimental runtime</p>
+</li>
+<li>
+<p>Prove running time</p>
+</li>
+<li>
+<p>Proof of correctness</p>
+</li>
+</ol>
+<h4 id="coin-change-problem">Coin Change Problem</h4>
+<p>Given so much change to return, how can you minimize the number of coins
+to be given.</p>
+<h4 id="paradigm-for-greedy-algorithms">Paradigm for Greedy Algorithms</h4>
+<ol>
+<li>
+<p>Examine all immediate options</p>
+</li>
+<li>
+<p>Select best option</p>
+</li>
+<li>
+<p>Update solution</p>
+</li>
+<li>
+<p>Confirm if complete</p>
+</li>
+</ol>
+<h4 id="union-find-data-structure">Union-Find Data Structure</h4>
+<p>The <em>union-find data structure</em>, or simply <em>UFDS</em>, is defined with the
+following functions.</p>
+<table><thead><tr><th>Function</th><th>Runtime</th><th>About</th></tr></thead><tbody>
+<tr><td><code>initialize(n)</code></td><td>$O(n)$</td><td>creates $n$ disjoint sets, each with a single element</td></tr>
+<tr><td><code>find(i)</code></td><td>$O(\log n)$</td><td>returns a pointer $p$ to the subset containing element $i$</td></tr>
+<tr><td><code>union(p,q)</code></td><td>$O(\log n)$</td><td>returns a pointer $r$ to a new subset that merges the subsets pointed to by $p$ and $q$ and then destroys $p$ and $q$</td></tr>
+<tr><td><code>equal(i,j)</code></td><td>$O(\log n)$</td><td>returns <code>find(i) == find(j)</code></td></tr>
+</tbody></table>
+<h2 id="data-compression">Data Compression</h2>
+<h4 id="fixed-length-compression">Fixed Length Compression</h4>
+<p>Given a string of characters (which take a byte of data for every
+character) can be compressed into fewer bits by representing each
+character by a smaller number of bits. Fixed length compression ensures
+that these replacement bit patterns, called <em>prefix codes</em>, are of the
+same length.</p>
+<h4 id="variable-length-compression">Variable Length Compression</h4>
+<p>The replacement bit patterns can also be done in different lengths. To
+ensure that the string can be decoded unambiguously, a specific set of
+prefix codes must be chosen.</p>
+<h4 id="prefix-tree">Prefix Tree</h4>
+<p>Prefix codes can be represented as a <em>prefix tree</em>. When no one bit
+pattern is the subset of another (on the tree) then the prefix codes
+represent compression that can be decoded.</p>
+<h4 id="optimal-compression">Optimal Compression</h4>
+<p>A problem that can be solved: find the optimal prefix code to represent
+a given string $T$ composed of symbols from alphabet $A$. In this case,
+&quot;optimal&quot; means to produce an encoding that minimizes the number of
+bits. This can be solved using <em>Huffman's Algorithm</em>.</p>
+<h1 id="divide-and-conquer">Divide and Conquer</h1>
+<h4 id="paradigm">Paradigm</h4>
+<ol>
+<li>
+<p>Divide the problem into smaller versions of the same problem.</p>
+</li>
+<li>
+<p>Conquer (or solve) the problem.</p>
+<ol>
+<li>
+<p>By applying a base case.</p>
+</li>
+<li>
+<p>Using recursion.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Rejoin the solutions (if necessary).</p>
+</li>
+</ol>
+<h4 id="guessing-game">Guessing Game</h4>
+<p>Find out a unique number that was drawn between the numbers $1$ and $n$
+inclusive.</p>
+<h4 id="dynamic-programming">Dynamic Programming</h4>
+<p>Often times recursion will involve solving the same subproblem multiple
+times. To avoid this, we solve each subproblem first, but only once.
+This process is called <em>memoizing</em> and is what we call dynamic
+programming.</p>
+<h1 id="backtracking">Backtracking</h1>
+<h4 id="depth-first-search">Depth First Search</h4>
+<p>That's all it is. Try every option, period.</p>
+<h4 id="pruning">Pruning</h4>
+<p>We can do better though. We can set a condition for which we know that
+no leaf of the tree will have a more optimal solution than one we have
+already found. This will cut down on checking every possible node.</p>
+<h1 id="branch-and-bound">Branch and Bound</h1>
+<h4 id="best-first-search">Best First Search</h4>
+<p>Just don't always pick the left child to expand. You can select any
+unexpanded node in a more meaningful way. This is called &quot;best first
+search&quot;.</p>
+<h1 id="computational-complexity-and-intractibility">Computational Complexity and Intractibility</h1>
+<h4 id="polynomial-time-algorithm">Polynomial-Time Algorithm</h4>
+<p>If $n$ is the input size, there exists some polynomial $p(n)$ such that
+$T(n) \in O(p(n))$.</p>
+<h4 id="intractable-problem">Intractable Problem</h4>
+<p>A problem that is known to have no polynomial time algorithm to solve is
+called <em>intractable</em>.</p>
+<h4 id="categories-of-problems">Categories of Problems</h4>
+<ol>
+<li>
+<p>Problems for which polynomial-time algorithms have been found.</p>
+</li>
+<li>
+<p>Problems that are provably intractable.</p>
+<ol>
+<li>
+<p>Unreasonable problems (where the output size is unreasonable)</p>
+</li>
+<li>
+<p>Reasonable problems (such as Halting problem)</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Problems that have not been proven to be intractable, but for which
+no polynomial-time algorithm has ever been found.</p>
+</li>
+</ol>
+<h2 id="some-problems">Some Problems</h2>
+<h4 id="traveling-salesperson-problem-tsp">Traveling Salesperson Problem (TSP)</h4>
+<p>Let $G$ be a weighted directed graph. A tour in $G$ is a path that
+starts at a vertex $a$ and visits all other vertices exactly once and
+ends at vertex $a$.</p>
+<table><thead><tr><th><code> </code></th><th><code> </code></th></tr></thead><tbody>
+<tr><td>Optimization</td><td>Find the tour with the lowest overall weight.</td></tr>
+<tr><td>Decision</td><td>Let $D$ be some constant. Is there a tour with total weight less than $D$?</td></tr>
+</tbody></table>
+<h4 id="graph-coloring-problem">Graph Coloring Problem</h4>
+<p>Let $G$ be a graph. Each vertex may be assigned a color. The goal is to
+color the graph in such a way that no two adjacent vertices have the
+same color.</p>
+<table><thead><tr><th><code> </code></th><th><code> </code></th></tr></thead><tbody>
+<tr><td>Optimization</td><td>What's the smallest number of colors needed to color the graph?</td></tr>
+<tr><td>Decision</td><td>Let $m$ be some constant. Is there a coloring that uses less than $m$ colors?</td></tr>
+</tbody></table>
+<h4 id="clique-problem">Clique Problem</h4>
+<p>Let $G=(V,E)$ be an undirected graph. A clique is a subset
+$W \subseteq V$ such that each vertex $v \in W$ is adjacent to every
+other vertex in $W$.</p>
+<table><thead><tr><th><code> </code></th><th><code> </code></th></tr></thead><tbody>
+<tr><td>Optimization</td><td>Find the largest subset $W \subseteq V$. Set $W$ is called the maximal clique.</td></tr>
+<tr><td>Decision</td><td>Let $k$ be some constant. Is there a maximal clique with cardinality of at least $k$?</td></tr>
+</tbody></table>
+<h4 id="conjuctive-normal-form-satisfiablility-problem">Conjuctive Normal Form Satisfiablility Problem</h4>
+<p>CNF is also known as SAT or 3-SAT. Let $x_1, \dots, x_n$ be boolean
+statments. A <em>literal</em> is either a variable or its negation. A <em>clause</em>
+is a sequence of literals seperated by 'or' operators. Then <em>conjuctive
+normal form</em> is a sequence of clauses seperated by 'and' operators.</p>
+<table><thead><tr><th><code> </code></th><th><code> </code></th></tr></thead><tbody>
+<tr><td>Decision</td><td>Is there an assignment for the boolean variables such that the CNS is true?</td></tr>
+</tbody></table>
+<h2 id="types-of-algorithms">Types of Algorithms</h2>
+<h4 id="polynomial-time-verification-algorithm">Polynomial-time Verification Algorithm</h4>
+<p>An algorithm that can verify the correctness of a proposed solution in
+polynomial time.</p>
+<h4 id="non-deterministic-algorithm">Non-Deterministic Algorithm</h4>
+<p>An algorithm that involves blind guessing or randomness to create a
+solution and then tries to verify that answer. These are used to solve
+decision problems only.</p>
+<h4 id="poly-time-non-deterministic-algorithm">Poly-Time Non-Deterministic Algorithm</h4>
+<p>Any non-deterministic algorithm where the verification stage takes
+polynomial time.</p>
+<h4 id="polynomial-time-reduction">Polynomial Time Reduction</h4>
+<p>If there is a polynomial time transformation algorithm that translates
+problem $A$ into an instance of problem $B$, we call that algorithm a
+<em>poly-time reduction</em>. We write this is $A \leq_p B$ for algorithm $p$.</p>
+<h2 id="sets-of-problems">Sets of Problems</h2>
+<h4 id="p">P</h4>
+<p>The set <em>P</em> is the set of decision problems that can be solved using a
+polynomial time algorithm.</p>
+<h4 id="np">NP</h4>
+<p>The set <em>NP</em> is the set of decision problems that can be solved with a
+nondeterministic polytime algorithm.</p>
+<h4 id="np-complete">NP-Complete</h4>
+<p>A problem $B$ is called <em>NP-Complete</em> if the following are true.</p>
+<ol>
+<li>
+<p>$B \in \mathit{NP}$</p>
+</li>
+<li>
+<p>For every other problem $A$ in $\mathit{NP}$, $A$ is polynomial time
+reducible to $B$. In other words, $A \leq_p B$.</p>
+</li>
+</ol>
+<h4 id="another-np-complete-definition">Another NP-Complete Definition</h4>
+<p>A problem $C$ is called <em>NP-Complete</em> if the following are true.</p>
+<ol>
+<li>
+<p>$C \in \mathit{NP}$</p>
+</li>
+<li>
+<p>For some other $\mathit{NP}$-complete problem $B$, $B \leq_p C$.</p>
+</li>
+</ol>
+<h4 id="stephen-cook-s-really-cool-thing">Stephen Cook's Really Cool Thing</h4>
+<p>Stephen Cook proved that CNF-SAT is $\mathit{NP}$-complete. Which has
+the consequence that if CNF-SAT is in $P$, then $P = \mathit{NP}$.</p>
+
+</div>
+
+</div>
+
+
+    <script>renderMathInElement(document.body, {delimiters:
+        [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\[", right: "\]", display: true}
+        ]
+    });</script>
+<script src="/livereload.js?port=1024&amp;mindelay=10"></script></body>
+</html>

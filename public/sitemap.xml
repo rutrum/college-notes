@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>http://127.0.0.1:1111/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/about/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/cs/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/cs/alg/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/math/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/math/groups/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/math/real/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/math/rings-fields/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/stats/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/stats/theory/</loc>
+            
+        </url>
+    
+</urlset>

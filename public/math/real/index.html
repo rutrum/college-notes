@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dave&#x27;s College Notes</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="/">What I Learned in College</a>: Real Analysis
+</h1>
+    </header>
+    
+
+<div class="note-page">
+<nav>
+<ul>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/real/#construction-of-real-numbers">Construction of Real Numbers</a>
+        
+            <ul>
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#the-natural-numbers">The Natural Numbers</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#more-sets-of-numbers">More Sets of Numbers</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#fields">Fields</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#metric">Metric</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#bounds">Bounds</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#the-symbols-infty-and-infty">The Symbols $\infty$ and $-\infty$</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/real/#sequences">Sequences</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#convergence-of-sequences">Convergence of Sequences</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#cardinality">Cardinality</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#limits-of-sequences">Limits of Sequences</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#limits-of-bounds-on-sequences">Limits of Bounds on Sequences</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#cauchy-sequences">Cauchy Sequences</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#subsequences">Subsequences</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/real/#series">Series</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/real/#tests-of-convergence">Tests of Convergence</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/real/#continuity">Continuity</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/real/#differentiation">Differentiation</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/real/#sequences-of-functions">Sequences of Functions</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/real/#power-series">Power Series</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/real/#riemann-integration">Riemann Integration</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+</ul>
+</nav>
+
+
+<div class="notes">
+<h1 id="construction-of-real-numbers">Construction of Real Numbers</h1>
+<h2 id="the-natural-numbers">The Natural Numbers</h2>
+<h4 id="the-peano-axioms">The Peano Axioms</h4>
+<p>We construct the <em>natural numbers</em> $\mathbb N$ by the following axioms.</p>
+<ol>
+<li>
+<p>1 is a natural number.</p>
+</li>
+<li>
+<p>If $n$ is a natural number, then it has a successor $S(n)$ that is
+also a natural number.</p>
+</li>
+<li>
+<p>1 is not a successor of any natural number.</p>
+</li>
+<li>
+<p>If $n$ and $m$ are natural numbers with the same successor, then $n$
+and $m$ are equal.</p>
+</li>
+<li>
+<p><em>Induction Axiom:</em> A subset containing 1 and containing $S(n)$
+whenever $n$ is in the subset must be the set of all natural numbers
+$\mathbb N$.</p>
+</li>
+</ol>
+<h4 id="mathematical-induction">Mathematical Induction</h4>
+<p>Let $P_1, P_2, \dots$ be a list of statements, all of which could either
+be true or false. If $P_1$ is true, and $P_n$ being true implies
+$P_{n+1}$ is true, then $P_n$ is true for all $n$.</p>
+<p>Proving $P_1 \equiv T$ is called the <em>base case</em>. Proving
+$P_n \equiv T \implies P_{n+1} \equiv T$ is called the <em>inductive step</em>.</p>
+<h2 id="more-sets-of-numbers">More Sets of Numbers</h2>
+<h4 id="integers">Integers</h4>
+<p>Define the <em>integers</em> $\mathbb Z$ as the set of natural numbers, their
+additive inverses, and zero.</p>
+<h4 id="rationals">Rationals</h4>
+<p>Define the <em>rationals</em> $\mathbb Q$ as the set of ratios $\frac{a}{b}$
+such that $a$ and $b$ are integers and $b$ is nonzero.</p>
+<h4 id="rational-zeros-theorem">Rational Zeros Theorem</h4>
+<p>Let $f(x) = c_nx^n + c_{n-1}x^{n-1} + \dots + c_1x + c_0, c_n \neq 0$ be
+polynomials with integer coefficients. If a rational number
+$\frac{a}{b}$, in lowest terms, is a root of $f(x)$, then $a|c_0$ and
+$b|c_n$.</p>
+<h4 id="rationals-are-incomplete">Rationals are Incomplete</h4>
+<p>A full intuitive sense of numbers requires numbers that lie outside the
+set of rationals. For example, the hypotenus of a right triangle with
+legs both of length 1 has a length of $\sqrt{2}$, a nonrational number.
+We can use the rational zeros theorem to prove that this is true.</p>
+<h2 id="fields">Fields</h2>
+<h4 id="the-field-axioms">The Field Axioms</h4>
+<p>We construct the <em>real numbers</em> $\mathbb R$ by the following axioms.</p>
+<ol>
+<li>
+<p>There exist two operations:
+$$+:\mathbb R \times \mathbb R \rightarrow \mathbb R \hspace{1cm} \cdot:\mathbb R \times \mathbb R \rightarrow \mathbb R$$
+We abbreviate these functions as follows:
+$$a + b := +(a,b)\hspace{1cm} a \cdot b = ab := \cdot(a,b)$$</p>
+</li>
+<li>
+<p>Addition is associative: $a + (b + c) = (a + b) + c$.</p>
+</li>
+<li>
+<p>Addition is commutative: $a + b = b + a$.</p>
+</li>
+<li>
+<p>There exists a real number, denoted by 0, such that $a + 0 = a$ for
+all $a |in \mathbb R$.</p>
+</li>
+<li>
+<p>For all $a \in \mathbb R$, there exists an element
+$-a \in \mathbb R$ such that $a + (-a) = 0$.</p>
+</li>
+<li>
+<p>Multiplication is associative: $a(bc) = (ab)c$.</p>
+</li>
+<li>
+<p>Multiplication is commutative: $ab = ba$.</p>
+</li>
+<li>
+<p>There exists a real number, distinct from 0, denoted by 1, such that
+$a \cdot 1 = a$ for all $a |in \mathbb R$.</p>
+</li>
+<li>
+<p>For all nonzero $a \in \mathbb R$, there exists an element
+$a\inv \in \mathbb R$ such that $a \cdot a\inv = 0$.</p>
+</li>
+<li>
+<p>For all $a,b,c \in \mathbb R$, it is true that $a(b+c) = ab + ac$.</p>
+</li>
+</ol>
+<h4 id="fun-facts">Fun Facts</h4>
+<ul>
+<li>
+<p>$a + c = b + c \implies a = b$</p>
+</li>
+<li>
+<p>$a \cdot 0 = 0$</p>
+</li>
+<li>
+<p>$(-a) \cdot b = -(a \cdot b)$</p>
+</li>
+<li>
+<p>$-a \cdot -b = a \cdot b$</p>
+</li>
+<li>
+<p>$a \cdot c = b \cdot c, c \neq 0 \implies a = b$</p>
+</li>
+<li>
+<p>$a \cdot b = 0 \implies a = 0 \text{ or } b = 0$</p>
+</li>
+</ul>
+<h4 id="order-axiom">Order Axiom</h4>
+<p>There exists a subset $\mathbb R^+$ of $\mathbb R$ called the set of
+positive numbers that satisfies the following:</p>
+<ol>
+<li>
+<p>Set $\mathbb R^+$ is closed under addition and multiplication.</p>
+</li>
+<li>
+<p><em>Law of Trichotomy</em>: For any real number, one and only one of the
+following is true:
+$$a \in \mathbb R^+ \hspace{1cm} -a \in \mathbb R^+ \hspace{1cm} a = 0$$</p>
+</li>
+</ol>
+<p>We define the following relations on $\mathbb R$: $$\begin{aligned}
+x \leq y \hspace{.5cm} \text{iff} &amp;\ y-x \in \mathbb R^+ \cup {0} \\
+x \geq y \hspace{.5cm} \text{iff} &amp;\ x-y \in \mathbb R^+ \cup {0} \\
+x &lt; y \hspace{.5cm} \text{iff} &amp;\ y-x \in \mathbb R^+ \\
+x &gt; y \hspace{.5cm} \text{iff} &amp;\ x-y \in \mathbb R^+
+\end{aligned}$$</p>
+<h4 id="fun-facts-with-order">Fun Facts with Order</h4>
+<ul>
+<li>
+<p>$a \leq b \implies -b \leq -a$</p>
+</li>
+<li>
+<p>$a \leq b \text{ and } c \leq 0 \implies bc \leq ac$</p>
+</li>
+<li>
+<p>$0 \leq a \text{ and } 0 \leq b \implies 0 \leq ab$</p>
+</li>
+<li>
+<p>$0 \leq a^2$</p>
+</li>
+<li>
+<p>$0 &lt; 1$</p>
+</li>
+<li>
+<p>$0 \leq a \implies 0 \leq a\inv$</p>
+</li>
+<li>
+<p>$0 &lt; a &lt; b \implies 0 &lt; b\inv &lt; a\inv$</p>
+</li>
+</ul>
+<h2 id="metric">Metric</h2>
+<h4 id="definition">Definition</h4>
+<p>A <em>metric</em> is a function $d: X \times X \rightarrow \mathbb R$ such that
+the following are true.</p>
+<ol>
+<li>
+<p>$d(x,y) \geq 0$</p>
+</li>
+<li>
+<p>$d(x,x) = 0$</p>
+</li>
+<li>
+<p>$d(x,y) = d(y,x)$</p>
+</li>
+<li>
+<p>$d(x,z) \leq d(x,y) + d(y,z)$</p>
+</li>
+</ol>
+<p>Note that $d(x,y)$ is read as &quot;the distance from $x$ to $y$&quot;. A set is
+called a <em>metric space</em> if a metric function is defined that satisfies
+the above.</p>
+<h4 id="metric-space-mathbb-r">Metric Space $\mathbb R$</h4>
+<p>Set $\mathbb R$ is a metric space under
+$d: \mathbb R \times \mathbb R \rightarrow \mathbb R$ where
+$$d(x,y) = |x - y|.$$</p>
+<h2 id="bounds">Bounds</h2>
+<h4 id="maximum">Maximum</h4>
+<p>Let $S \subseteq \mathbb R$. If for some $s \in S$ and $x \leq s$ for
+all $s$, then $s$ is called the <em>maximum</em> of $S$, denoted $\max S$.</p>
+<h4 id="minimum">Minimum</h4>
+<p>Let $S \subseteq \mathbb R$. If for some $s \in S$ and $x \geq s$ for
+all $s$, then $s$ is called the <em>minimum</em> of $S$, denoted $\min S$.</p>
+<h4 id="upper-bound">Upper Bound</h4>
+<p>An <em>upper bound</em> for $S$ is an element $m \in \mathbb R$ such that
+$x \leq m$ for all $x \in S$. If such $m$ exists we say $S$ is <em>bounded
+above</em> by $m$.</p>
+<h4 id="lower-bound">Lower Bound</h4>
+<p>An <em>lower bound</em> for $S$ is an element $m \in \mathbb R$ such that
+$x \geq m$ for all $x \in S$. If such $m$ exists we say $S$ is <em>bounded
+below</em> by $m$.</p>
+<h4 id="supremum">Supremum</h4>
+<p>Let $S \subseteq \mathbb R$ be bounded above. The <em>supremum</em> of $S$,
+denoted $\sup S$, is the minimum of all upperbounds of $S$.</p>
+<h4 id="infemum">Infemum</h4>
+<p>Let $S \subseteq \mathbb R$ be bounded below. The <em>infemum</em> of $S$,
+denoted $\inf S$, is the maximum of all lowerbounds of $S$.</p>
+<h4 id="difference-between-the-reals-and-rationals">Difference Between the Reals and Rationals</h4>
+<p>So far, the 4 additive axioms, the 4 multiplicative axioms, the
+distributive axiom, and the order axiom, construct both the real numbers
+and rational numbers with no distinction between the two. Therefore, the
+completeness axiom was construction to make such distinction.</p>
+<h4 id="completeness-axiom">Completeness Axiom</h4>
+<p>If $S$ is bounded above in $\mathbb R$, then the set of upperbounds of
+$S$ has a minimum. If $S$ is bounded below in $\mathbb R$, then the set
+of lowerbounds of $S$ has a maximum.</p>
+<h4 id="density">Density</h4>
+<p>We say that set $A$ <em>is dense in</em> $B$ if for any two values
+$b, \beta \in B$, where $b &lt; \beta$, there exists a number $a \in A$
+such that $b &lt; a &lt; \beta$.</p>
+<h4 id="archimedean-property">Archimedean Property</h4>
+<p>For any $x \in \mathbb R$, there exists $n \in \mathbb N$ such that
+$n &gt; x$. As a consequence of this property we know that $\mathbb Q$ is
+dense in $\mathbb R$.</p>
+<h2 id="the-symbols-infty-and-infty">The Symbols $\infty$ and $-\infty$</h2>
+<h4 id="notation">Notation</h4>
+<p>Note that $\infty$ and $-\infty$ are not elements of $\mathbb R$.
+Rather, they are symbols used in the following ways: $$\begin{aligned}
+[a, \infty) &amp;:= {x \in \mathbb R: x \geq a} \\
+(a, \infty) &amp;:= {x \in \mathbb R: x &gt; a} \\
+(-\infty, b] &amp;:= {x \in \mathbb R: x \leq b} \\
+(-\infty, b) &amp;:= {x \in \mathbb R: x &lt; b}
+\end{aligned}$$</p>
+<h4 id="extended-real-numbers">Extended Real Numbers</h4>
+<p>The set of the <em>extended real numbers</em> is defined as
+$\mathbb R \cup {-\infty, \infty}$ with associated definitions of
+operations on elements $-\infty$ and $\infty$.</p>
+<h1 id="sequences">Sequences</h1>
+<h4 id="definition-1">Definition</h4>
+<p>Define a <em>sequence</em> to be a function $f: \mathbb N \rightarrow X$. We
+call this a <em>sequence in $X$</em> that is notated as
+$(S_n) = (f(1), f(2), \dots )$ where $f(n) = a_n$.</p>
+<h2 id="convergence-of-sequences">Convergence of Sequences</h2>
+<h4 id="definition-2">Definition</h4>
+<p>Let $(S_n)$ in $\mathbb R$ <em>converge</em> to $L \in \mathbb R$ if for any
+$\epsilon &gt; 0$, there exists an $N \in \mathbb N$ (dependent on epsilon)
+such that for all $n &gt; N$, $$|S_n - L| &lt; \epsilon.$$ We say that $(S_n)$
+<em>converges</em> to $L$. We can denote this as
+$\displaystyle \lim_{n \rightarrow \infty}S_n = L$. If there does not
+exist any $L$ for which this is true, we say that $(S_n)$ <em>diverges</em>.</p>
+<h4 id="uniqueness">Uniqueness</h4>
+<p>The limit of a sequence is unique.</p>
+<h2 id="cardinality">Cardinality</h2>
+<h4 id="definition-3">Definition</h4>
+<p>Let $S$ be a set. The <em>cardinality</em> of $S$ is the number of elements in
+$S$, denoted $|S|$.</p>
+<h4 id="comparing-sizes">Comparing Sizes</h4>
+<p>We say that $|A| = |B|$ if and only if there exists an
+$f: A \rightarrow B$ that is a bijection. We say that $|A| &lt; |B|$ if and
+only if there exists an $f: A \rightarrow B$ that is injective and not
+surjective.</p>
+<h4 id="countable">Countable</h4>
+<ul>
+<li>
+<p>If $|A| &lt; |\mathbb N|$ then we say $A$ is <em>countable</em>.</p>
+</li>
+<li>
+<p>If $|A| = |\mathbb N|$ then we say $A$ is <em>countably infinite</em>.</p>
+</li>
+<li>
+<p>If $|A| &gt; |\mathbb N|$ then we say $A$ is <em>uncountably infinite</em>.</p>
+</li>
+</ul>
+<h4 id="enumeration">Enumeration</h4>
+<p>A list of all elements of a set is called an <em>enumeration</em> of the set.
+This list is not unique.</p>
+<h4 id="power-set">Power Set</h4>
+<p>The <em>power set</em> of $A$, denoted $\mathcal P(A)$, is the set of all
+subsets of $A$.</p>
+<h4 id="union-of-countable-sets">Union of Countable Sets</h4>
+<p>The union of countable sets is also countable.</p>
+<h4 id="continuum-hypothesis">Continuum Hypothesis</h4>
+<p>Does there exist a set with cardinality greater than the integers but
+less than the reals? It has been proved that this cannot be proved true.
+It also been proved that this cannot be proven false. The conclusion is
+called <em>undecidable</em>.</p>
+<h2 id="limits-of-sequences">Limits of Sequences</h2>
+<h4 id="boundedness">Boundedness</h4>
+<p>A sequence is said to be <em>bounded above</em> if the set of its terms is
+bounded above. A sequence is said to be <em>bounded below</em> if the set of
+its terms is bounded below.</p>
+<h4 id="bounds-and-convergence">Bounds and Convergence</h4>
+<p>If a sequence converges, then it must be bounded.</p>
+<h4 id="properties-of-limits">Properties of Limits</h4>
+<p>Let $(a_n)$ and $(b_n)$ be convergent series. Then the following
+properties hold.</p>
+<table><thead><tr><th>Rule</th><th>Notation</th></tr></thead><tbody>
+<tr><td>Constant Multiple</td><td>$\displaystyle \lim_{n\rightarrow \infty} ca_n = c\lim_{n\rightarrow \infty} a_n$</td></tr>
+<tr><td>Sum Rule</td><td>$\displaystyle \lim_{n\rightarrow \infty}(a_n + b_n) = \lim_{n\rightarrow \infty} a_n + \lim_{n\rightarrow \infty} b_n$</td></tr>
+<tr><td>Product Rule</td><td>$\displaystyle \lim_{n\rightarrow \infty}(a_n\cdot b_n) = \lim_{n\rightarrow \infty} a_n \cdot \lim_{n\rightarrow \infty} b_n$</td></tr>
+<tr><td>Quotient Rule</td><td>$\displaystyle \lim_{n\rightarrow \infty}\frac{a_n}{b_n} = \frac{\displaystyle \lim_{n\rightarrow \infty} a_n}{\displaystyle \lim_{n\rightarrow \infty} b_n}$</td></tr>
+</tbody></table>
+<h4 id="infinite-limits">Infinite Limits</h4>
+<p>We say that $\lim S_n = \infty$ if for every $M&gt;0$ then there exists
+$N \in \mathbb N$ such that $S_n &gt; M$ for all $n &gt; N$. Likewise, this is
+defined for $-\infty$.</p>
+<h4 id="monotone-sequence">Monotone Sequence</h4>
+<p>We say $(S_n)$ is increasing if $S_{n+1} \geq S_n$ for all
+$n \in \mathbb N$. We say $(S_n)$ is decreasing if $S_{n+1} \leq S_n$
+for all $n \in \mathbb N$.</p>
+<h4 id="bounded-means-converges">Bounded Means Converges</h4>
+<p>An increasing (decreasing) sequence bounded above (below) converges.</p>
+<h4 id="unbounded-means-it-doesn-t">Unbounded Means It Doesn't</h4>
+<p>If $(S_n)$ is increasing (decreasing) and is not bounded, then
+$\lim S_n = \infty$ ($-\infty$).</p>
+<h2 id="limits-of-bounds-on-sequences">Limits of Bounds on Sequences</h2>
+<h4 id="limit-superior">Limit Superior</h4>
+<p>The limit of the supremum of the tails of a sequence.
+$$\lim \sup S_n = \lim_{N\rightarrow \infty} \sup{S_n:n&gt;N}$$</p>
+<h4 id="limit-inferior">Limit Inferior</h4>
+<p>The limit of the infemum of the tails of a sequence.
+$$\lim \inf S_n = \lim_{N\rightarrow \infty} \inf{S_n:n&gt;N}$$</p>
+<h4 id="they-always-exist">They Always Exist</h4>
+<p>For any sequence $(S_n)$, one of the following is true.</p>
+<ol>
+<li>
+<p>$\lim \sup S_n = L \in \mathbb R$.</p>
+</li>
+<li>
+<p>$\lim \sup S_n = \infty$.</p>
+</li>
+<li>
+<p>$\lim \sup S_n = -\infty$.</p>
+</li>
+</ol>
+<p>Similarly, this holds for the infemum.</p>
+<h2 id="cauchy-sequences">Cauchy Sequences</h2>
+<h4 id="definition-4">Definition</h4>
+<p>A sequence $(S_n)$ is said to be <em>Cauchy</em> if for every $\epsilon &gt; 0$,
+there exists an $N \in \mathbb N$ such that for any $m, n &gt; N$,
+$$d(S_m-S_n) &lt; \epsilon.$$</p>
+<h4 id="convergence">Convergence</h4>
+<p>Note that Cauchy sequences don't always converge. This depends on the
+metric space in which the sequence is defined. A metric space where
+these converge is called <em>complete</em>. However, if a sequence does
+converge then it must be Cauchy, no matter the space.</p>
+<h4 id="but-in-the-reals">But in the Reals!</h4>
+<p>In the reals all Cauchy sequence converge.</p>
+<h2 id="subsequences">Subsequences</h2>
+<h4 id="definition-5">Definition</h4>
+<p>A subsequence of $(S_n)$ is a sequence of the form
+$(S_{n_i})_{i=1}^\infty$ such that $(n_i)$ is a strictly increasing
+sequence in $\mathbb N$.</p>
+<h4 id="suprisingly-useful-fact">Suprisingly Useful Fact</h4>
+<p>If $n_i$ is a strictly increasing sequence in $\mathbb N$, then
+$n_i \geq i$ for all $i \in \mathbb N$.</p>
+<h4 id="subsequence-convergence">Subsequence Convergence</h4>
+<p>If a sequence $(S_n)$ converges to $L, \infty, -\infty$ then every
+subsequence of $(S_n)$ converges to $L, \infty, -\infty$.</p>
+<h4 id="unbounded-subsequences">Unbounded Subsequences</h4>
+<p>If $(s_n)$ is an unbounded-above sequence, it has an increasing sequence
+diverging to $\infty$. If $(s_n)$ is an unbounded-below sequence, it has
+a decreasing sequence diverging to $-\infty$.</p>
+<h4 id="monotonic-subsequences-exist">Monotonic Subsequences Exist</h4>
+<p>Every sequence contains a monotonic subsequence.</p>
+<h4 id="bolzano-weierstrass-theorem">Bolzano-Weierstrass Theorem</h4>
+<p>Every bounded sequence in $\mathbb R$ has a convergent subsequence.</p>
+<h4 id="subsequential-limits">Subsequential Limits</h4>
+<p>A <em>subsequential limit</em> of $(s_n)$ is a limit of a subsequence. If
+$\lim(s_n)$ has a limit $L$, all subsequential limits are $L$.</p>
+<h4 id="limsups-are-subsequential-limits">Limsups are Subsequential Limits</h4>
+<p>The limit supremum and limit infemum are subsequential limits.</p>
+<h4 id="topology">Topology</h4>
+<p>A <em>topology</em> is a pair $(X,T)$ where $X$ is a set, and $T$ is a set of
+subsets of $X$ such that</p>
+<ol>
+<li>
+<p>$X \in T, \emptyset \in T$</p>
+</li>
+<li>
+<p>An arbitrary union of sets in $T$ is also in $T$</p>
+</li>
+<li>
+<p>A finite intersection of sets in $T$ is also in $T$</p>
+</li>
+</ol>
+<p>An element of $T$ is called an <em>open set</em>.</p>
+<h4 id="best-definition-of-a-limit">Best Definition of a Limit</h4>
+<p>Let $\lim s_n = L$ if for any open set $\mathcal O$ containing $L$,
+there exists $N \in \mathbb N$ such that $n&gt;N$, $s_n \in \mathcal O$.</p>
+<h4 id="accumulation-point">Accumulation Point</h4>
+<p>A <em>limit point</em> or <em>accumulation point</em> of a set $S \subseteq X$ is a
+point $x \in X$ such that every open set $\mathcal O$ containing $x$
+also contains an element of $S-{x}$.</p>
+<h4 id="bolzano-weierstrass-in-a-different-way">Bolzano-Weierstrass in a Different Way</h4>
+<p>Every bounded infinite subset of $\mathbb R$ possesses an accumulation
+point.</p>
+<h1 id="series">Series</h1>
+<h4 id="definition-6">Definition</h4>
+<p>Let $(a_n)$ be a sequence. We define $(s_n)$ by
+$$s_n = \sum_{k=1}^na_k.$$ So $(s_n)$ is a new sequence called a
+<em>series</em>. Note that $(a_n)$ is called the <em>$n^{th}$ term</em> and $(s_i)$ is
+called the <em>$i^{th}$ partial sum</em>.</p>
+<h4 id="convergence-1">Convergence</h4>
+<p>If $\lim s_n = L$, we say that the series converges to $L$, or that the
+sum of the series is $L$.</p>
+<h4 id="harmonic-series">Harmonic Series</h4>
+<p>$$\sum_{k=1}^\infty \frac{1}{k}$$</p>
+<h4 id="geometric-series">Geometric Series</h4>
+<p>$$\sum_{k=1}^\infty ar^k$$</p>
+<h4 id="geometric-convergence">Geometric Convergence</h4>
+<p>The geometric series converges only when $|r| &lt; 1$.</p>
+<h4 id="cauchy-criteria">Cauchy Criteria</h4>
+<p>Suppose $\sum a_n$ converges. It is true that for some $n \geq m &gt; N$,
+$$\left|\sum_{k=m}^n\right|&lt;\epsilon$$</p>
+<h2 id="tests-of-convergence">Tests of Convergence</h2>
+<h4 id="n-th-term-test">$N^{th}$ Term Test</h4>
+<p>If $\lim a_k \neq 0$, then $\sum a_k$ diverges.</p>
+<h4 id="comparison-test">Comparison Test</h4>
+<p>Let $\sum a_k$ converge, where $a_k \geq 0$. If $|b_k| \leq a_k$, for
+all $k$, then $\sum b_k$ converges.</p>
+<h4 id="root-test">Root Test</h4>
+<p>Let $\sum a_k$ be a series. Let $\alpha:= \lim\sup|a_n|^{\frac{1}{n}}$.
+If $\alpha &lt; 1$, then the series converges. If $\alpha &gt; 1$, then the
+series diverges. If $\alpha = 1$, then the test is inconclusive.</p>
+<h4 id="ratio-test">Ratio Test</h4>
+<p>Let $\sum a_k$ be a series of nonzero terms. Let
+$\alpha:= \lim\sup\left|\frac{a_n+1}{a_n}\right|$. If $\alpha &lt; 1$, then
+the series converges absolutely. If $\alpha &gt; 1$, then the series
+diverges. If $\alpha = 1$, then the test is inconclusive.</p>
+<h4 id="p-series">p-series</h4>
+<p>The series $\sum \frac{1}{n^p}$ converges when $p &gt; 1$ and diverges when
+$p \leq 1$ for some $n &gt; 1$.</p>
+<h4 id="alternating-series-test">Alternating Series Test</h4>
+<p>Suppose $a_n$ is a non-negative, decreasing sequence. Suppose that
+$\lim a_n = 0$. Then $\sum (-1)^{n+1} a_n$.</p>
+<h4 id="integration-test">Integration Test</h4>
+<p>Let $a_n$ be a sequence. Let $f:[1,\infty) \rightarrow \mathbb R$ such
+that $f$ is continuous, nonnegative, nonincreasing, and that
+$f(n) = a_n$. Then $\sum_{n=1}^\infty a_n$ converges if and only if
+$\int_1^\infty f(x)dx$ converges.</p>
+<h1 id="continuity">Continuity</h1>
+<h4 id="refresher-on-domain-and-range">Refresher on Domain and Range</h4>
+<p>Define the domain of $f$, denoted $dom(f)$ as the set of all $x$ such
+that $f(x)$ is defined. Define the range of $f$ to be the set of $f(x)$
+where $x$ is in the domain of $f$.</p>
+<h4 id="limit-at-a-point">Limit at a Point</h4>
+<p>The notation $\lim_{x\rightarrow a} f(a) = L$ is defined as, for any
+$\epsilon &gt; 0$, there exists a $\delta &gt; 0$, dependent on $0$, such that
+if $x \in dom(f)$ and $0 &lt; |x-a| &lt; \delta$, then $|f(x)-L| &lt; \epsilon$.</p>
+<h4 id="continuity-1">Continuity</h4>
+<p>Let $f(x)$ be <em>continuous</em> at $x=a$ if
+$$\lim_{x\rightarrow a} f(x) = f(a).$$ In other words, for any
+$\epsilon &gt; 0$, there exists $\delta &gt; 0$ such that if $x \in dom(f)$
+and $|x-a| &lt; \delta$, then $|f(x)-f(a)| &lt; \epsilon$.</p>
+<h4 id="limit-at-a-point-sequence-style">Limit at a Point Sequence Style</h4>
+<p>The notation $\lim_{x\rightarrow a} f(a) = L$ is defined as, for any
+sequence $(x_n)$ in $dom(f)$ such that if
+$\lim_{n\rightarrow\infty}x_n = a$, then $(f(x))$ converges to $L$.</p>
+<h4 id="limit-rules">Limit Rules</h4>
+<p>All limit rules about limits at infinity also apply to limits at points.</p>
+<h4 id="continuity-sequence-style">Continuity Sequence Style</h4>
+<p>Let $f(x)$ be <em>continuous</em> at $x=a$ if for any sequence $(x_n)$ in
+$dom(f)$ converging to $a$, $(f(x))$ converges to $f(a)$.</p>
+<h4 id="continuity-on-operations">Continuity on Operations</h4>
+<p>If $f(x)$ and $g(x)$ are continuous at $x=a$, then $f+g$, $f\cdot g$ and
+$f/g$, where $g(a) \neq 0$, are all also continuous at $x=a$. In
+addition, if $g(x)$ is continuous at $x=a$ and $f(x)$ is continuous at
+$x=g(a)$, then $f(g(a))$ is continuous at $x=a$.</p>
+<h4 id="extreme-value-theorem">Extreme Value Theorem</h4>
+<p>Let $f$ be continuous and bounded on $[a,b]$. Then there exists
+$x_{min}, x_{max} \in [a,b]$ such that
+$f(x_{min})\leq f(x) \leq f(x_{max})$ for all $x \in [a,b]$.</p>
+<h4 id="intermediate-value-theorem">Intermediate Value Theorem</h4>
+<p>Let $a&lt;b$, and let $f$ be continuous on $[a,b]$. If
+$f(a) \leq \gamma \leq f(b)$ or $f(b) \leq \gamma \leq f(a)$, then there
+exists $c \in [a,b]$ such that $f(c) = \gamma$.</p>
+<h4 id="uniform-continuity">Uniform Continuity</h4>
+<p>We say that $f$ is <em>uniformly continuous</em> on $X$ if for any
+$\epsilon &gt; 0$, there exists $\delta &gt; 0$ such that for all $x,y \in X$,
+$|x-y| &lt; \delta$ implies $|f(x)-f(y)| &lt; \epsilon$. In other words,
+$\delta$ is not dependent on $x$.</p>
+<h4 id="continuity-on-a-closed-interval-is-uniform">Continuity on a Closed Interval is Uniform</h4>
+<p>If $f$ is continuous on $[a,b]$, then $f$ is uniformly continuous on
+$[a,b]$.</p>
+<h4 id="uniform-continuity-on-bounded-interval-is-bounded">Uniform Continuity on Bounded Interval is Bounded</h4>
+<p>Let $X$ be a bounded set. If $f(x)$ is uniformly continuous on $X$, then
+$f$ is bounded on $X$.</p>
+<h1 id="differentiation">Differentiation</h1>
+<h4 id="definition-7">Definition</h4>
+<p>Let $f$ be a real valued function. We say $f$ is differentiable at $x=a$
+if there exists $\alpha, \beta \in \mathbb R$ where
+$\alpha &lt; a &lt; \beta$, such that $(\alpha, \beta) \subset dom(f)$ and
+$\lim_{x\rightarrow a} \frac{f(x)-f(a)}{x-a}$ converges.</p>
+<h4 id="derivative-of-a-function">Derivative of a Function</h4>
+<p>Define $f':X\rightarrow \mathbb R$ by
+$f'(a) = \lim_{x\rightarrow a} \frac{f(x)-f(a)}{x-a}$, where
+$X = {x:f\text{ is differentiable at } x}$.</p>
+<h4 id="differentiation-implies-continuity">Differentiation implies Continuity</h4>
+<p>If $f(x)$ is differentiable at $x=a$, then it is continuous at $x=a$.</p>
+<h4 id="properties-of-the-derivative">Properties of the Derivative</h4>
+<p>Let $f$ and $g$ be differentiable at $x=a$, or $x=g(a)$ when applicable.</p>
+<table><thead><tr><th>Rule</th><th>Notation</th></tr></thead><tbody>
+<tr><td>Constant Rule</td><td>$\frac{d}{dx}(cf(x)) = c \cdot \frac{d}{dx}f(x)$</td></tr>
+<tr><td>Sum Rule</td><td>$\frac{d}{dx}(f(x)+g(x)) = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)$</td></tr>
+<tr><td>Product Rule</td><td>$\frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + f'(x)g(x)$</td></tr>
+<tr><td>Quotient Rule</td><td>$\frac{d}{dx}(\frac{f(x)}{g(x)}) = \frac{g(x)f'(x) - f(x)g'(x)}{(g(x))^2}$</td></tr>
+<tr><td>Chain Rule</td><td>$\frac{d}{dx}(f(g(x)) = f'(g(x))g'(x)$</td></tr>
+</tbody></table>
+<h1 id="sequences-of-functions">Sequences of Functions</h1>
+<h4 id="pointwise-convergence">Pointwise Convergence</h4>
+<p>Let $f_n(x)$ be a sequence of functions, with $dom(f_n) = S$ for all
+$n \in \mathbb N$. We say that $\lim_{n\rightarrow \infty}f_n(x)=f(x)$
+pointwise if for every fixed point $x_0 \in S$,
+$\lim_{n\rightarrow \infty}f_n(x_0)=f(x_0)$ as a sequence in
+$\mathbb R$. We also denote this as &quot;$f_n\rightarrow f$ pointwise&quot;.</p>
+<h4 id="uniform-convergence">Uniform Convergence</h4>
+<p>Let $(f_n(x))$ be a sequence of functions on $S$. We say that $f_n$
+converges to $f$ uniformly if for every $\epsilon &gt; 0$, there exists
+$N \in \mathbb N$ such that for $n &gt; N$, $|f_n(x)-f(x)|&lt;\epsilon$ for
+all $x \in S$.</p>
+<h4 id="uniqueness-1">Uniqueness</h4>
+<p>If $(f_n)$ has a pointwise limit, it is unique. If it has a uniformly
+continuous limit, it is also unique.</p>
+<h4 id="uniform-implies-pointwise">Uniform Implies Pointwise</h4>
+<p>If $f_n$ converges to $f$ uniformly, then it converges to $f$ pointwise.</p>
+<h4 id="uniform-convergence-of-continuous-is-continuous">Uniform Convergence of Continuous is Continuous</h4>
+<p>Let $f_n$ be a series of continuous functions on $S$. If $f_n$ converges
+to $f$ uniformly, then $f$ is continuous.</p>
+<h1 id="power-series">Power Series</h1>
+<h4 id="definition-8">Definition</h4>
+<p>Let $(a_n)$ be a sequence in $\mathbb R$. Then
+$\sum_{n=0}^\infty a_nx^n$ is a power series.</p>
+<h4 id="pointwise-convergence-1">Pointwise Convergence</h4>
+<p>We may define
+$$f(x) := \sum_{n=0}^\infty a_nx^n = a_0 + a_1x + a_2x^2 + a_3x^3 + \dots$$
+where $dom(f) = {x: \sum a_nx^n \text{ converges}}$. Then if we set
+$f_k(x)$ to be the partial sum of the first $k$ terms, then $f_k$
+converges to $f$ pointwise.</p>
+<h4 id="radius-of-convergence">Radius of Convergence</h4>
+<p>Let $\sum a_nx^n$ be a power series. Let
+$\beta = \lim\sup |a_n|^\frac{1}{n}$. Let $R$ be defined as follows.
+$$R=\begin{cases}
+\frac{1}{\beta} &amp; 0 &lt; \beta &lt; \infty \\
+\infty &amp; \beta = 0 \\
+0 &amp; \beta = \infty
+\end{cases}$$ We call $R$ the <em>radius of convergence</em>.</p>
+<h4 id="uniformly-cauchy">Uniformly Cauchy</h4>
+<p>Let $(f_n)$ be a sequence of functions. Sequence $(f_n)$ on $S$ is
+<em>uniformly Cauchy</em> if for $\epsilon &gt; 0$, there exists $N \in \mathbb N$
+such that for all $m, n \geq N$, $|f_n(x)-f_m(x)| &lt; \epsilon$ for all
+$x \in S$.</p>
+<h4 id="cauchy-sequences-converge-still">Cauchy Sequences Converge Still</h4>
+<p>Suppose $(f_n)$ is uniformly Cauchy on $S$. Then there exists $f$ on $S$
+such that $f_n$ converge to $f$ uniformly.</p>
+<h4 id="weierstrass-m-test">Weierstrass $M$-Test</h4>
+<p>Let $(M_k)$ be a sequence on nonnegative numbers such that
+$\sum M_k &lt; \infty$. If $|g_k(x)| &lt; M_k$ for all $x$ in $S$, this series
+converges uniformly on $S$.</p>
+<h4 id="uniformly-convergence-on-closed-radius">Uniformly Convergence on Closed Radius</h4>
+<p>Let $\sum a_nx^n$ be a power series with radius of convergence $R$. Let
+$0 &lt; T &lt; R$. Then $\sum a_nx^n$ converges uniformly on $[-T,T]$.
+Furthermore, $\sum a_nx^n$ converges to a continuous function on
+$(-R,R)$.</p>
+<h1 id="riemann-integration">Riemann Integration</h1>
+<h4 id="partition">Partition</h4>
+<p>Let a <em>partition</em> $P$ of an interval $D = [a,b]$ be a set
+$P = {x_0, x_1, \dots, x_n}$ such that
+$a = x_0 &lt; x_1 &lt; \dots &lt; x_n = b$. We also define a sampling set of $P$
+to be $P^* = {x_1^<em>,x_2^</em>,\dots,x_n^*}$ such that
+$x_k \in [x_{k-1}, x_k]$.</p>
+<h4 id="mesh">Mesh</h4>
+<p>The <em>mesh</em> of a partition $P$, denoted $||P||$, be defined as
+$$||P|| = \max{x_k-x_{k-1}}.$$</p>
+<h4 id="riemann-integration-1">Riemann Integration</h4>
+<p>Let $f$ be a bounded function on $[a,b]$. Let $\epsilon &gt; 0$. We say
+that $f$ is <em>Riemann Integrable</em> if there exists $\delta &gt; 0$ such that
+for any partition $P$ and cooresponding sampling set $P^<em>$, if
+$||P|| &lt; \delta$ then
+$$\left|\sum f(x^</em><em>k)(x_k-x</em>{k-1}) - I\right| &lt; \epsilon.$$</p>
+<h4 id="you-can-integrate-on-continuous-functions">You can Integrate on Continuous Functions</h4>
+<p>Continuous are Riemann integrable.</p>
+<h4 id="darboux-sum">Darboux Sum</h4>
+<p>Fix a partition $P={x_0,\dots,x_n}$. Let
+$M_k = \sup{f(x):x\in[x_{k-1},x_k]}$ and
+$m_k = \inf{f(x):x\in[x_{k-1},x_k]}$. Then we define the <em>lower
+Darboux sum</em> as $$\mathcal L(f,P) = \sum m_k(x_k-x_{k-1})$$ and define
+the <em>upper Darboux sum</em> as $$\mathcal U(f,P) = \sum M_k(x_k-x_{k-1}).$$
+If $R(f,P)$ is a Riemann sum then we know that
+$$\mathcal L(f,P) \leq R(f,P) \leq \mathcal U(f,P).$$</p>
+<h4 id="refinement">Refinement</h4>
+<p>Let $Q$ and $P$ be partitions. We say that $Q$ is a refinement of $P$ if
+$P \subseteq Q$.</p>
+<h4 id="refinements-on-partitions-tighten-the-noose">Refinements on Partitions Tighten the Noose</h4>
+<p>If $Q$ is a refinement of $P$, then
+$$\mathcal L(f,P) \leq \mathcal L(f,Q) \leq \mathcal U(f,Q) \leq \mathcal U(f,P).$$</p>
+<h4 id="cauchy-criterian-for-integral-existance">Cauchy Criterian for Integral Existance</h4>
+<p>Let $f:[a,b]\rightarrow \mathbb R$. Suppose for every $\epsilon &gt; 0$,
+there exists $\delta &gt; 0$ such that for any partition $P$ with
+$||P|| &lt; \delta$, $$\mathcal U(f,P)-\mathcal L(f,P) &lt; \epsilon.$$ Then
+$f$ is Riemann integrable on $[a,b]$.</p>
+<h4 id="fundamental-theorem-of-calculus">Fundamental Theorem of Calculus</h4>
+<p>If $f(x)$ is Riemann integrable on $[a,b]$, then
+$$A(x) = \int_a^xf(t)dt$$ is a uniformly continuous function on $[a,b]$.
+Furthermore, if $f$ is also continuous at $x_0\in (a,b)$, then $A(x)$ id
+differentiable at $x_0$ and $$\frac{d}{dx}A(x_0)=f(x_0).$$</p>
+
+</div>
+
+</div>
+
+
+    <script>renderMathInElement(document.body, {delimiters:
+        [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\[", right: "\]", display: true}
+        ]
+    });</script>
+<script src="/livereload.js?port=1024&amp;mindelay=10"></script></body>
+</html>
