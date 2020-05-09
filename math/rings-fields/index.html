@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dave&#x27;s College Notes</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="/">What I Learned in College</a>: Rings and Fields Theory
+</h1>
+    </header>
+    
+
+<div class="note-page">
+<nav>
+<ul>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#symmetric-functions">Symmetric Functions</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/rings-fields/#algebraic-numbers">Algebraic Numbers</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/rings-fields/#ways-to-find-roots-of-polynomials-over-the-integers">Ways to Find Roots of Polynomials Over the Integers</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#properties-of-the-integers">Properties of the Integers</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#algebraic-structures">Algebraic Structures</a>
+        
+            <ul>
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/rings-fields/#groups">Groups</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/rings-fields/#rings">Rings</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/rings-fields/#fields">Fields</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/rings-fields/#integral-domains">Integral Domains</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/rings-fields/#summary-of-algebraic-structures">Summary of Algebraic Structures</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#integral-domains-with-unity">Integral Domains with Unity</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#field-extensions">Field Extensions</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#tests-for-irreducibility">Tests for Irreducibility</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#constructable-numbers">Constructable Numbers</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#splitting-fields">Splitting Fields</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#roots-of-unity-and-cyclotomic-polynomials">Roots of Unity and Cyclotomic Polynomials</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#galois-group-of-a-polynomial">Galois Group of a Polynomial</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#solving-a-polynomial-by-radicals">Solving a Polynomial By Radicals</a>
+        
+            <ul>
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/rings-fields/#some-notable-groups">Some Notable Groups</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/math/rings-fields/#solvable">Solvable</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/math/rings-fields/#finite-fields">Finite Fields</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+</ul>
+</nav>
+
+
+<div class="notes">
+<h1 id="symmetric-functions">Symmetric Functions</h1>
+<h4 id="polynomials-in-f-x">Polynomials in $F[x]$</h4>
+<p>Let $a_0, a_1, \dots, a_n$ live in set $F$ with $a_0 \neq 0$. Let $n$ be
+a nonnegative integer. Then the function
+$p: \mathbb C \rightarrow \mathbb C$ defined by
+$$p(x) = a_0x^n + a_1x^{n-1} + \dots + a_n$$ is called a <em>polynomial
+over $F$</em> with degree $n$. The set of all polynomials over $F$ is
+denoted by $F[x]$</p>
+<h4 id="root">Root</h4>
+<p>A complex number $\alpha$ is called a <em>root</em> or a <em>zero</em> of a polynomial
+$p(x)$ if $p(\alpha) = 0$.</p>
+<h4 id="fundamental-theorem-of-algebra">Fundamental Theorem of Algebra</h4>
+<p>A polynomial of degree $n$ has exactly $n$ indistinct roots.</p>
+<h4 id="factor-theorem">Factor Theorem</h4>
+<p>Let $p(x)$ have $n$ roots $\alpha_1, \dots, \alpha_n$, then for the
+leading coefficient $a_0$
+$$p(x) = a_0(x-\alpha_1)(x-\alpha_2)\dots(x-\alpha_n).$$</p>
+<h4 id="symmetric-functions-1">Symmetric Functions</h4>
+<p>The <em>symmetric functions</em> are functions that describe the roots of a
+polynomial in terms of the coefficients of the polynomial and are as
+follows. $$\begin{aligned}
+\sum_{1 \leq i \leq n}^n\alpha_i &amp;= -\frac{a_1}{a_0} \\
+\sum_{i&lt;j}\alpha_i\alpha_j &amp;= \frac{a_2}{a_0} \\
+\sum_{i&lt;j&lt;k}\alpha_i\alpha_j\alpha_k &amp;= -\frac{a_3}{a_0} \\
+&amp;\vdots \\
+\alpha_1\alpha_2\dots\alpha_n &amp;= -\frac{a_n}{a_0}
+\end{aligned}$$</p>
+<h2 id="algebraic-numbers">Algebraic Numbers</h2>
+<h4 id="general-definition">General Definition</h4>
+<p>Let $F \subset G$. A number <em>$a \in F$ is algebraic over $G$</em> if $a$ is
+a root of a nonzero polynomial $p(x) \in G[x]$.</p>
+<h4 id="algebraic-numbers-1">Algebraic Numbers</h4>
+<p>By convention, <em>algebraic numbers</em> will be those numbers
+$a \in \mathbb C$ that are algebraic over $\mathbb Z$.</p>
+<h4 id="transcendental-numbers">Transcendental Numbers</h4>
+<p>A number $\alpha \in \mathbb C$ is called <em>transcendental</em> if it is not
+algebraic over $\mathbb Z$.</p>
+<h2 id="ways-to-find-roots-of-polynomials-over-the-integers">Ways to Find Roots of Polynomials Over the Integers</h2>
+<h4 id="rational-zeros-theorem">Rational Zeros Theorem</h4>
+<p>Let $f(x) = c_nx^n + c_{n-1}x^{n-1} + \dots + c_1x + c_0, c_n \neq 0$ be
+polynomials with integer coefficients. If a rational number
+$\frac{a}{b}$, in lowest terms, is a root of $f(x)$, then $a|c_0$ and
+$b|c_n$.</p>
+<h4 id="monic-polynomial">Monic Polynomial</h4>
+<p>A polynomial is called <em>monic</em> if its leading coefficient is 1.</p>
+<h4 id="zeros-of-monic-polynomials">Zeros of Monic Polynomials</h4>
+<p>A rational zero of a monic polynomial with integer coefficients is an
+integer.</p>
+<h4 id="descartes-rule-of-signs">Descartes' Rule of Signs</h4>
+<p>If the terms of a polynomial $p(x) \in \mathbb R[x]$ are arranged in the
+descending order of the powers of $x$, then the number of positive roots
+of $p(x)$ does not exceed the number of sign changes between consecutive
+nonzero coefficients of $p(x)$. Similarly, the number of negative roots
+of $p(x)$ is at most the number of sign changes between consecutive
+nonzero coefficients of $p(-x)$.</p>
+<h4 id="newton-s-identities">Newton's Identities</h4>
+<p>For a polynomial $f(x) = a_0x^n + a_1x^{n-1} + \dots + a_n$ with roots
+$\alpha_1, \alpha_2, \dots, \alpha_n$, then define
+$$s_k = \alpha_1^k + \alpha_2^k + \dots + \alpha_n^k.$$ The following
+statements are called <em>Newton's identities</em>. $$\begin{aligned}
+a_0s_k + a_1s_{k-1} + \dots + a_{k-1}s_1 + a_kk = 0 &amp; \hspace{.5cm} \text{for } k \leq n \\
+a_0s_k + a_1s_{k-1} + \dots + a_ns_{k-n} = 0 &amp; \hspace{.5cm} \text{for } k &gt; n 
+\end{aligned}$$</p>
+<h1 id="properties-of-the-integers">Properties of the Integers</h1>
+<h4 id="well-ordered">Well Ordered</h4>
+<p>Any nonempty subset of $\mathbb Z^+$ contains a smallest element.</p>
+<h4 id="divides">Divides</h4>
+<p>For $a, b \in \mathbb Z$ with $b \neq 0$, we say $b$ <em>divides</em> $a$, $b$
+<em>is a divisor of</em> $a$, or $a$ <em>is a multiple of</em> $b$ if there exists an
+integer $k$ such that $a = kb$. We notate this as $b\ |\ a$.</p>
+<h4 id="greatest-common-divisor">Greatest Common Divisor</h4>
+<p>Define $(a, b)$ as the <em>greatest common divisor</em> of $a$ and $b$.</p>
+<h4 id="when-gcd-is-undefined">When GCD is Undefined</h4>
+<p>For integers $a$ and $b$, $(a,b)$ exists if and only if at least one of
+$a$ and $b$ is not 0.</p>
+<h4 id="relatively-prime">Relatively Prime</h4>
+<p>We say $a$ and $b$ are <em>relatively prime</em> when $(a, b) = 1$.</p>
+<h4 id="division-algorithm">Division Algorithm</h4>
+<p>If $a$ and $b$ are integers and $b \neq 0$, then there exists unique
+integers $q$ and $r$ such that $a = qb + r$ with $0 \leq r \leq |b|$. We
+give $a, q, b, r$ the names <em>dividend</em>, <em>quotient</em>, <em>divisor</em>, and
+<em>remainder</em> respectively. This can be abstracted to not just the
+integers but any integral domain.</p>
+<h4 id="gcd-of-remainder">GCD of Remainder</h4>
+<p>For $a, b, r$ as defined in the division algorithm, then
+$(a, b) = (b, r)$.</p>
+<h4 id="euclidean-algorithm">Euclidean Algorithm</h4>
+<p>If $r_0, r_1 \in \mathbb Z^+$ and if $r_0 &gt; r_1$, then there exists two
+unique sets of positive integers $q_1, q_2, \dots, q_n$ and
+$r_2, r_3, \dots, r_n$ such that</p>
+<ol>
+<li>
+<p>$r_0 &gt; r_1 &gt; r_2 &gt; \dots &gt; r_{n-1} &gt; r_n &gt; 0$</p>
+</li>
+<li>
+<p>$r_{i-1} = q_ir_i + r_{i+1}$ for $1 \leq i \leq n-1$</p>
+</li>
+<li>
+<p>$r_{n-1} = q_nr_n$</p>
+</li>
+<li>
+<p>$(r_0,r_1) = r_n$</p>
+</li>
+</ol>
+<p>Furthermore, there exist integers $x, y$ such that
+$r_n = x \cdot r_0 + y \cdot r_1$.</p>
+<h4 id="bezout-s-lemma">Bézout's Lemma</h4>
+<p>Let $a$ and $b$ be integers with $b \neq 0$. Then $(a, b)$ is the
+smallest of the positive elements of the set
+$L = \{ax + by:x,y \in \mathbb Z\}$.</p>
+<h4 id="specific-case-of-the-above">Specific Case of the Above</h4>
+<p>Let $(a,b) = 1$ if and only if there exists $x$ and $y$ for which
+$ax + by = 1$.</p>
+<h4 id="relatively-prime-and-divides">Relatively Prime and Divides</h4>
+<p>If $a\ |\ bc$ and $(a,b) = 1$, then $a\ |\ c$.</p>
+<h4 id="divides-and-relatively-prime">Divides and Relatively Prime</h4>
+<p>If $a\ |\ c$ and $b\ |\ c$ and if $(a, b) = 1$, then $ab\ |\ c$.</p>
+<h4 id="fundamental-theorem-of-arithmetic">Fundamental Theorem of Arithmetic</h4>
+<p>Any positive integer $n$ can be uniquely expressed as
+$n = p_1^{k_1}p_2^{k_2}p_3^{k_3}\dots p_m^{k_m}$ where $p_i$ are
+distinct primes and $k_i$ are positive integers.</p>
+<h4 id="euler-s-phi-function">Euler's Phi Function</h4>
+<p>Define $\phi:\mathbb Z^+ \rightarrow Z^+$ as follows: $\phi(1) = 1$, and
+$n &gt; 1$, then $\phi(n)$ is the number of positive integers less than $n$
+that are relatively prime to $n$.</p>
+<h4 id="properties-of-phi">Properties of $\phi$</h4>
+<p>Using the following properties, $phi(n)$ can be calculated given that
+the prime power factorization of $n$ is known.</p>
+<ol>
+<li>
+<p>$\phi(1) = 1$</p>
+</li>
+<li>
+<p>If $a, b \in Z^+$ and if $(a, b) = 1$, then
+$\phi(ab) = \phi(a)\phi(b)$.</p>
+</li>
+<li>
+<p>For any prime $p$ and positive integer $k$, then
+$\phi(p^k) = p^k - p^{k-1}$.</p>
+</li>
+</ol>
+<h4 id="number-of-divisors">Number of Divisors</h4>
+<p>Suppose $n = \Pi p_i^{k_i}$, then the number of positive integer
+divisors of $n$, denoted $\delta(n)$, is the following.
+$$\delta(n) = \displaystyle \prod(k_i + 1)$$</p>
+<h1 id="algebraic-structures">Algebraic Structures</h1>
+<h2 id="groups">Groups</h2>
+<h4 id="group-axioms">Group Axioms</h4>
+<p>A group is a set $G$ and a binary operation denoted by $\circ$ such that
+the following are true.</p>
+<ol>
+<li>
+<p><em>Closure</em>: $a, b \in G \implies a \circ b \in G$.</p>
+</li>
+<li>
+<p><em>Associativity</em>:
+$a, b, c \in G \implies (a \circ b) \circ c = a \circ (b \circ c)$.</p>
+</li>
+<li>
+<p><em>Identity</em>: There exists $e \in G$ such that
+$a \circ e = e \circ a = a$ for all $a \in G$.</p>
+</li>
+<li>
+<p><em>Inverses</em>: For each $a \in G$ there exists $a\inv \in G$ such that
+$a \circ a\inv = a\inv \circ a = e$.</p>
+</li>
+</ol>
+<h4 id="abelian-group">Abelian Group</h4>
+<p>A group is called <em>abelian</em> if the binary operation is <em>commutative</em>:
+$a, b \in G \implies a \circ b = b \circ a$.</p>
+<h4 id="order">Order</h4>
+<p>The <em>order of a group</em> is the number of elements in the group. The
+<em>order of an element</em>, say $a$, is the smallest positive integer $n$
+such that $a^n = e$. If no such positive integer exists, we say the
+element $a$ has <em>infinite order</em>.</p>
+<h4 id="subgroup">Subgroup</h4>
+<p>A subset $H$ of a group $G$ is called a <em>subgroup of $G$</em> if $H$ is a
+group under the operation by which $G$ is a group.</p>
+<h4 id="cosets">Cosets</h4>
+<p>Let $H \leq G$. Define the <em>right coset</em> of $H$ in $G$ as the set
+$Hx = \{hx:x\in H\}$. The set of all right cosets of $H$ in $G$ is
+denoted as $G/H$.</p>
+<h4 id="cosets-partition-the-subgroup">Cosets Partition the Subgroup</h4>
+<p>For $x,y\in G$, the right cosets $Hx$ and $Hy$ are either disjoint or
+identical.</p>
+<h4 id="bijection-of-cosets">Bijection of Cosets</h4>
+<p>If $g_1, g_2 \in G$, then there exists a function on $G$ that sends
+$x \mapsto g_2g_1\inv x$ is a permutation of $G$ that maps $Hg_1$ to
+$Hg_2$. Thus, $|Hg_1| = |Hg_2|$.</p>
+<h4 id="lagrange-theorem">LaGrange Theorem</h4>
+<p>Let $H$ be a subgroup of $G$, then $|G| = |H| \cdot |G/H|$.</p>
+<h4 id="index">Index</h4>
+<p>The <em>index</em> of $H$ in $G$ is $|G/H|$.</p>
+<h4 id="normal-subgroup">Normal Subgroup</h4>
+<p>A subgroup $H$ of $G$ is called a <em>normal subgroup</em> of $G$, denoted
+$H \triangleleft G$, if $ghg\inv \in H$ for all $g \in G$ and for all
+$h \in H$. We say that $H$ is closed under conjugation by the elements
+in $G$.</p>
+<h4 id="functions-between-groups">Functions Between Groups</h4>
+<p>Let $G_1$ and $G_2$ be groups with identity elements $e_1$ and $e_2$
+respectively. A function $f: G_1 \rightarrow G_2$ is called a <em>group
+homomorphism</em> if $f(ab) = f(a)f(b)$ for $a, b$. A one-to-one
+homomorphism is called a <em>monomorphism</em>. An onto homomorphism is called
+a <em>epimorphism</em>. A one-to-one and onto homomorphism is called an
+<em>isomorphism</em>.</p>
+<table><thead><tr><th>$f(ab)=f(a)f(b)$</th><th>Not 1-1</th><th>1-1</th></tr></thead><tbody>
+<tr><td>Not Onto</td><td>Homomorphism</td><td>Monomorphism</td></tr>
+<tr><td>Onto</td><td>Epimorphism</td><td>Isomorphism</td></tr>
+</tbody></table>
+<h4 id="image-and-kernal">Image and Kernal</h4>
+<p>Let $f: G_1 \rightarrow G_2$ be a homomorphism. Then the <em>image</em> of
+$G_1$: $f(G_1) = \{f(x): x\in G\}$ is a subgroup of $G_2$. It also
+follows that the <em>kernal</em> of $f$:
+$\text{ker} f = \{x \in G_1: f(x) = e_2\}$ is a normal subgroup of
+$G_1$.</p>
+<h4 id="pointwise-product">Pointwise Product</h4>
+<p>Define the <em>pointwise product</em> of two subset $A$ and $B$ of a group $G$
+by $A \cdot B = \{ab: a \in A, b\in B\}$.</p>
+<h4 id="normality-and-cosets">Normality and Cosets</h4>
+<p>Let $H \triangleleft G$. Then for any $x,y \in G$, $Hx = xH$ and
+$Hx \cdot Hy = Hxy$.</p>
+<h4 id="first-homomorphism-theorem">First Homomorphism Theorem</h4>
+<p>Let $G_1, G_2$ be groups and let $f: G_1 \rightarrow G_2$ be an onto
+homomorphism with kernal $K$. Then $G_2$ is isomorphic to $G_1/K$.</p>
+<h4 id="permutation-group">Permutation Group</h4>
+<p>Define $S(X)$ as the set of all permutations of elements in set $S$. Let
+$S_n$ be the set of all permutations of elements in the set
+$\{1,2,3,\dots,n\}$. We call $S_n$ the <em>symmetric group of degree $n$</em>.</p>
+<h4 id="alternating-group">Alternating Group</h4>
+<p>Define $A_n$, called the <em>alternating group</em>, as the set of all even
+permutations of $S_n$. Note that $A_n$ is normal in $S_n$.</p>
+<h4 id="conjugacy">Conjugacy</h4>
+<p>An element $a \in G$ is said to be a <em>conjugate</em> in $G$ of an element
+$b$ if there exists an $x \in G$ such that $a = xbx\inv$.</p>
+<h4 id="conjugacy-classes">Conjugacy Classes</h4>
+<p>Conjugacy is an equivalence relation on $G$, and thus, the action
+partitions the group $G$ into <em>conjugacy classes</em>.</p>
+<h4 id="conjugacy-of-permutations">Conjugacy of Permutations</h4>
+<p>For two elements $a, b \in S_n$, $a$ and $b$ are in the same conjugacy
+class if and only if they have the same cycle decomposition. It follows
+that the number of conjugacy classes in $S_n$ equals the number of
+partitions of $n$.</p>
+<h2 id="rings">Rings</h2>
+<h4 id="ring-axioms">Ring Axioms</h4>
+<p>A set $R$ with two operations defined on it called addition and
+multiplication (denoted by $+$ and $\cdot$ respectively) is called a
+ring if the following are true.</p>
+<ol>
+<li>
+<p>$R$ is an abelian group under addition.</p>
+</li>
+<li>
+<p>$R$ is closed and is associative under multiplication</p>
+</li>
+<li>
+<p>The distributive laws hold: $a(b+c) = ab+ac$ and $(a+b)c = ac + bc$.</p>
+</li>
+</ol>
+<h4 id="commutative-ring">Commutative Ring</h4>
+<p>A ring $R$ is called <em>commutative</em> if multiplication on $R$ is
+commutative: $ab = ba$.</p>
+<h4 id="identities">Identities</h4>
+<p>Rings have a additive identity that follows from being a group under
+addition. We denoted this identity as 0. Rings do not necessarily have
+an identity under multiplication, a value $u \neq 0$ such that
+$u \cdot x = x$ for all $x \in R$. If they do, we denote that identity
+as the unity, or 1.</p>
+<h4 id="subring">Subring</h4>
+<p>A subset $T$ of ring $R$ is called a <em>subring</em> if $T$ is a ring under
+the operations defined on $R$.</p>
+<h4 id="ideal">Ideal</h4>
+<p>A subring $T$ of $R$ is called an <em>ideal</em> if for all $x \in R$ and
+$t \in T$, then $xt \in T$.</p>
+<h4 id="smallest-ideal">Smallest Ideal</h4>
+<p>The smallest ideal of $R$ containing a given subset $A$ of $R$ is
+denoted by $(A)$.</p>
+<h4 id="principle-ideal">Principle Ideal</h4>
+<p>The ideal generated by a single element $a \in R$ is denoted by $(a)$ is
+called a <em>princicple ideal</em> in $R$.</p>
+<h4 id="maximal-ideal">Maximal Ideal</h4>
+<p>An ideal $I$ of $R$ is called a <em>maximal ideal</em> of $R$ if $I \subset R$
+and there is no ideal $J$ of $R$ such that $I \subset J \subset R$.</p>
+<h4 id="ring-homomorphisms">Ring Homomorphisms</h4>
+<p>Let $R_1$ and $R_2$ be commutative rings. A function
+$f: R_1 \rightarrow R_2$ is called a ring homomorphism if $a, b \in R_1$
+implies that $f(a+b) = f(a) + f(b)$ and $f(ab) = f(a)f(b)$. Similar
+terms for group homomorphisms are analagous here.</p>
+<h4 id="kernal">Kernal</h4>
+<p>Kernals of rings are defined similarly.</p>
+<h4 id="first-isomorphism-theorem-for-rings">First Isomorphism Theorem for Rings</h4>
+<p>Let $R$ and $S$ be rings and let $f:R\rightarrow S$ be an onto ring
+homomorphism with kernal $K$. Then $R/K$ is isomorphic to $S$.</p>
+<h4 id="useful-factorings-on-rings">Useful Factorings On Rings</h4>
+<p>Let $a, b$ be elements in ring $R$. Then the following statements hold
+for $n \in \mathbb N$. $$\begin{aligned}
+(a+b)^n &amp;= \sum_{k=0}^n \binom{n}{k}a^{n-k}b^k \\
+a^n-b^n &amp;= (a-b)\sum_{k=0}^{n-1}a^{n-1-k}b^k \\
+a^n+b^n &amp;= (a+b)\sum_{k=0}^{n-1}(-1)^ka^{n-1-k}b^k &amp;\text{if $n$ is odd} 
+\end{aligned}$$</p>
+<h2 id="fields">Fields</h2>
+<h4 id="field-axioms">Field Axioms</h4>
+<p>A field $F$ is a commutative ring with unity (identity under
+multiplication) in which the nonzero elements form a group under
+multiplication.</p>
+<h4 id="subfield">Subfield</h4>
+<p>A subset $S$ of field $F$ is called a <em>subfield</em> of $F$ it is a field
+under the operations on $F$.</p>
+<h4 id="prime-subfield">Prime Subfield</h4>
+<p>The intersections of all subfields is called the <em>prime subfield</em> of
+$F$, the smallest subfield of $F$.</p>
+<h4 id="automorphism">Automorphism</h4>
+<p>A one-to-one function $g$ from a field $F$ onto $F$ is called an
+<em>automorphism</em> of $F$ if is a one-to-one ring homomorphism of $F$ onto
+itself.</p>
+<h2 id="integral-domains">Integral Domains</h2>
+<h4 id="definition">Definition</h4>
+<p>An <em>integral domain</em> $D$ is a commutative ring with at least two
+elements such that $x,y \in D$ and $xy = 0$, then $x = 0$ or $y = 0$.</p>
+<h4 id="gaussian-integers">Gaussian Integers</h4>
+<p>Define the <em>guassian integers</em> as the set
+$\{a + ib: a, b \in \mathbb Z\}$.</p>
+<h4 id="zero-divisor">Zero Divisor</h4>
+<p>An element $x$ of a commutative ring $R$ is called a <em>zero divisor</em> in
+$R$ if $x \neq 0$ and if there is a nonzero $y \in R$ for which
+$xy = 0$.</p>
+<h4 id="fields-are-integral-domains">Fields are Integral Domains</h4>
+<p>All fields are integral domains. Not all integral domains are fields.</p>
+<h4 id="characteristic">Characteristic</h4>
+<p>The <em>characteristic</em> of an integral domain $S$ is the smallest positive
+integer $m$ such that
+$\underbrace{x + x + \dots + x}_\text{$m$ times} = m \cdot x = 0$ for
+all $x \in S$. If no such positive integer exists, the characteristic of
+$S$ is defined to be 0.</p>
+<h4 id="characteristics-are-prime">Characteristics are Prime</h4>
+<p>The characteristic of an integral domain must either be 0 or prime.</p>
+<h2 id="summary-of-algebraic-structures">Summary of Algebraic Structures</h2>
+<p>$$\begin{aligned}
+\text{Groups} &amp;\subset \text{Abelian Groups} \\
+&amp;\subset \text{Rings} \\
+&amp;\subset \text{Commutative Rings} \\
+&amp;\subset \text{Integral Domains} \\
+&amp;\subset \text{Fields} \\
+\end{aligned}$$</p>
+<h1 id="integral-domains-with-unity">Integral Domains with Unity</h1>
+<h4 id="unit">Unit</h4>
+<p>A <em>unit</em> is an element that has a multiplicative inverse.</p>
+<h4 id="associates">Associates</h4>
+<p>Two elements $a, b \in D$ are called <em>associates</em> in $D$ if there exists
+a unit $u \in D$ such that $a = bu$.</p>
+<h4 id="divides-on-a-domain">Divides on a Domain</h4>
+<p>The relation $a | b$ between elements in $D$ have the following
+properties:</p>
+<ol>
+<li>
+<p>If $a|b$ and $b|c$, then $a | c$.</p>
+</li>
+<li>
+<p>If $a|b$ and $a|c$, then $a | (b \pm c)$.</p>
+</li>
+<li>
+<p>If $a|b$, then $a|bx$ for all $x \in D$</p>
+</li>
+</ol>
+<h4 id="greatest-common-divisor-1">Greatest Common Divisor</h4>
+<p>An element $d$ is called the <em>greatest common divisor</em> of $a$ and $b$ if
+for any element that divides $a$ and $b$, it also divides $d$.</p>
+<h4 id="partitioning-integral-domains-with-unity">Partitioning Integral Domains with Unity</h4>
+<p>Partition an integral domain $D$ into three groups:</p>
+<ol>
+<li>
+<p>$\{0\}$</p>
+</li>
+<li>
+<p>Units in $D$</p>
+</li>
+<li>
+<p>All other elements denoted $\hat D$.</p>
+</li>
+</ol>
+<h4 id="reducible">Reducible</h4>
+<p>An element $a \in D$ is said to be <em>reducible</em> in $D$ if $a \in \hat D$
+and if there exists $b, c \in \hat D$ such that $a = bc$. Element
+$a \in D$ is said to be <em>irreducible</em> if it is not reducible.</p>
+<h4 id="prime">Prime</h4>
+<p>Element $x \in D$ is called <em>prime in $D$</em> if for any $y, z \in S$ such
+that $x|yz$, then either $x|y$ or $x|z$.</p>
+<h4 id="unique-factorization-domain">Unique Factorization Domain</h4>
+<p>Domain $D$ is called a <em>unique factorization domain</em> or <em>UFD</em> if any
+$x \in \hat D$ can be written as the finite product of irreducible
+elements that are unique up to associates.</p>
+<h4 id="multiplicative-norm">Multiplicative Norm</h4>
+<p>A function $\eta: D \rightarrow \mathbb Z$ is called a <em>multiplicative
+norm</em> on $D$ if the following conditions are satisfied for $x, y \in D$.</p>
+<ol>
+<li>
+<p>$\eta(x) \geq 0$</p>
+</li>
+<li>
+<p>$\eta(x) = 0$ if and only if $x = 0$</p>
+</li>
+<li>
+<p>$\eta(xy) = \eta(x)\eta(y)$</p>
+</li>
+</ol>
+<h4 id="norm-of-unity-is-1">Norm of Unity is 1</h4>
+<p>$\eta(1) = 1$.</p>
+<h4 id="norms-of-associates">Norms of Associates</h4>
+<p>If $x$ and $y$ are associates then $\eta(x) = \eta(y)$.</p>
+<h4 id="some-elements-aren-t-just-irreducible">Some Elements Aren't Just Irreducible</h4>
+<p>A prime element of an integral domain $D$ is irreducible.</p>
+<h4 id="irreducibles-of-ufds">Irreducibles of UFDs</h4>
+<p>Every irreducible element of a unique factorization domain is prime.</p>
+<h4 id="principle-ideal-domain">Principle Ideal Domain</h4>
+<p>An integral domain is called a <em>principal ideal domain</em> if any ideal of
+the domain is a principal ideal.</p>
+<h1 id="field-extensions">Field Extensions</h1>
+<h4 id="definition-1">Definition</h4>
+<p>Let $K$ be a subfield of $L$. Then we say that $L$ <em>is an extension of</em>
+$K$, and is notated as $L : K$.</p>
+<h4 id="degree">Degree</h4>
+<p>If $L : K$, then $L$ is a vector space over $K$ and its dimension over
+$K$, denoted as $[L : K]$, is called the <em>degree</em> of $L$ over $K$. If
+the degree is finite, we call $L$ is a <em>finite extension</em>.</p>
+<h4 id="extension-on-a-field">Extension on a Field</h4>
+<p>We define $F(A)$ for a field $F$ to be the set of all elements in $F$,
+the set of all elements in $A$, and all the elements forced by their
+union. If $A$ is a single element, we say that $F(A)$ is a <em>simple
+extension</em>.</p>
+<h4 id="simple-and-finite-extentions">Simple and Finite Extentions</h4>
+<p>It turns out that every finite extension is a simple extension. But note
+that not every simple extension is finite, for example: $Q(\pi)$.</p>
+<h4 id="tower-law">Tower Law</h4>
+<p>Suppose $M : L$ and $L : K$ are finite field extensions. Then
+$$[M:K]=[M:L]\cdot[L:K].$$</p>
+<h4 id="extended-tower-law">Extended Tower Law</h4>
+<p>The tower law can be extended to any number of field extensions. The
+sequences of field extensions is called a <em>tower</em> of field extensions.</p>
+<h4 id="algebraic-degree">Algebraic Degree</h4>
+<p>An element $a \in L$ is said to be <em>algebraic of degree $n$</em> over $K$ if
+there is a polynomial $p(x)$ in $K[x]$ of degree $n$ such that
+$p(a) = 0$, and if no nonzero polynomial of lower degree in $K[x]$ has
+this property.</p>
+<h4 id="minimial-polynomial">Minimial Polynomial</h4>
+<p>If $p(x)$ is a monic with the above property, then it is called the
+<em>minimal polynomial</em> for $\alpha$ over $K$.</p>
+<h4 id="transcendental">Transcendental</h4>
+<p>If no polynomial $p(x)$ exists for such $a$, then we said that $a$ is
+<em>transcendental</em> over $K$.</p>
+<h1 id="tests-for-irreducibility">Tests for Irreducibility</h1>
+<h4 id="important-facts-before-we-start">Important Facts Before We Start</h4>
+<ul>
+<li>
+<p>The set $D[x]$ of the polynomials over $D$ is itself an integral
+domain.</p>
+</li>
+<li>
+<p>The set of units of $D[x]$ is the same as that of $D$.</p>
+</li>
+<li>
+<p>If $D$ is a UFD, then so is $D[x]$.</p>
+</li>
+<li>
+<p>If $F$ is a field, then the set of irreducible polynomials in $F[x]$
+contains all the first degree polynomials in $F[x]$.</p>
+</li>
+</ul>
+<h4 id="a-word-on-irreducibility">A Word on Irreducibility</h4>
+<p>Note that determining if a given polynomial is irreducible depends on
+the polynomial domain in which it is being considered.</p>
+<h4 id="primitive">Primitive</h4>
+<p>A nonzero polynomial in $Z[x]$ is called <em>primitive</em> if the greatest
+common divisor of its coefficients is $1$.</p>
+<h4 id="product-of-primitives">Product of Primitives</h4>
+<p>The product of two primitive polynomials is primitive.</p>
+<h4 id="one-more-fact">One More Fact</h4>
+<p>A primitive polynomial is reducible over $\mathbb Z$ if and only if a
+constant multiple of that polynomial is reducible over $\mathbb Q$.</p>
+<h4 id="gauss-s-lemma">Gauss's Lemma</h4>
+<p>If a primitive polynomial can be factored as a product of two
+polynomials having rational coefficients, then it can be factored as a
+product of two polynomials with integer coefficients.</p>
+<h4 id="the-eisenstein-criterian">The Eisenstein Criterian</h4>
+<p>If a prime divides all non-leading coefficients of a polynomial, does
+not divide the leading coefficient, and the square of the prime does not
+divide the constant term, then the polynomial is irreducible over the
+rationals.</p>
+<h4 id="another-fact">Another Fact</h4>
+<p>A polynomial of the form $x^{p-1} + x^{p-2} + \dots + x + 1$ for some
+prime $p$ is irreducible over $\mathbb Z$.</p>
+<h1 id="constructable-numbers">Constructable Numbers</h1>
+<h4 id="definition-2">Definition</h4>
+<p>Suppose we are given a straight-edge, a compass, and two distinct points
+$A$ and $B$ whose distance we call <em>unit length</em>. We call a real number
+$\alpha$ constructable if one can construct a line segment of length
+$|\alpha|$ in a finite number of steps from unit length using only a
+straight-edge and compass.</p>
+<h4 id="constructable-point">Constructable Point</h4>
+<p>We call point $(a,b)$ in the Euclidean plane a <em>constructable point</em> if
+and only if $|a|$ and $|b|$ are constructable numbers.</p>
+<h4 id="it-s-a-field">It's a Field</h4>
+<p>The constructable numbers form a field that contains $\mathbb Q$ as a
+subfield.</p>
+<h4 id="it-s-not-just-rationals">It's Not Just Rationals</h4>
+<p>If $\alpha$ is constructable, then so is $\sqrt{|\alpha|}$.</p>
+<h4 id="but-not-all-reals">But Not All Reals</h4>
+<p>Cube roots are not constructable. Geometrically, this means you cannot
+trisect an angle.</p>
+<h1 id="splitting-fields">Splitting Fields</h1>
+<h4 id="split">Split</h4>
+<p>Let $L:K$ be an extension. A polynomial $f(x) \in K[x]$ is said to split
+over $L$ if we can write $f(x) = a(x-\alpha_1)\dots(x-\alpha_n)$ where
+$a\in K$ and $\alpha_i \in L$. Then $L:K$ is called a <em>splitting field
+extension</em> for $f$ if $f$ splits over $L$ and if there exists no proper
+subfield of $L$ containing $K$ such that $f$ splits over that subfield.</p>
+<h4 id="the-exact-extension">The Exact Extension</h4>
+<p>Suppose $L:K$ is an extension and $f \in K[x]$ splits over $L$ as
+$f(x) = a(x-\alpha_1)\dots(x-\alpha_n)$. Then
+$K(\alpha_1, \dots, \alpha_n)$ is a splitting field extension for
+$f(x)$.</p>
+<h4 id="simple-extensions-mean-reducible">Simple Extensions Mean Reducible</h4>
+<p>Suppose $f \in K[x]$ is irreducible of degree $n \geq 1$. Then there
+exists a simple algebraic extension $K(\alpha) : K$ such that
+$[K(\alpha):K] = n$ and $f(\alpha) = 0$ for some $\alpha = L$.</p>
+<h4 id="random-fact-from-notes">Random Fact From Notes</h4>
+<p>For any prime $p$, there exists a field of order $p^n$ for any
+$n \in \mathbb N$.</p>
+<h1 id="roots-of-unity-and-cyclotomic-polynomials">Roots of Unity and Cyclotomic Polynomials</h1>
+<h4 id="roots-of-unity">Roots of Unity</h4>
+<p>Let $p(x) = x^n - 1$. Applying De Moivre's Theorem we find the complex
+roots to $p(x)$ to be
+$$\frac{\cos 2k\pi}{n} + \frac{i\sin 2k\pi}{n} = \exp{\frac{2\pi ik}{n}}, 1 \leq k \leq n.$$
+We can write these roots as $a, a^2, a^3, \dots, a^{n-1}, a^n = 1$ for
+$a = \exp{\frac{2\pi ik}{n}}$.</p>
+<h4 id="roots-make-group">Roots Make Group</h4>
+<p>The roots of unity form a cyclic group $C_n$ of order $n$. One can
+partition $C_n$ into $\delta(n)$ classes, where two elements are the in
+same class if and only if they have the same order in $C_n$.</p>
+<h4 id="cyclotomic-polynomials">Cyclotomic Polynomials</h4>
+<p>The $n^{th}$ cyclotomic polynomial $\Phi_n(x)$ is defined as
+$$\Phi_n(x) = \prod_\epsilon (x-\alpha)$$ where the product is taken
+over all primitive $n^{th}$ roots of unity. As a consequence of
+partitioning $C_n$, it follows that $$x^n-1 = \prod_{m|n}\Phi_m(x).$$</p>
+<h1 id="galois-group-of-a-polynomial">Galois Group of a Polynomial</h1>
+<h4 id="set-of-automorphisms">Set of Automorphisms</h4>
+<p>Let $L : K$ be a field extension and let $\Gamma(L:K)$ denote the set of
+all automorphisms $\sigma$ of $L$ such that for all $x \in K$,
+$\sigma(x) = x$. In other words, all the automorphism of $L$ that fix
+elements of $K$.</p>
+<h4 id="galois-group">Galois Group</h4>
+<p>The set $\Gamma(L:K)$ is a group under function composition. We call
+this the Galois group of $L:K$.</p>
+<h4 id="mapping-galois-groups-to-fields">Mapping Galois Groups to Fields</h4>
+<p>Define $\phi$ to be a function that associates each subgroups $H$ of
+$\Gamma(L:K)$ to a subfield $\phi(H)$ defined by
+$$\phi(H) = \{y \in L: h(y) = y \text{ for } h \in H\}.$$ This is called
+the <em>fixed field</em> of $H$.</p>
+<h4 id="mapping-fields-to-galois-groups">Mapping Fields to Galois Groups</h4>
+<p>Define $\gamma$ to be a function that associates each field $M$ that is
+intermediate between $K$ and $L$ to a subgroup $\gamma(M)$ of
+$\Gamma(L:K)$ defined by
+$$\gamma(M) = \{\sigma \in \Gamma(L:K) : \sigma(m) = m \text{ for all } m \in M\}.$$</p>
+<h4 id="normal-extension">Normal Extension</h4>
+<p>Field $L$ is called a <em>normal extension</em> of $K$ if it is a finite
+extension of $K$ and if $K$ is the fixed field of $\Gamma(L:K)$.</p>
+<h4 id="seperable">Seperable</h4>
+<p>An element $a \in L$ is called <em>seperable</em> over $K$ if it is a root of a
+polynomial over $K$ with no multiple roots. An extension $L$ of $K$ is
+called seperable over $K$ if all its elements are seperable over $K$.</p>
+<h4 id="galois-group-of-a-polynomial-1">Galois Group of a Polynomial</h4>
+<p>Let $f \in K[x]$ and $L:K$ be a splitting field extension for $f$ over
+$K$. Then $\Gamma(L:K)$ is called the Galois group of $f$ and it is
+denoted $\Gamma_K(f)$.</p>
+<h4 id="fundamental-theorem-of-galois-theory">Fundamental Theorem of Galois Theory</h4>
+<p>Suppose that $K$ is a field of characteristic $0$ or a finite field and
+that $L$ is the splitting field of some polynomial $p(x) \in K[x]$. Then</p>
+<ol>
+<li>
+<p>The map $\phi$ is a one-to-one correspondence of the set of
+subgroups of $\Gamma(L,K)$ and the subfields of $L$ which contain
+$K$. Furthermore, $\gamma$ is its inverse.</p>
+</li>
+<li>
+<p>$[L:M] = |\Gamma(L:M)|$</p>
+</li>
+<li>
+<p>$M$ is a normal extension of $K$ if and only if $\Gamma(L,M)$ is a
+normal subgroup of $\Gamma(L,K)$.</p>
+</li>
+</ol>
+<h1 id="solving-a-polynomial-by-radicals">Solving a Polynomial By Radicals</h1>
+<h2 id="some-notable-groups">Some Notable Groups</h2>
+<h4 id="commutator">Commutator</h4>
+<p>An element $x$ in $G$ is said to be a commutator in $G$ if
+$x = aba\inv b\inv$ for $a,b \in G$.</p>
+<h4 id="derived-subgroup">Derived Subgroup</h4>
+<p>The subgroup generated by all commutators of $G$ is called the derived
+subgroup of $G$ and is notated as $G'$. Note that $G'$ is normal in $G$.
+Note that the product of two commutators is not always a commutator.</p>
+<h4 id="abelian-normal-subgroups-contain-commutators">Abelian Normal Subgroups Contain Commutators</h4>
+<p>If $K \triangleleft G$, then $G/K$ is abelian if and only if $K$
+contains $G'$.</p>
+<h4 id="derived-subgroup-is-normal-too">Derived Subgroup is Normal Too</h4>
+<p>If $H \triangleleft G$, then $H' \triangleleft G$.</p>
+<h4 id="chaining-derivated-subgroups">Chaining Derivated Subgroups</h4>
+<p>Define $G' = G^{(1)}$, then $(G^{(k-1)})' = G^{(k)}$.</p>
+<h4 id="prime-and-finite-means-simple">Prime and Finite means Simple</h4>
+<p>Any finite group of prime order is simple.</p>
+<h4 id="alternating-group-1">Alternating Group</h4>
+<p>Remember that $A_n$ is simple for $n \geq 5$.</p>
+<h2 id="solvable">Solvable</h2>
+<h4 id="soluble">Soluble</h4>
+<p>A group $G$ is said to be solvable or soluble if there exists a finite
+series of subgroups
+$$G=G_0 \triangleright G_1 \triangleright \dots \triangleright G_n = \{e\}$$
+such that $G_{i-1}/G_i$ is cyclic.</p>
+<h4 id="radicals">Radicals</h4>
+<p>Let $L:K$ be an extension. An element $\alpha \in L$ is called a
+<em>radical over</em> $K$ if $\alpha^n \in K$ for some positive integer $n$.
+Extension $L:K$ is said to be an <em>extension by radicals</em> if there are
+intermediate fields $$L=L_m:L_{m-1}:\dots:L_0=K$$ such that
+$L_i=L_{i-1}(\alpha_i)$ with $\alpha_i$ a radical over $L_{i-1}$.</p>
+<h4 id="polynomial-solvability">Polynomial Solvability</h4>
+<p>A polynomial $f(x) \in K[x]$ is said to be <em>solvable by radicals</em> if
+there is an extension $L:K$ by radicals such that $f(x)$ splits over
+$L$. Note that $L$ could be larger than the splitting field of $f$.</p>
+<h4 id="three-cycles-are-special">Three-Cycles are Special</h4>
+<p>Let $G=S_n$ where $n \geq 5$. Then $G^{(k)}$ for $k \in \mathbb N$
+contains every $3$-cycle of $S_n$.</p>
+<h4 id="subgroups-of-solvable-groups-are-solvable">Subgroups of Solvable Groups are Solvable</h4>
+<p>If $G$ is solvable, then so is every subgroup of $G$.</p>
+<h4 id="like-the-alternating-group">Like the Alternating Group...</h4>
+<p>Group $S_n$ is not soluable for $n \geq 5$.</p>
+<h4 id="galois-group-of-an-irreducible">Galois Group of an Irreducible</h4>
+<p>Suppose $p(x) \in \mathbb Q[x]$ is irreducible of prime degree $p$ such
+that $p(x)$ has exactly two nonreal roots in $\mathbb C$. Then the
+Galois group of $p(x)$ over $\mathbb Q$ is $S_p$.</p>
+<h4 id="the-general-polynomial-of-degree-n-geq-5-is-not-solvable-by-radicals">The general polynomial of degree $n \geq 5$ is not solvable by radicals.</h4>
+<h1 id="finite-fields">Finite Fields</h1>
+<h4 id="prime-field">Prime Field</h4>
+<p>A field $K$ is called a <em>prime field</em> if it has no proper subfield.</p>
+<h4 id="isomorphisms">Isomorphisms</h4>
+<p>For a field $K$, the prime field of $K$ is either isomorphic to
+$\mathbb Q$ or to $\mathbb Z_p$.</p>
+<h4 id="finite-fields-have-prime-characteristic">Finite Fields have Prime Characteristic</h4>
+<p>If $F$ is a finite field, then the characteristic of $F$ is a prime
+number $p$, and thus $F$ contains $\mathbb Z_p$ and it consists of $p^n$
+elements.</p>
+<h4 id="no-zero-means-cyclic">No Zero Means Cyclic</h4>
+<p>If $F$ is a finite field, then the multiplicative subgroup $F^*$ of
+nonzero elements of $F$ is cyclic.</p>
+<h4 id="small-degree-roots-mean-irreducible">Small Degree Roots Mean Irreducible</h4>
+<p>Let $f(x) \in K[x]$ be a polynomial of degree $2$ or $3$. Then $f(x)$ is
+reducible over $K$ if and only if $f(x)$ has a root in $K$.</p>
+<h4 id="prime-power-cardinality">Prime Power Cardinality</h4>
+<p>If $F$ is a finite field, then its order is $p^n$ for prime $p$. This
+field is also unique for every pair of $n$ and $p$.</p>
+
+</div>
+
+</div>
+
+
+    <script>renderMathInElement(document.body, {delimiters:
+        [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\[", right: "\]", display: true}
+        ]
+    });</script>
+<script src="/livereload.js?port=1024&amp;mindelay=10"></script></body>
+</html>

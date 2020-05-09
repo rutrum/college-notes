@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dave&#x27;s College Notes</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="/">What I Learned in College</a>: Statistical Theory
+</h1>
+    </header>
+    
+
+<div class="note-page">
+<nav>
+<ul>
+
+    <li>
+        <a href="http://127.0.0.1:1111/stats/theory/#review">Review</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#discrete-random-variables">Discrete Random Variables</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#moment-generating-functions">Moment Generating Functions</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#continuous-random-variables">Continuous Random Variables</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#variance">Variance</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#frequently-used-results">Frequently used Results</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/stats/theory/#estimation">Estimation</a>
+        
+            <ul>
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#introduction-into-statistics">Introduction into Statistics</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#point-estimators">Point Estimators</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#goodness-of-a-point-estimator">Goodness of a Point Estimator</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#common-point-estimators">Common Point Estimators</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#confidence-interval">Confidence Interval</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#properties-of-point-estimators">Properties of Point Estimators</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/stats/theory/#methods-of-estimation">Methods of Estimation</a>
+        
+            <ul>
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#method-of-moments">Method of Moments</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#method-of-maximum-likelihood">Method of Maximum Likelihood</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/stats/theory/#hypothesis-testing">Hypothesis Testing</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#error-analysis">Error Analysis</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#power-of-tests">Power of Tests</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/stats/theory/#analysis-of-categorical-data">Analysis of Categorical Data</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#analysis-of-variance">Analysis of Variance</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/stats/theory/#ways-to-measure-variance-for-two-way-anova">Ways to Measure Variance for Two Way ANOVA</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/stats/theory/#bayesian-statistics">Bayesian Statistics</a>
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    </li>
+
+</ul>
+</nav>
+
+
+<div class="notes">
+<h1 id="review">Review</h1>
+<h4 id="random-variable">Random Variable</h4>
+<p>A <em>random variable</em> is a real-valued function for which the domain is a
+sample space.</p>
+<h2 id="discrete-random-variables">Discrete Random Variables</h2>
+<h4 id="definition">Definition</h4>
+<p>A random variable is said to be <em>discrete</em> if it can assume only finite
+or a countably infinite number of distinct values.</p>
+<h4 id="discrete-probability-distribution">Discrete Probability Distribution</h4>
+<p>The <em>probability distribution for a discrete variable $Y$</em> satisfies
+that $p(y) = P(Y = y)$ for all $y$.</p>
+<h4 id="expected-value-of-a-discrete-random-variable">Expected Value of a Discrete Random Variable</h4>
+<p>Let $Y$ be a discrete random variable with the probability function
+$p(y)$. Then the <em>expected value</em> of $Y$, denoted $E(Y)$ is defined as
+the following: $$E(Y) = \sum_y{yp(y)}$$</p>
+<h4 id="properties-of-expected-value">Properties of Expected Value</h4>
+<ol>
+<li>
+<p>$E(c) = c$</p>
+</li>
+<li>
+<p>$E(cg(x)) = cE(g(x))$</p>
+</li>
+<li>
+<p>$E(g(x)) = \sum_{all y}g(y)p(y)$</p>
+</li>
+<li>
+<p>$E(g_1(x) + \dots + g_k(x)) = E(g_1(x)) + \dots + E(g_k(x))$</p>
+</li>
+</ol>
+<h2 id="moment-generating-functions">Moment Generating Functions</h2>
+<h4 id="definition-1">Definition</h4>
+<p>The <em>moment generating function of a random variable</em> denoted $m(t)$ for
+random variable $Y$, is defined as $$m(t) = E(e^{Yt})$$ We say that a
+moment generating function for $Y$ exists if there exists a positive
+constant $b$ such that $m(t)$ is finite for $|t| \leq b$.</p>
+<h4 id="properties-of-moment-generating-functions">Properties of Moment Generating Functions</h4>
+<ol>
+<li>
+<p>$\lbrace \frac{d^km(t)}{dt^k} \rbrace_{t=0} = m^{(k)}(0) = \mu'_k$</p>
+</li>
+<li>
+<p>Uniquely determine a distribution</p>
+</li>
+<li>
+<p>If $Z = X + Y$, then $m_Z(t) = m_X(t) + m_Y(t)$, where $X, Y$ are
+independent random variables.</p>
+</li>
+</ol>
+<h2 id="continuous-random-variables">Continuous Random Variables</h2>
+<h4 id="definition-2">Definition</h4>
+<p>A random variable that can take any value in an interval is called
+<em>continuous</em>.</p>
+<h4 id="expected-value-of-a-continuous-random-variable">Expected Value of a Continuous Random Variable</h4>
+<p>The <em>expected value of a continuous random variable Y</em> is
+$$E(Y) = \int_{-\infty}^\infty{yf(y)dy}$$ provided the integral exists.</p>
+<h2 id="variance">Variance</h2>
+<h4 id="definition-3">Definition</h4>
+<p>If $Y$ is a random variable with the mean $E(Y) = \mu$, the <em>variance of
+$Y$</em> is defined as $$V(Y) = E((Y-\mu)^2).$$</p>
+<h4 id="properties-of-variance">Properties of Variance</h4>
+<ol>
+<li>
+<p>$V(aY) = a^2V(Y)$</p>
+</li>
+<li>
+<p>$V(X+Y) = V(X) + V(Y)$ if $X,Y$ are independent</p>
+</li>
+<li>
+<p>$V(Y) = E(Y^2) - E(Y)^2$</p>
+</li>
+<li>
+<p>$V(\overline Y) = \frac{\sigma^2}{n}$</p>
+</li>
+</ol>
+<h2 id="frequently-used-results">Frequently used Results</h2>
+<ol>
+<li>
+<p>$E(\overline x) = \mu$</p>
+</li>
+<li>
+<p>$V(\overline x) = \frac{\sigma^2}{n}$</p>
+</li>
+</ol>
+<h1 id="estimation">Estimation</h1>
+<h2 id="introduction-into-statistics">Introduction into Statistics</h2>
+<h4 id="statistics">Statistics</h4>
+<p><em>Statistics</em> is a collection of procedures and principles for gaining
+and analyzing information to educate people and help them make better
+decisions when faced with uncertainty. It is science about data, where
+you make decisions between certainty and uncertainty.</p>
+<h4 id="population">Population</h4>
+<p>The <em>population</em> is the collection of all individuals or items under
+consideration in a statistical study.</p>
+<h4 id="sample">Sample</h4>
+<p>The <em>sample</em> is part of the population from which information is
+obtained.</p>
+<h4 id="parameter">Parameter</h4>
+<p>A <em>parameter</em> is a numerical descriptive measure of a population.</p>
+<h4 id="statistic">Statistic</h4>
+<p>A <em>statistic</em> is a numerical descriptive measure of a sample.</p>
+<h4 id="types-of-statistics">Types of Statistics</h4>
+<p>Based on its purpose, statistics can be categorized into <em>descriptive
+statistics</em>, where data is examined and explored for its own intrinsic
+interest as well as presented, and <em>inferential statistics</em>, where
+information obtained from a sample of a population of a study and use
+that information to draw conclusions about populations.</p>
+<h4 id="estimator">Estimator</h4>
+<p>An <em>estimator</em> is a rule that tells how to calculate the value of an
+estimate based on the measurements in a sample.</p>
+<h4 id="types-of-estimation">Types of Estimation</h4>
+<p>Estimating a parameter can be done using a <em>point estimate</em>, a single
+value, or an <em>interval</em>, an interval or real values.</p>
+<h4 id="i-d-d">i.d.d.</h4>
+<p>This acronym stands for <em>independent and identically distributed</em>. It
+follows that if a set of events are i.d.d., then all events are
+independent of each other and all share the same distribution (the same
+mean, variance, etc.).</p>
+<h4 id="typical-statistical-process">Typical Statistical Process</h4>
+<ol>
+<li>
+<p>Ask a question.</p>
+</li>
+<li>
+<p>Design a study.</p>
+</li>
+<li>
+<p>Collect data.</p>
+</li>
+<li>
+<p>Describe and summarize data.</p>
+</li>
+<li>
+<p>Select the appropriate statistical method.</p>
+</li>
+<li>
+<p>Inferential statistics.</p>
+</li>
+<li>
+<p>Interpret data.</p>
+</li>
+<li>
+<p>Answer the question.</p>
+</li>
+</ol>
+<h2 id="point-estimators">Point Estimators</h2>
+<h4 id="sampling-distribution">Sampling Distribution</h4>
+<p>A point estimator is a function of observations, random variables.
+Therefore the point estimator is a random variable and has a
+distribution. The distribution of a statistic is called a <em>sampling
+distribution</em>.</p>
+<h4 id="bias">Bias</h4>
+<p>For a parameter $\theta$ and an estimator $\hat \theta$ for $\theta$,
+the estimator is <em>unbias</em> if and only if $E(\hat \theta) = \theta$. We
+say it is <em>not unbias</em> if $E(\hat \theta) \neq \theta$. We can calculate
+bias using the following: $$B(\hat \theta) = E(\hat \theta) - \theta$$</p>
+<h4 id="variance-of-an-estimator">Variance of an Estimator</h4>
+<p>When faced with multiple unbias estimators, the best one to use is the
+one of least variance.</p>
+<h4 id="standard-error">Standard Error</h4>
+<p>The <em>standard error</em> is the standard deviation of an estimator or
+statistic.</p>
+<h4 id="mean-square-error">Mean Square Error</h4>
+<p>The <em>mean square error</em> is a function of both variance and bias
+calculated as follows: $$\begin{aligned}
+MSE(\hat \theta) &amp;= E((\hat \theta - \theta)^2) \
+&amp;= V(\hat \theta) + B(\theta)^2\end{aligned}$$</p>
+<h4 id="unbais-estimators-for-parameters">Unbais Estimators for Parameters</h4>
+<p>Let the following be an unbais estimator for $\mu$:
+$$\overline x = \frac{\sum{Y_i}}{n}$$ Let the following be an unbias
+estimator for $\sigma^2$:
+$$s^2 = \frac{\sum{(Y_i-\overline Y)^2}}{n - 1}$$</p>
+<h2 id="goodness-of-a-point-estimator">Goodness of a Point Estimator</h2>
+<h4 id="error-of-estimation">Error of Estimation</h4>
+<p>The <em>error of estimation</em> $\epsilon$ is the distance between an
+estimator and its target parameter. That is,
+$$\epsilon = |\hat \theta - \theta|.$$ Even though the estimator may be
+unbias, there will still likely be an error for a single sample.</p>
+<h4 id="bounds-on-error">Bounds on Error</h4>
+<p>For a given quantity $b$, we can find the probability of the error on
+the estimator on parameter $\theta$ bounded by $b$ as follows:
+$$\begin{aligned}
+P(\epsilon &lt; b) &amp;= P(|\hat \theta - \theta| &lt; b) \
+&amp;= P(\theta - b &lt; \hat \theta &lt; \theta + b) \
+&amp;= \int_{\theta - b}^{\theta+b}{f(\hat \theta)d\theta}\end{aligned}$$</p>
+<h4 id="tchebysheff-s-theorem">Tchebysheff's Theorem</h4>
+<p>Let $Y$ by a random variable with the mean $\mu$ and finite variance
+$\sigma^2$. Then, generally, for any constant $k&gt;0$, $$\begin{aligned}
+P(|Y-\mu| &lt; k\sigma) &amp;\geq 1 - \frac{1}{k^2} \
+P(|Y-\mu| \geq k\sigma) &amp;\leq \frac{1}{k^2}.\end{aligned}$$</p>
+<h2 id="common-point-estimators">Common Point Estimators</h2>
+<h4 id="and-their-standard-errors">...and their Standard Errors</h4>
+<table><thead><tr><th><code> </code></th><th><code> </code></th><th><code> </code></th><th><code> </code></th></tr></thead><tbody>
+<tr><td>$\theta$</td><td>Sample Size</td><td>Estimator</td><td>$\sigma_\theta$</td></tr>
+<tr><td>$\mu$</td><td>$n$</td><td>$\displaystyle \overline Y = \frac{1}{n}\sum{Y_i}$</td><td>$\displaystyle \frac{\sigma}{\sqrt n}$</td></tr>
+<tr><td>$p$</td><td>$n$</td><td>$\displaystyle \hat p = \frac{Y}{n}$</td><td>$\displaystyle \sqrt \frac{p(1-p)}{n}$</td></tr>
+<tr><td>$\mu_1-\mu_2$</td><td>$n_1, n_2$</td><td>$\overline Y_1 - \overline Y_2$</td><td>$\displaystyle \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}$</td></tr>
+<tr><td>$p_1-p_2$</td><td>$n_1, n_2$</td><td>$\hat p_1 - \hat p_2$</td><td>$\displaystyle \sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}$</td></tr>
+</tbody></table>
+<p>Note that $\sigma_1^2, \sigma_2^2$ are the variances of populations
+$1, 2$ respectively. We assume the two sample cases are independent.</p>
+<h2 id="confidence-interval">Confidence Interval</h2>
+<h4 id="interval-estimator">Interval Estimator</h4>
+<p>An <em>interval estimator</em> is a rule specifying the method for using the
+sample measurements to calculate end points on the interval. An interval
+estimator will likely contain the target parameter and will be
+relatively narrow. This is also commonly called a <em>confidence interval</em>.</p>
+<h4 id="confidence-coefficient">Confidence Coefficient</h4>
+<p>The probability that a random confidence interval will enclose $\theta$
+is called the <em>confidence coefficient</em>. This probability is denoted as
+$$P(\hat \theta_L \leq \theta \leq \hat \theta_U) = 1 - \alpha$$ where
+$\hat \theta_L$ and $\hat \theta_U$ are the lower and upper bounds on
+the confidence interval defined as
+$$\hat \theta_L = \hat \theta - z_{\alpha /2}\sigma_{\hat \theta}$$
+$$\hat \theta_U = \hat \theta + z_{\alpha /2}\sigma_{\hat \theta}$$ and
+$(1-\alpha)$ is the confidence coefficient.</p>
+<h4 id="one-sided-confidence-intervals">One Sided Confidence Intervals</h4>
+<p>It is possible to build a <em>one sided confidence interval</em> such that
+$$P(\hat \theta_L \leq \theta) = 1 - \alpha$$ or
+$$P(\theta \leq \hat \theta_U) = 1 - \alpha.$$</p>
+<h4 id="significance-level">Significance Level</h4>
+<p>If $(1-\alpha)$ is the confidence coefficient, then $\alpha$ is called
+the <em>significance level</em>.</p>
+<h4 id="confidence-level">Confidence Level</h4>
+<p>In the context of confidence interval, the $100(1 - \alpha)%$ is called
+the <em>confidence level</em>.</p>
+<h4 id="margin-of-error">Margin of Error</h4>
+<p>The <em>margin of error</em> is a value to determine how sample size affects
+the accuracy of an estimated. It is calculated as half the length of the
+confidence interval. It is also called the <em>maximum error of the
+estimate</em>.</p>
+<h2 id="properties-of-point-estimators">Properties of Point Estimators</h2>
+<h4 id="relative-efficiency">Relative Efficiency</h4>
+<p>Given two unbias estimators $\hat \theta_1$ and $\hat \theta_2$ of a
+parameter $\theta$, then the <em>efficiency of $\hat \theta_1$ relative to
+$\hat \theta_2$</em> is given by the following:
+$$\mathit{eff}(\hat \theta_1, \hat \theta_2) = \frac{V(\hat \theta_2)}{V(\hat \theta_1)}$$
+If $\mathit{eff}(\hat \theta_1, \hat \theta_2) &gt; 1$, then we prefer
+$\hat \theta_1$ as an estimator over $\hat \theta_2$.</p>
+<h4 id="consistency">Consistency</h4>
+<p>An estimator $\hat \theta$ is said to be a <em>consistent estimator of
+$\theta$</em> if for any $\epsilon &gt; 0$,
+$$\lim_{n \rightarrow \infty} P(|\hat \theta_n - \theta| &lt; \epsilon) = 1$$
+or
+$$\lim_{n \rightarrow \infty} P(|\hat \theta_n - \theta| \geq \epsilon) = 0.$$
+Consistency measures the variance of the estimator as the sample size
+increases.</p>
+<h4 id="consistency-of-unbias-estimators">Consistency of Unbias Estimators</h4>
+<p>An unbias estimator $\hat \theta$ is said to be a <em>consistent estimator
+of $\theta$</em> if $$\lim_{n \rightarrow \infty} V(\hat \theta_n) = 0.$$</p>
+<h4 id="likelihood">Likelihood</h4>
+<p>Let $y_1 = Y_1, y_2 = Y_2, \dots, y_n = Y_n$ follow the distribution
+that depends on parameter $\theta$. If $Y_i$ are discrete random
+variables then the <em>likelihood function of the sample</em> is
+$$L(y_1, y_2, \dots, y_n, \theta) = P(y_1, y_2, \dots, y_n, \theta) = \prod{P(y_i)}$$
+Or if $Y_i$ are continuous random variables then the <em>likelihood
+function of the sample</em> is
+$$L(y_1, y_2, \dots, y_n, \theta) = f(y_1, y_2, \dots, y_n, \theta) = \prod{f(y_i)}$$
+Sometimes $L(\theta)$ is used over $L(y_1, y_2, \dots, y_n, \theta)$.</p>
+<h4 id="sufficiency">Sufficiency</h4>
+<p>The statistic $U = g(Y_1,Y_2,\dots,Y_n)$ is said to be a <em>sufficient
+statistic</em> if the conditional distribution of $Y_i$ given $U$ does not
+depend on parameter $\theta$.</p>
+<h4 id="method-of-finding-sufficiency">Method of Finding Sufficiency</h4>
+<p>The statistic $U = g(Y_1,Y_2,\dots,Y_n)$ is sufficient if and only if
+the likelihood function can be factored into 2 non-negative functions as
+follows.
+$$L(y_1, y_2, \dots, y_n, \theta) = g(U,\theta)\cdot h(y_1, y_2, \dots, y_n)$$</p>
+<h4 id="rao-blackwell-theorem">Rao-Blackwell Theorem</h4>
+<p>Let $\hat \theta$ be an unbias estimator for $\theta$ such that
+$V(\hat \theta) &lt; \infty$. If $U$ is a sufficient statistic for
+$\theta$, define $\hat \theta^* = E(\theta|U)$. Then for all $\theta$,
+$MSE(\hat \theta^*) &lt; MSE(\hat \theta)$.</p>
+<h4 id="minimum-variance-unbias-estimator">Minimum Variance Unbias Estimator</h4>
+<p>A <em>minimum variance unbais estimator</em> is an unbias estimator with the
+least variance of any other unbais estimator for the distribution.</p>
+<h4 id="how-to-find-mvue">How to Find MVUE</h4>
+<p>First find a sufficient statistic for given parameter. Then, confirm if
+it is unbais. If not, tweat the estimator to make it unbais.</p>
+<h1 id="methods-of-estimation">Methods of Estimation</h1>
+<h2 id="method-of-moments">Method of Moments</h2>
+<h4 id="k-th-moment-of-a-random-variable">$k^{th}$ Moment of a Random Variable</h4>
+<p>The <em>$k^{th}$ moment</em> taken about the origin is defined as the
+following: $$\mu_k^\prime = E(Y^k)$$</p>
+<h4 id="k-th-sample-moment">$k^{th}$ Sample Moment</h4>
+<p>The <em>$k^{th}$ sample moment</em> of the sample $Y_1, Y_2,\dots, Y_n$ is
+defined as the following: $$m_k^\prime = \frac{\sum{Y_i^k}}{n}$$</p>
+<h4 id="method-of-moments-1">Method of Moments</h4>
+<p>The objective is to estimate $\mu_k^\prime$ with $m_k^\prime$. For a
+distribution of $t$ random variables, we set
+$\mu_k^\prime = \mu_k^\prime$ for $k \in [1, t]$ and solve for
+$\theta_1, \theta_2, \dots, \theta_t$.</p>
+<h2 id="method-of-maximum-likelihood">Method of Maximum Likelihood</h2>
+<h4 id="maximum-likelihood-estimators">Maximum Likelihood Estimators</h4>
+<p>Maximize $ln(L(\theta))$ with respect to each parameter and solve for
+the parameter. We call estimators found this way <em>maximum likelihood
+estimators</em>.</p>
+<h1 id="hypothesis-testing">Hypothesis Testing</h1>
+<h4 id="definition-4">Definition</h4>
+<p>A <em>hypothesis test</em> is a commonly used method for making a decision
+about the value of a parameter by the data from samples.</p>
+<h4 id="hypotheses">Hypotheses</h4>
+<p>A hypothesis test is based upon two hypotheses determined by the
+statistician. The first is the <em>null hypothesis</em>, denoted by $H_0$,
+which is a statement of equality assumed to be true for the sake of the
+test. The second is the <em>alternative hypothesis</em>, denoted $H_a$, which
+is a statement of inequality.</p>
+<h4 id="paradigm">Paradigm</h4>
+<p>Hypothesis tests come to one of two conclusions. They can reject $H_0$,
+which shows the data would be in favor of $H_a$ and we conclude that
+$H_a$ is true. Or, they can fail to reject null, which shows the data is
+not strong enough to support $H_a$ and we conclude that $H_0$ is true.</p>
+<h4 id="test-statistic">Test Statistic</h4>
+<p>The <em>test statistic</em> is the sample statistic used to make a conclusion
+on during a hypothesis test.</p>
+<h4 id="p-value">p-value</h4>
+<p>The <em>p-value</em> of a hypothesis test is the smallest level of significance
+for which the observed data indicate that the null hypothesis should be
+rejected. It is the probability that the test statistic, or a value more
+extreme, would occur given the null hypothesis is true.</p>
+<h4 id="conclusions">Conclusions</h4>
+<p>After determining the p-value, the statistician can draw a conclusion to
+the experiment based on a significance level. If $p-value \leq \alpha$,
+then we reject the null hypothesis. Otherwise, if $p-value &gt; \alpha$,
+then we fail to reject the null hypothesis.</p>
+<h4 id="how-to-perform-a-hypothesis-test">How to Perform a Hypothesis Test</h4>
+<ol>
+<li>
+<p>Form hypotheses</p>
+</li>
+<li>
+<p>Choose the significance level $\alpha$</p>
+</li>
+<li>
+<p>Use sample data to determine the value of the test statistic</p>
+</li>
+<li>
+<p>Use a test to determine the p-value</p>
+</li>
+<li>
+<p>Make a decision about the truth of $H_0$</p>
+</li>
+</ol>
+<h4 id="types-of-tests">Types of Tests</h4>
+<p>Let the null hypothesis be $H_0: \theta = \theta_0$. Then given the
+following alternatives, we determine the tail of the test.</p>
+<ul>
+<li>
+<p>$H_a: \theta \neq \theta_0 \rightarrow$ Two tailed test</p>
+</li>
+<li>
+<p>$H_a: \theta &gt; \theta_0 \rightarrow$ Right tailed test</p>
+</li>
+<li>
+<p>$H_a: \theta &lt; \theta_0 \rightarrow$ Left tailed test</p>
+</li>
+</ul>
+<h2 id="error-analysis">Error Analysis</h2>
+<h4 id="type-i-error">Type I Error</h4>
+<p>A <em>type I error</em> occurs when the result of a hypothesis test concludes
+to reject $H_0$, when in reality that conclusion is false, and the $H_0$
+is true. The probability of a type I error is the significance level:
+$P(\text{Type I Error}) = \alpha$.</p>
+<h4 id="type-ii-error">Type II Error</h4>
+<p>A <em>type II error</em> occurs when the result of a hypothesis test fails to
+reject $H_0$, when in reality that conclusion is false, and the $H_0$ is
+false. The probability of a type II error is based on the size of the
+sample size: $P(\text{Type II Error}) = \beta$.</p>
+<h4 id="decisions-made-in-a-hypothesis-test">Decisions Made in a Hypothesis Test</h4>
+<table><thead><tr><th><code> </code></th><th>$H_0$ True</th><th>$H_0$ False</th></tr></thead><tbody>
+<tr><td>Fail to reject $H_0$</td><td></td><td>Type I Error</td></tr>
+<tr><td>Reject $H_0$</td><td>Type II Error</td><td></td></tr>
+</tbody></table>
+<h2 id="power-of-tests">Power of Tests</h2>
+<h4 id="definition-5">Definition</h4>
+<p>Suppose $W$ is a test statistic and $RR$ be the rejection region for a
+hypothesis test of parameter $\theta$. Define the <em>power of the test</em>,
+denoted $power(\theta)$, to be the probability that the test rejects
+$H_0$, when the actual value parameter value is $\theta$. In other
+words, $$power(\theta) = P(\text{Reject } H_0 : \theta = \theta_0)$$
+where $\theta_0$ is the value of the null hypothesis. Analyzing the
+power of a test is contrasts the p-value approach to statistical tests.</p>
+<h4 id="power-when-null-is-true">Power When Null Is True</h4>
+<p>Suppose $\theta = \theta_0$. Then $$\begin{aligned}
+power(\theta_0) &amp;= P(\text{Reject } H_0 : H_0 \text{ is true}) \
+&amp;= P(\text{Type I error}) \
+&amp;= \alpha\end{aligned}$$</p>
+<h4 id="power-when-null-is-false">Power When Null Is False</h4>
+<p>Suppose $\theta = \theta_a$. Then $$\begin{aligned}
+power(\theta_a) &amp;= P(\text{Reject } H_0 : H_0 \text{ is false}) \
+&amp;= 1 - P(\text{Fail to reject } H_0 : H_0 \text{ is false}) \
+&amp;= 1 - P(\text{Type II error}) \
+&amp;= 1 - \beta\end{aligned}$$</p>
+<h4 id="power-curve">Power Curve</h4>
+<p>Looks kind of like 1 minus the normal distribution, with the minimum
+value at $\theta_0$ having height of $\alpha$.</p>
+<h4 id="simple-hypothesis">Simple Hypothesis</h4>
+<p>If a random sample is taken from a distribution of parameter $\theta$, a
+hypothesis is said to be <em>simple</em> if that hypothesis uniquely identifies
+the distribution.</p>
+<h4 id="composite-hypothesis">Composite Hypothesis</h4>
+<p>Any hypothesis that is not simple is called <em>composite</em> and does not
+uniquely identify the distribution.</p>
+<h4 id="most-powerful-test">Most Powerful Test</h4>
+<p>When determining the value of $H_0$ and $H_a$, we want to choose a
+rejection region such that $\alpha = power(\theta_0)$ is fixed and
+$power(\theta_a)$ is maximum. We call such a test the <em>most powerful
+test</em>.</p>
+<h4 id="neymann-pearson-lemma">Neymann-Pearson Lemma</h4>
+<p>Suppose we test simple null hypothesis $H_0: \theta = \theta_0$ versus
+simple alternative hypothesis $H_a: \theta = \theta_a$, based on simple
+random samples $Y_1,\dots, Y_n$ from a distribution with parameter
+$\theta$. Then for a given $\alpha$, the test that maximizes the power
+at $\theta_a$ has a rejection region $RR$ determined by
+$$\frac{L(\theta_0)}{L(\theta_a)} &lt; k$$ where $k$ is chosen so that the
+test has a desired value for $\alpha$. Note that $k$ is a bound on the
+random variable $Y$.</p>
+<h4 id="uniformly-most-powerful-test">Uniformly Most Powerful Test</h4>
+<p>The Neymann-Pearson Lemma can only be used on a simple alternative
+hypothesis. Oftentimes a composite alternative hypothesis is used. In
+order to invoke the Neymann-Pearson Lemma, we say $H_a = \theta_a$ for
+$\theta_a$ in the bounds described by the composite alternative
+hypothesis. When this procedure is used on a test with a composite
+alternative hypothesis, the determined $\alpha$ gives the <em>uniformly
+most powerful test</em>.</p>
+<h1 id="analysis-of-categorical-data">Analysis of Categorical Data</h1>
+<h4 id="types-of-data">Types of Data</h4>
+<p>All of data can be either <em>quantitative</em> or <em>qualitative</em>. Quantitative
+data are numbers, that are either <em>discrete</em> or <em>continuous</em>.
+Qualitative data are not numbers, but are categories or qualities of an
+observational unit. There is <em>monimal</em> data, where the variables are not
+ordered, and <em>ordinal</em>, where the variables have a natural way of being
+ordered.</p>
+<h4 id="contingency-table">Contingency Table</h4>
+<p>When data is collected from two variables of a population it is called
+<em>bi-variate</em>. When the frequency of the two variables are drawn across
+each other we call this a <em>contingency table</em>.</p>
+<h2 id="analysis-of-variance">Analysis of Variance</h2>
+<h4 id="factor-and-level">Factor and Level</h4>
+<p>Variables that the statistician uses to partition the population into
+subpopulations are called <em>factors</em>. A distinct subcategory of a factor
+is called its <em>level</em>.</p>
+<h4 id="anova">ANOVA</h4>
+<p>The <em>analysis of variance</em> (abbreviated <em>ANOVA</em>) is a procedure that
+attempts to analyze the variation in a set of responses and assign
+portions of this variation to each variable in a set of independent
+variables. The objective is to identify important independent variables
+and determine how they affect the response.</p>
+<h4 id="experimental-units">Experimental Units</h4>
+<p>Objects upon which measurements are taken are called <em>experimental
+units</em>.</p>
+<h4 id="blocks-and-treatments">Blocks and Treatments</h4>
+<p>Ways to partition data is into factor variables <em>blocks</em> and
+<em>treatments</em>. Generally data is partitioned into blocks are treatments
+are then applied to each block. Mathematically, how this assignment is
+done is arbitrary.</p>
+<h4 id="completely-randomized-design">Completely Randomized Design</h4>
+<p>A <em>completely randomized design</em> to compare $k$ treatments, is one in
+which a grup of $n$ relatively homogeneous experimental units are
+randomly divided into $k$ subgroups of sizes $n_1, n_2, \dots, n_k$
+where the sum of $n_i$ is $n$. All experimental units in each subgroup
+receive the same treatment, which each treatment applied to exactly one
+subgroup.</p>
+<h4 id="randomized-block-design">Randomized Block Design</h4>
+<p>A <em>randomized block design</em> containing $b$ blocks $k$ treatments
+consists of $b$ blocks of $k$ experimental units each. The treatments
+are randomly assigned units in each block, with each treatments
+appearing exactly once in every block.</p>
+<h2 id="ways-to-measure-variance-for-two-way-anova">Ways to Measure Variance for Two Way ANOVA</h2>
+<h4 id="total-sum-of-squares">Total Sum of Squares</h4>
+<p>The <em>sum of squares of deviations</em> or <em>total sum of squares</em>,
+abbreviated <em>TSS</em>, is a measure of variance across the entire
+population. It's value is calculated by the following:
+$$TSS = \sum_{i=1}^k \sum_{j=1}^{n_i} (y_{ij} - \bar y)^2$$</p>
+<h4 id="error-sum-of-squares">Error Sum of Squares</h4>
+<p>The <em>error sum of squares</em>, abbreviated <em>SSE</em> is a measure of variation
+within subpopulations partitioned by treatments.</p>
+<h4 id="treatment-sum-of-squares">Treatment Sum of Squares</h4>
+<p>The <em>error sum of squares</em>, abbreviated <em>SSE</em> is a measure of variation
+between subpopulations partitioned by treatments.</p>
+<h1 id="bayesian-statistics">Bayesian Statistics</h1>
+<h4 id="paradigm-1">Paradigm</h4>
+<p>Up to this point in these notes, all statistical procedures are based on
+treating parameters as unknown constants. Bayesian statistics treats
+parameters as random variables that follow a distribution. Using data
+collected, we can adjust the distribution to be more accurate given the
+data using Bayes' Rule.</p>
+<h4 id="bayes-rule">Bayes' Rule</h4>
+<p>Let $A$ and $B$ be two events with probability $P(A)$ and $P(B)$. Then
+the following is true, given that $P(B) \neq 0$.
+$$P(A|B) = \frac{P(B|A)\cdot P(A)}{P(B)}$$</p>
+<h4 id="discrete-probabilities">Discrete Probabilities</h4>
+<p>Let $H$ be an outcome of the given parameter and let $D$ be the data
+collected about that parameter.</p>
+<ul>
+<li>
+<p>Every parameter starts with an initial distribution. We call this
+the <em>prior distribution</em> notated as $P(H)$.</p>
+</li>
+<li>
+<p>The <em>likelihood</em> is the probability that the data occurs given the
+prior distribution, notated as $P(D|H)$.</p>
+</li>
+<li>
+<p>The probability that the data occurs is called the <em>marginal
+distribution</em> notated as $P(D)$.</p>
+</li>
+<li>
+<p>Lastly, the distribution of the parameter given the collected data
+is called the <em>posterior distribution</em>, notated as $P(H|D)$.</p>
+</li>
+</ul>
+<p>In addition, we call an intermediate calculation the <em>joint likelihood</em>,
+calculated by $P(H)\cdot P(D|H)$.</p>
+<h4 id="how-to-calculate-posterior-distribution">How to Calculate Posterior Distribution</h4>
+<p>Using Bayes' rule, we can calculate the posterior distribution using the
+prior distribution and the data. First calculate likelihood, then joint
+likelihood. The sum of the all joint likelihoods is the marginal
+distribution. Then using Bayes' rule the posterior is calculated.</p>
+<h4 id="bayesian-box">Bayesian Box</h4>
+<p>A <em>Bayesian box</em> is a way to organize calculations taken to determine
+the posterior probability. Is is shown here.</p>
+<table><thead><tr><th>Hypotheses</th><th>Prior</th><th>Likelihood</th><th>Joint</th><th>Posterior</th></tr></thead><tbody>
+<tr><td>$H_1$</td><td>$P(H_1)$</td><td>$P(D</td><td>H_1)$</td><td>$P(H_1) \cdot P(D</td></tr>
+<tr><td>$H_2$</td><td>$P(H_2)$</td><td>$P(D</td><td>H_2)$</td><td>$P(H_2) \cdot P(D</td></tr>
+<tr><td>$\vdots$</td><td>$\vdots$</td><td>$\vdots$</td><td>$\vdots$</td><td>$\vdots$</td></tr>
+<tr><td>$H_2$</td><td>$P(H_2)$</td><td>$P(D</td><td>H_2)$</td><td>$P(H_2) \cdot P(D</td></tr>
+<tr><td>$Total:$</td><td>$1$</td><td></td><td>$P(D)$</td><td>$1$</td></tr>
+</tbody></table>
+<h4 id="continuous-probabilities">Continuous Probabilities</h4>
+<p>This is similar to the discrete counterpart, adjusted for continuous
+random variables. Let $\theta$ be the value of the given parameter and
+let $y_1, \dots, y_n$ be the data collected about that parameter.</p>
+<ul>
+<li>
+<p>We notate the prior distribution as $g(\theta)$.</p>
+</li>
+<li>
+<p>The likelihood of the data is the application of the likelihood
+function, $L(y_1, \dots, y_n | \theta)$.</p>
+</li>
+<li>
+<p>The joint distribution is calculated by
+$L(y_1, \dots, y_n | \theta) \cdot g(\theta)$.</p>
+</li>
+<li>
+<p>The marginal distribution is calculated as follows:
+$$m(y_1, \dots, y_n) = \int_{-\infty}^\infty L(y_1, \dots, y_n | \theta) \cdot g(\theta)\ d\theta$$</p>
+</li>
+<li>
+<p>Lastly, the posterior distribution is calculated as follows:
+$$g^*(\theta|y_1, \dots, y_n) = \frac{L(y_1, \dots, y_n | \theta) \cdot g(\theta)}{\int_{-\infty}^\infty L(y_1, \dots, y_n | \theta) \cdot g(\theta)\ d\theta}$$</p>
+</li>
+</ul>
+<h4 id="bernoulli-distribution">Bernoulli Distribution</h4>
+<p>A discrete random variable that has binary outcomes 0 or 1 follows a
+Bernoulli distribution with probability function as follows:
+$$f(k) = p^k(1-p)^{1-k}$$</p>
+<h4 id="beta-distribution">Beta Distribution</h4>
+<p>In Bayesian statistics, any beta distribution is the prior distribution
+for a Bernoulli or Binomial distribution. When the prior is updated
+using the data, the result is a beta posterior was altered parameter
+values.</p>
+<h4 id="conjugate-prior">Conjugate Prior</h4>
+<p>Any prior distributions that result in posterior distributions that
+follow the same functional form of the prior are called <em>conjugate
+priors</em>.</p>
+
+</div>
+
+</div>
+
+
+    <script>renderMathInElement(document.body, {delimiters:
+        [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\[", right: "\]", display: true}
+        ]
+    });</script>
+<script src="/livereload.js?port=1024&amp;mindelay=10"></script></body>
+</html>
