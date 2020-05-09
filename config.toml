@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://rutrum.github.io"
+base_url = "https://rutrum.github.io/college-notes"
 
 title = "Dave's College Notes"
 
