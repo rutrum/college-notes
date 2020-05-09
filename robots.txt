@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://rutrum.github.io/sitemap.xml
+Sitemap: https://rutrum.github.io/college-notes/sitemap.xml
