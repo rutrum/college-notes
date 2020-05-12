@@ -2,52 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/</loc>
+            <loc>http://127.0.0.1:1111/</loc>
             
         </url>
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/about/</loc>
+            <loc>http://127.0.0.1:1111/about/</loc>
             
         </url>
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/cs/</loc>
+            <loc>http://127.0.0.1:1111/cs/</loc>
             
         </url>
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/cs/alg/</loc>
+            <loc>http://127.0.0.1:1111/cs/alg/</loc>
             
         </url>
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/math/</loc>
+            <loc>http://127.0.0.1:1111/cs/networks/</loc>
             
         </url>
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/math/groups/</loc>
+            <loc>http://127.0.0.1:1111/math/</loc>
             
         </url>
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/math/real/</loc>
+            <loc>http://127.0.0.1:1111/math/groups/</loc>
             
         </url>
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/math/rings-fields/</loc>
+            <loc>http://127.0.0.1:1111/math/real/</loc>
             
         </url>
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/stats/</loc>
+            <loc>http://127.0.0.1:1111/math/rings-fields/</loc>
             
         </url>
     
         <url>
-            <loc>https://rutrum.github.io/college-notes/stats/theory/</loc>
+            <loc>http://127.0.0.1:1111/stats/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/stats/theory/</loc>
             
         </url>
     
