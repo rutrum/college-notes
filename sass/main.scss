@@ -114,7 +114,7 @@ header {
         margin: 20px;
         max-width: 800px;
 
-        p, ul, ol {
+        pre, p, ul, ol {
             margin: 0;
             width: 100%;
             margin-left: $left-width;
@@ -128,6 +128,13 @@ header {
             width: 100% - $left-width;
             margin-top: $paragraph-spacing;
             margin-left: 0;
+        }
+
+        // These are code blocks
+        pre {
+            padding: 5px; 
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
 
         // Add something to make it tabler

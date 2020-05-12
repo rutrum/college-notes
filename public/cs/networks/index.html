@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dave&#x27;s College Notes</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;">What I Learned in College</a>: Networks
+</h1>
+    </header>
+    
+
+<div class="note-page">
+<nav>
+<ul>
+
+    <li>
+        <a href="http://127.0.0.1:1111/cs/networks/#introduction">Introduction</a>
+        
+            <ul>
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#internet">Internet</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#network-edge">Network Edge</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#network-core-1">Network Core</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#packet-loss">Packet Loss</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#internet-protocol-stack">Internet Protocol Stack</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#security">Security</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/cs/networks/#application-layer">Application Layer</a>
+        
+            <ul>
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#network-applications">Network Applications</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#domain-name-system">Domain Name System</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#socket-programming">Socket Programming</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#the-web-and-http">The Web and HTTP</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#ftp">FTP</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#smtp">SMTP</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+    <li>
+        <a href="http://127.0.0.1:1111/cs/networks/#transport-layer">Transport Layer</a>
+        
+            <ul>
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#introduction-1">Introduction</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#udp">UDP</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#reliable-data-transfer">Reliable Data Transfer</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#tcp">TCP</a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="http://127.0.0.1:1111/cs/networks/#congestion-control">Congestion Control</a>
+                        </li>
+                    
+                
+            </ul>
+        
+    </li>
+
+</ul>
+</nav>
+
+
+<div class="notes">
+<h1 id="introduction">Introduction</h1>
+<h2 id="internet">Internet</h2>
+<p>The <em>internet</em> is a network of networks. It is build from interconnected
+internet service providers (ISPs) and the end users, called <em>hosts</em>.
+Between these hosts are <em>communication links</em>, such as physical cables
+and fibers aswell as radio and satellite transmissions.</p>
+<h4 id="packets">Packets</h4>
+<p>Across communication links are <em>packets</em>, chunks of data that can be
+moved and directed across the internet through <em>routers</em> and <em>switches</em>.</p>
+<h4 id="protocols">Protocols</h4>
+<p>A <em>protocol</em> is the language at which a message sent across a network
+should be interpreted. Protocols define the format of the message, the
+order of messages sent and received among network entities, and actions
+taken on a message transmission. This message acts as a receipt for the
+transmission.</p>
+<h2 id="network-edge">Network Edge</h2>
+<p>The <em>network edge</em> is the set of hosts on the network: <em>clients</em> and
+<em>servers</em>.</p>
+<h4 id="network-core">Network Core</h4>
+<p>The set of routers that connects the network edges is called the
+<em>network core</em>. The network edge connects to the network core by local
+networks, such as residential networks and institutional networks, or
+mobile providers.</p>
+<h4 id="digital-subscriber-line">Digital Subscriber Line</h4>
+<p>Otherwise known as <em>DSL</em>, the <em>digital subscriber line</em> is the idea of
+using existing telephone line as an access point to internet. The
+alternative being to construct more physical connections between hosts
+and the network. DSL lines meet at a central office called <em>DSLAM</em> where
+it is then connected to an ISP.</p>
+<h4 id="coax">Coax</h4>
+<p>One can send multiple packets of data across a single communication link
+by using varying frequency bands from different signals. This process is
+called <em>frequency division multiplexing</em>. A common communication link
+that uses this technology is called <em>HFC</em>, <em>hybrid fiber coax</em>, or just
+<em>coax</em> which is commonly used to stream many television channels across
+the same wire. Unlike DSL, coax does not have a central office, which is
+why different frequency bands are used.</p>
+<h4 id="home-network">Home Network</h4>
+<p>Typical home networks use a router that extends from a DSL modem or
+cable, which connects directly to hosts or to wireless access points
+that in turn connect to hosts wirelessly.</p>
+<h4 id="enterprise-access-networks">Enterprise Access Networks</h4>
+<p>Larger companies use <em>ethernet</em>, which involves connecting ethernet
+switches to a router, which then connect hosts to the internet via the
+router.</p>
+<h4 id="wireless-access-networks">Wireless Access Networks</h4>
+<p>Devices that connect devices wireless to the internet include <em>wireless
+LANs</em>, which typically service a 100 foot radius, and <em>wide-area towers</em>
+that can provide service for a radius of many miles.</p>
+<h4 id="bandwidth">Bandwidth</h4>
+<p>A message is broken into chucks called packets, composed of a string of
+bits. How fast these bits are sent across the network, the link
+transmission rate, is called <em>link bandwidth</em>.</p>
+<h4 id="physical-media">Physical Media</h4>
+<p>There are various types of physical connections between different hosts.
+including <em>twisted pair</em>, or <em>TP</em>, <em>coaxial cable</em>, or <em>coax</em>, ahd
+<em>fiber optic cable</em>. Fiber optic cable in particular is extremely fast
+and reliable. In addition, there are types of radio links, such as
+<em>LAN</em>, <em>satellite</em>, and <em>wide-area</em>.</p>
+<h2 id="network-core-1">Network Core</h2>
+<h4 id="packet-switching">Packet-Switching</h4>
+<p>The network core is a mech of interconnect routers. The process of
+directing packets between the correct host devices is called
+<em>packet-switching</em>. Before sending a packet, a router must first receive
+the entire packet.</p>
+<h4 id="routing-and-forwarding">Routing and Forwarding</h4>
+<p>The network core has two main jobs. To <em>route</em> data, that is, to
+determine the optimal way to send the data through the network, and to
+<em>forward</em>, to actually move the data across the network.</p>
+<h4 id="how-to-connect-access-points">How to Connect Access Points</h4>
+<p>There is an incredible number of access points. What is best way to
+connect them? A number of access points will connect to a particular
+ISP. Between these ISPs, are <em>internet exchange points</em> to allow
+connections between providers. On top of all this, are content providers
+that are connected to all ISPs.</p>
+<h2 id="packet-loss">Packet Loss</h2>
+<h4 id="queuing-delay-and-loss">Queuing Delay and Loss</h4>
+<p>When more packets are sent to a router than the router is forwarding,
+the router is overloaded and packets back up into memory, called a
+<em>buffer</em>. Once a threshold is met, packets are simply lost, and the data
+never reaches its destination.</p>
+<h4 id="sources-of-packet-delay">Sources of Packet Delay</h4>
+<p>Delay comes from four different sources: nodal processing, queueing
+delay, transmission delay, and propagation delay.</p>
+<h4 id="buffers">Buffers</h4>
+<p>To tackle the delay with queueing, buffers were created to hold data if
+the queue is not empty.</p>
+<h2 id="internet-protocol-stack">Internet Protocol Stack</h2>
+<h4 id="layering">Layering</h4>
+<p>The internet is a set of layers within a host before taking application
+data and sending it across the wire. This methodology is used for a
+multitude of reason, one being the opportunity to standardize the
+communication between different layers and isolating parts of a local
+system for simplicity.</p>
+<h4 id="the-stack">The Stack</h4>
+<p>The five layers are as follows.</p>
+<ol>
+<li>
+<p><em>Application</em>: supports network-accessible applications (FTP, SMTP,
+HTTP)</p>
+</li>
+<li>
+<p><em>Transport</em>: process-process data transfer (TCP, UDP)</p>
+</li>
+<li>
+<p><em>Network</em>: routing of datagrams from source to destination (IP,
+routing protocols)</p>
+</li>
+<li>
+<p><em>Link</em>: data transfer between neighboring network elements
+(ethernet, PPP)</p>
+</li>
+<li>
+<p><em>Physical</em>: bits on the wire</p>
+</li>
+</ol>
+<h4 id="other-layers-nobody-cares-about">Other Layers Nobody Cares About</h4>
+<p>They are called <em>presentation</em> and <em>session</em> layers but we lump these in
+with appliation so no worries.</p>
+<h4 id="messages-across-layers">Messages Across Layers</h4>
+<p>Each layer will often add its own header on top of the application layer
+message to help direct the message through each layer as it makes its
+way back up the stack on the receiving device.</p>
+<h2 id="security">Security</h2>
+<p>All layers are at risk from malicious use of communications. For
+example, there is malware, malicious programs that can be sent over the
+internet to a host computer. There are <em>denial of service</em> attacks, or
+<em>DoS</em> which involve overloading a host with packets. There is also
+<em>packet sniffing</em> which involves capturing packets across the wire and
+viewing senstive material.</p>
+<h1 id="application-layer">Application Layer</h1>
+<h2 id="network-applications">Network Applications</h2>
+<h4 id="examples">Examples</h4>
+<p>Some network applications include e-mail, streaming video, online
+gaming, skype, torrenting, and social networking.</p>
+<h4 id="only-for-hosts">Only for Hosts</h4>
+<p>The application layer is only necessary for hosts. Routers and switches
+do not have an application layer.</p>
+<h4 id="application-architecture">Application Architecture</h4>
+<p>Two popular structures of network applications are <em>client-server</em> and
+<em>peer-to-peer</em>. In client-server architecture, the server is a host that
+is always on with a permanent IP address. It is often structured to
+handle scaling as more clients communicate with the server, and not
+directly with eachother. Peer-to-peer connects do not use a server, and
+require complex management to connect arbitrary end users and to scale
+across more users.</p>
+<h4 id="processes">Processes</h4>
+<p>A program running on a host is called a <em>process</em>. Within the same host,
+two processes communicate using <em>inter-process communication</em>. All
+processes communicate by exchanging <em>messages</em>.</p>
+<h4 id="necessary-addressing">Necessary Addressing</h4>
+<p>To receive messages, processes must have an <em>identifier</em>, which include
+both the IP address and port number associated with the process. An IP
+address is a unique 32-bit number which identifies the device. A port
+number is a number that identifies which application (on all end users)
+the message is sent from and being delivered too.</p>
+<h4 id="application-protocol">Application Protocol</h4>
+<p>The appliation layer protocol defines the types of messages exchange
+(request or response), the message syntax, the semantics of the message,
+and the rules for how to respond and communicate using the message. Some
+of the protocols are open which include HTTP and SMTP, while others are
+proprietary, like Skype.</p>
+<h4 id="requirements-for-transport-service">Requirements for Transport Service</h4>
+<p>Some apps require 100% reliable data transfer, while others can tolerate
+some loss. Some apps needs very low delays to be effective. Some require
+a large amount of throughput in a small amount of time, while other work
+off whatever throughput they can get. And often apps require encryption
+and data security.</p>
+<h4 id="internet-protocol-services">Internet Protocol Services</h4>
+<p>Two protocols that applications use are <em>TCP</em> and <em>UDP</em>.</p>
+<ul>
+<li>
+<p><em>TCP</em>: Reliable transport, flow control, congenstion control; doesn't
+provide minimal delay guarantee, security.</p>
+</li>
+<li>
+<p><em>UDP</em>: Unreliable data transfer; doesn't provide everything else.</p>
+</li>
+</ul>
+<h2 id="domain-name-system">Domain Name System</h2>
+<h4 id="what-is-it">What is it?</h4>
+<p>The <em>domain name server</em> or <em>DNS</em> is distributed database of name
+servers that connect a name query with an IP address of the web domain.</p>
+<h4 id="services">Services</h4>
+<p>DNS provides hostname to IP address translation, host aliasing, mail
+server aliasing, and load distribution.</p>
+<h4 id="centralizing-dns">Centralizing DNS</h4>
+<p>It's a bad idea. Doesn't scale; it's a single point of failure; it would
+require the utmost of maintenance.</p>
+<h4 id="structure">Structure</h4>
+<p>DNS has diffferent levels of servers. The highest level being <em>root
+servers</em>, which then communicate with <em>top-level domain servers</em> (com,
+edu, net), and then communicate with <em>authoritative name servers</em>.</p>
+<h4 id="communicating-across-the-structure">Communicating Across the Structure</h4>
+<p>There are two types of queries used across the structure. The first is
+called iterated query, where a host communicates with a local DNS server
+who then communicates with root DNS server, then TLD server, then
+authoriative DNS servers. A recursive query has the host communicate
+with a local DNS server who in turn communicates with a root DNS server
+who then communicates with a TDL server who then communicates with an
+authoritative DNS server.</p>
+<h4 id="caching">Caching</h4>
+<p>In order to avoid doing this process too many times for the same record,
+hosts will cache the exact name to IP record. This lasts for only a
+short amount of time, to enure that if changes happen between the name
+and IP that all hosts will see those changes.</p>
+<h4 id="resource-records">Resource Records</h4>
+<p><em>Resource records</em> or <em>RRs</em> are distributed database entries that hold
+information. They hold <em>name</em>, <em>value</em>, <em>type</em>, and <em>time to live</em> or
+<em>ttl</em>.</p>
+<h4 id="type">Type</h4>
+<p>Each type describes what the name and value mean.</p>
+<table><thead><tr><th align="right"><code> </code></th><th><code> </code></th></tr></thead><tbody>
+<tr><td align="right"><strong>A</strong></td><td>Name is hostname, value is IP address</td></tr>
+<tr><td align="right"><strong>NS</strong></td><td>Name is domain, value is hostname of authoritative name server for this domain</td></tr>
+<tr><td align="right"><strong>CNAME</strong></td><td>Name is alias for some &quot;canonical&quot; (the real) name, value is canonical name</td></tr>
+<tr><td align="right"><strong>MX</strong></td><td>Value is the name of mailserver associated with name</td></tr>
+<tr><td align="right"><strong>PTR</strong></td><td>Points IP to name</td></tr>
+<tr><td align="right"><strong>TXT</strong></td><td>Anything, often security</td></tr>
+<tr><td align="right"><strong>SOA</strong></td><td>Start of authority</td></tr>
+<tr><td align="right"><strong>AAAA</strong></td><td>Specifies the IPv6 address for a given host.</td></tr>
+</tbody></table>
+<h4 id="message-format">Message Format</h4>
+<p>Query and reply messages have the same message format. Messages have a
+header that has an <em>identification number</em> to link queries with replies
+and flags that determine if message is a reply or query and if recursion
+is desired or is available. Then there is 4 more blocks that include the
+number of question, number of answer records, number of authority
+records, and number of additional record. Of course this is then
+followed by questions, answers, authority, and additional information.</p>
+<h2 id="socket-programming">Socket Programming</h2>
+<h4 id="sockets">Sockets</h4>
+<p>In order for a network application in the application layer to
+communicate to the transport layer, messages are passed to a <em>socket</em>,
+which communicate between the applicastion layer and transport layer.
+Sockets communicate using UDP or TCP.</p>
+<h4 id="socket-programming-with-udp">Socket Programming with UDP</h4>
+<p>There is no &quot;connection&quot; between client and server. No &quot;handshaking&quot;
+before sending the data. Sender explicitly attached IP destination and
+port number to each packet. Transmitted data may also be lost or
+received out of order. Data is also sent in <em>datagrams</em>, or chucks of
+data.</p>
+<h4 id="an-example-of-udp-socket-program">An Example of UDP Socket Program</h4>
+<p>This is an example of using UDP to establish a client-server connection.</p>
+<ul>
+<li>Client: </li>
+</ul>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">socket </span><span style="color:#b48ead;">import </span><span style="color:#d08770;">*
+</span><span style="color:#c0c5ce;">serverName = &#39;</span><span style="color:#a3be8c;">hostname</span><span style="color:#c0c5ce;">&#39;
+serverPort = </span><span style="color:#d08770;">12000
+</span><span style="color:#c0c5ce;">clientSocket = </span><span style="color:#bf616a;">socket</span><span style="color:#c0c5ce;">(socket.</span><span style="color:#bf616a;">AF_INET</span><span style="color:#c0c5ce;">,
+        socket.</span><span style="color:#bf616a;">SOCK_DGRAM</span><span style="color:#c0c5ce;">)
+message = </span><span style="color:#96b5b4;">raw_input</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">Input lowercase sentence:</span><span style="color:#c0c5ce;">&#39;)
+clientSocket.</span><span style="color:#bf616a;">sendto</span><span style="color:#c0c5ce;">(message,(serverName, serverPort))
+modifiedMessage, serverAddress =
+        clientSocket.</span><span style="color:#bf616a;">recvfrom</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">2048</span><span style="color:#c0c5ce;">)
+</span><span style="color:#b48ead;">print </span><span style="color:#c0c5ce;">modifiedMessage
+clientSocket.</span><span style="color:#bf616a;">close</span><span style="color:#c0c5ce;">()
+</span></pre>
+<ul>
+<li>Server</li>
+</ul>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">socket </span><span style="color:#b48ead;">import </span><span style="color:#d08770;">*
+</span><span style="color:#c0c5ce;">serverPort = </span><span style="color:#d08770;">12000
+</span><span style="color:#c0c5ce;">serverSocket = </span><span style="color:#bf616a;">socket</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">AF_INET</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">SOCK_DGRAM</span><span style="color:#c0c5ce;">)
+serverSocket.</span><span style="color:#bf616a;">bind</span><span style="color:#c0c5ce;">((&#39;&#39;, serverPort))
+</span><span style="color:#b48ead;">print </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">The server is ready to receive</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#b48ead;">while </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">:
+    message, clientAddress = serverSocket.</span><span style="color:#bf616a;">recvfrom</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">2048</span><span style="color:#c0c5ce;">)
+    modifiedMessage = message.</span><span style="color:#bf616a;">upper</span><span style="color:#c0c5ce;">()
+    serverSocket.</span><span style="color:#bf616a;">sendto</span><span style="color:#c0c5ce;">(modifiedMessage, clientAddress)
+</span></pre><h4 id="socket-programming-with-tcp">Socket Programming with TCP</h4>
+<p>Client must contact the server directly, and the server must have
+created a socket that welcomes the client's contact. Once the client
+contacts the server using a new socket, the server does the same with
+its own socket. Then TCP can communicate using <em>byte stream transfer</em>,
+or a stream of bits.</p>
+<h4 id="an-example-of-udp-socket-program-1">An Example of UDP Socket Program</h4>
+<p>This is an example of using TPC to establish a client-server connection.</p>
+<ul>
+<li>Client</li>
+</ul>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">socket </span><span style="color:#b48ead;">import </span><span style="color:#d08770;">*
+</span><span style="color:#c0c5ce;">serverName = &#39;</span><span style="color:#a3be8c;">servername</span><span style="color:#c0c5ce;">&#39;
+serverPort = </span><span style="color:#d08770;">12000
+</span><span style="color:#c0c5ce;">clientSocket = </span><span style="color:#bf616a;">socket</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">AF_INET</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">SOCK_STREAM</span><span style="color:#c0c5ce;">)
+clientSocket.</span><span style="color:#bf616a;">connect</span><span style="color:#c0c5ce;">((serverName,serverPort))
+sentence = </span><span style="color:#96b5b4;">raw_input</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">Input lowercase sentence:</span><span style="color:#c0c5ce;">&#39;)
+clientSocket.</span><span style="color:#bf616a;">send</span><span style="color:#c0c5ce;">(sentence)
+modifiedSentence = clientSocket.</span><span style="color:#bf616a;">recv</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1024</span><span style="color:#c0c5ce;">)
+</span><span style="color:#b48ead;">print </span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">From Server:</span><span style="color:#c0c5ce;">&#39;, modifiedSentence
+clientSocket.</span><span style="color:#bf616a;">close</span><span style="color:#c0c5ce;">()
+</span></pre>
+<ul>
+<li>Server</li>
+</ul>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">socket </span><span style="color:#b48ead;">import </span><span style="color:#d08770;">*
+</span><span style="color:#c0c5ce;">serverPort = </span><span style="color:#d08770;">12000
+</span><span style="color:#c0c5ce;">serverSocket = </span><span style="color:#bf616a;">socket</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">AF_INET</span><span style="color:#c0c5ce;">,</span><span style="color:#bf616a;">SOCK_STREAM</span><span style="color:#c0c5ce;">)
+serverSocket.</span><span style="color:#bf616a;">bind</span><span style="color:#c0c5ce;">((&#39;&#39;,serverPort))
+serverSocket.</span><span style="color:#bf616a;">listen</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">)
+</span><span style="color:#b48ead;">print </span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">The server is ready to receive</span><span style="color:#c0c5ce;">&#39;
+</span><span style="color:#b48ead;">while </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">:
+    connectionSocket, addr = serverSocket.</span><span style="color:#bf616a;">accept</span><span style="color:#c0c5ce;">()
+    sentence = connectionSocket.</span><span style="color:#bf616a;">recv</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1024</span><span style="color:#c0c5ce;">)
+    capitalizedSentence = sentence.</span><span style="color:#bf616a;">upper</span><span style="color:#c0c5ce;">()
+    connectionSocket.</span><span style="color:#bf616a;">send</span><span style="color:#c0c5ce;">(capitalizedSentence)
+    connectionSocket.</span><span style="color:#bf616a;">close</span><span style="color:#c0c5ce;">()
+</span></pre><h4 id="zones">Zones</h4>
+<p>Zones can be either forward or reverse domains. They transfer domain
+requests to other servers.</p>
+<h2 id="the-web-and-http">The Web and HTTP</h2>
+<h4 id="overview">Overview</h4>
+<p>Web pages consist of objects, such as an HTML file, pictures, applets,
+audio files, etc. Each object is addressable by a URL.</p>
+<h4 id="hypertext-transfer-protocol">Hypertext Transfer Protocol</h4>
+<p>Also known as <em>HTTP</em>, the <em>hypertext transfer protocol</em> is the web's
+application layer protocol. It follows a client/server model. HTTP uses
+TCP to initiated a connection between the client and server. Also note
+that HTTP is <em>stateless</em>, meaning it maintains no information about past
+client requests.</p>
+<h4 id="persistent-and-non-persistent">Persistent and Non-persistent</h4>
+<p>Non-persistent HTTP only allows one object to be sent over a TCP
+connection at a time, and multiple connections are required to download
+more. Persistent HTTP allows multiple objects to be sent in a single
+connection.</p>
+<h4 id="timing">Timing</h4>
+<p>The amount of time for a packet to travel from the client to the server
+and back to the client is called <em>round trip time</em> or <em>RRT</em>.</p>
+<h4 id="http-request-message">HTTP Request Message</h4>
+<p>HTTP requests and responses are in ASCII, human-readable format.
+Generally, these messages look like the following.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">METHOD some.url/path HTTP/1.1\r\n
+name: value\r\n
+name: value\r\n
+...
+name: value\r\n
+\r\n
+body of document until end
+</span></pre><h4 id="methods">Methods</h4>
+<p>There are a variety of methods that can be used in the HTTP protocol.</p>
+<table><thead><tr><th><code> </code></th><th><code> </code></th></tr></thead><tbody>
+<tr><td><strong>GET</strong></td><td>Requests for object on domain</td></tr>
+<tr><td><strong>POST</strong></td><td>Used for sending form input to server</td></tr>
+<tr><td><strong>HEAD</strong></td><td>Asks server to leave requested object out of response</td></tr>
+<tr><td><strong>PUT</strong></td><td>Uploads file in entity body to path specified by URL field</td></tr>
+<tr><td><strong>DELETE</strong></td><td>Deletes file specified in the URL field</td></tr>
+</tbody></table>
+<h4 id="http-response-message">HTTP Response Message</h4>
+<p>Generally, these messages look like the following.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">HTTP/1.1 STATUSNUM STATUSDESC\r\n
+name: value\r\n
+name: value\r\n
+...
+name: value\r\n
+\r\n
+data requested until end
+</span></pre><h4 id="http-response-status-codes">HTTP Response Status Codes</h4>
+<p>There are many HTTP response status codes, but here are few.</p>
+<table><thead><tr><th><code> </code></th><th><code> </code></th><th><code> </code></th></tr></thead><tbody>
+<tr><td><strong>OK</strong></td><td><strong>200</strong></td><td>request succeeded</td></tr>
+<tr><td><strong>Moved Permanently</strong></td><td><strong>301</strong></td><td>request object has been moved</td></tr>
+<tr><td><strong>Bad Request</strong></td><td><strong>400</strong></td><td>request message not understood</td></tr>
+<tr><td><strong>Not Found</strong></td><td><strong>404</strong></td><td>request document is not found</td></tr>
+<tr><td><strong>HTTP Version Not Supported</strong></td><td><strong>505</strong></td><td>title</td></tr>
+</tbody></table>
+<h4 id="cookies">Cookies</h4>
+<p>Cookies are a way to store data between client and server, despite HTTP
+be stateless. In the HTTP request and response, a cookie is shared in a
+header that is stored at the client and used by the server to preserve
+information between the connection.</p>
+<h4 id="web-proxy">Web Proxy</h4>
+<p>A web proxy is a middle man for client-server interaction. The proxy
+server will distribute cached data to clients that access the proxy. If
+the requested data is not cached, the proxy will query the server and
+cache the requested data.</p>
+<h4 id="conditional-get">Conditional GET</h4>
+<p>The client can add a header called 'If-modified-since' which will send
+the data if it is new, otherwise will send just a 304 status code to
+save on bandwidth between the client and the server, since the cached
+data is up to date.</p>
+<h2 id="ftp">FTP</h2>
+<p>The only thing interesting about the FTP protocol is that it has two
+seperate connections, one for data and one for control.</p>
+<h2 id="smtp">SMTP</h2>
+<p>This protocol is used for distributing email. The only thing interesting
+about the SMTP protocol is that it involves a lot of communication back
+and forth to communicate a single email.</p>
+<h1 id="transport-layer">Transport Layer</h1>
+<h2 id="introduction-1">Introduction</h2>
+<h4 id="what-is-it-really">What is it really?</h4>
+<p>The transport layer provides logical communication between app processes
+running on different hosts. Transport protocols only run on end systems,
+as only those have an application layer. It is the transport layer that
+breaks up packets on the sender side and rejoins packets and the
+receiver side.</p>
+<h4 id="difference-from-network-layer">Difference From Network Layer</h4>
+<p>The network layer is logical connection between hosts, while the
+transport layer is logical connection between processes.</p>
+<h4 id="internet-transport-layer-protocols">Internet Transport Layer Protocols</h4>
+<p>There are two that are most popular. TCP is reliable data transfer, that
+includes features like congestion control and flow control at the cost
+of overhead. UDP is unreliable and simply an extension of the very
+minimal, network layer IP protocol.</p>
+<h4 id="multiplexing-and-demultiplexing">Multiplexing and Demultiplexing</h4>
+<p>The first two bytes of a TPC/UDP segment is the source port number,
+followed by the destination port number in the second two bytes. From
+this, the sender can multiplex the message to the network layer and the
+reciever can demultiplex the response.</p>
+<h2 id="udp">UDP</h2>
+<h4 id="overview-1">Overview</h4>
+<p>UDP is a bare-bones protocol to send message across the wire with as
+little overhead as possible. In that regard, UDP packets may be lost or
+sent out of order. It is also connectionless, meaning there is no
+communication between the client and server before data is sent. Data is
+simply sent out on the wire with hopes that it will reach its
+destination.</p>
+<h4 id="udp-segment-format">UDP Segment Format</h4>
+<p>UDP datagrams have a small header that includes 4 shorts: source port,
+destination port, length of entire UDP segment, and checksum. The rest
+of the segment is the application layer data, called the <em>payload</em>.</p>
+<h4 id="perks">Perks</h4>
+<p>Because there is no handshaking, there is no connection delay. It also
+had a very small header size, and has no congestion control. This means
+that UDP can blast away as fast as desired.</p>
+<h2 id="reliable-data-transfer">Reliable Data Transfer</h2>
+<h4 id="what-is-it-1">What is it?</h4>
+<p>The real world, including the physical layer, is subject to change and
+is unreliable. Bits can be changes across the medium and packets can be
+lost altogether. At the transport layer, the right protocol can similate
+a guarunteed correct data transfer for the application layer, despite
+that the network layer is inherently unreliable.</p>
+<h4 id="problems-from-data-transfer-and-their-solutions">Problems from Data Transfer and their Solutions</h4>
+<table><thead><tr><th><code> </code></th><th><code> </code></th></tr></thead><tbody>
+<tr><td>Bit Errors</td><td>When a <em>checksum</em> fails, the receiver of the lost message sends an <em>ACK</em> to tell the sender that the message was recieved.</td></tr>
+<tr><td>Currupted ACK</td><td>If an ACK is received and its garbled, then the sender simply resends their message.</td></tr>
+<tr><td>Duplicate Packets</td><td>When having to resend a message that the reciever may have already recieved, attached is a <em>sequence number</em> so the reciever knows if the packet sent is the same data that was last ACKed. To transmit to the sender which packet was received successully, the ACK also includes the sequence number of the last packet that was received uncorrupted.</td></tr>
+<tr><td>Lost Packets</td><td>If the sender never receives an ACK because either the message or the ACK was lost, the sender will resend the packate after a <em>timeout</em> as determined by a countdown timer.</td></tr>
+</tbody></table>
+<h4 id="stop-and-wait-operation">Stop and Wait Operation</h4>
+<p>Primitive versions of reliable data transfer send a single packet, and
+then wait for an ACK before sending the next packet. But if the round
+trip time, or <em>RRT</em>, is very long, a large number of packets may take a
+very, very long time to send.</p>
+<h4 id="pipelining">Pipelining</h4>
+<p>A piplined protocol is one that sends multiple packets across the
+network before expected an ACK for each one.</p>
+<h4 id="go-back-n">Go-Back-N</h4>
+<p>In the <em>go-back-N</em> pipelining paradigm, the sender sends up to N unacked
+packets across the pipeline. The receiver only needs to send a single
+cumulative ack. The sender has a timer for the oldest unacked packet.
+When it expires, the sender transmits all unacked packets.</p>
+<h4 id="selective-repeat">Selective Repeat</h4>
+<p>In this pipelining paradigm, the sender sends up to N unacked packets
+but also has a timer for each packet because the sender expects an ACK
+for every packet sent.</p>
+<h2 id="tcp">TCP</h2>
+<h4 id="overview-2">Overview</h4>
+<p>TCP is point-to-point, meaning one sender and one receiver. It is
+reliable and in the form of a byte stream. It's pipelined and used full
+duplex data, meaning you can have bidirectional data flow in the same
+connection. Its connection oriented and flow controlled, as to not
+overwhelm the receiver.</p>
+<h4 id="segment-structure">Segment Structure</h4>
+<ul>
+<li>
+<p>2-byte source port</p>
+</li>
+<li>
+<p>2-byte destination port</p>
+</li>
+<li>
+<p>4-byte sequence number</p>
+</li>
+<li>
+<p>4-byte acknowledgement number</p>
+</li>
+<li>
+<p>1-byte head length</p>
+</li>
+<li>
+<p>2-bit unused space</p>
+</li>
+<li>
+<p>6 1-bit flags (URG, ACK, PSH, RST, SYN, FIN)</p>
+</li>
+<li>
+<p>2-byte receive window size</p>
+</li>
+<li>
+<p>2-byte checksum</p>
+</li>
+<li>
+<p>2-byte urgent data pointer</p>
+</li>
+<li>
+<p>variable length options block</p>
+</li>
+<li>
+<p>variable length application layer data</p>
+</li>
+</ul>
+<p>The RST, SYN, and FIN flags are used for the beginning handshaking as
+well as closing the connection.</p>
+<h4 id="timeout">Timeout</h4>
+<p>A natural question is to ask how long should the sender wait before
+sending again? How long should the countimer be? TCP's implementation
+calcalates the timeout as function of the current timeout and the most
+recent round trip times. This moving average is then inflated by four
+standard deviations.</p>
+<h4 id="tcp-fast-restransmit">TCP Fast Restransmit</h4>
+<p>If the sender receives 3 ACKs for the same data, then TCP will resend
+unacked segment with the smallest sequence number. Likely the unacked
+segment was lost, so TCP does not wait for timeout.</p>
+<h4 id="flow-control">Flow Control</h4>
+<p>The receiver sends back to the sender the size of the congestion window,
+which is how many packets the receiver can fit in the remaining space of
+the buffer. This guaruntees that the buffer will not overflow.</p>
+<h4 id="handshaking">Handshaking</h4>
+<p>Three way handshakes for the win.</p>
+<h2 id="congestion-control">Congestion Control</h2>
+<p>Congestion is when the network gets too many packets too quickly and as
+a result can't fit all packets in buffers. So these packets are dropped
+by the routers which leads to more packets being lost and then resent
+across the network. Controlling the rate at which these packets are sent
+across the network is called congestion control.</p>
+<h4 id="two-paradigms">Two Paradigms</h4>
+<p>End-end congestion control is the approach taken by TCP, which involves
+no explicit feedback from the network, but is inferred from end-system
+observed loss and delay.</p>
+<h4 id="tcp-congestion-control">TCP Congestion Control</h4>
+<p>TCP starts by sending so many packets, and if all goes successfully, it
+will increase its congestion window by 1. It will continue to do this
+until there is a loss, at which the congestion window will be cut in
+half. How does TCP know a good place to start? TCP has <em>slow start</em>
+which exponentially increases packets sent from 1 to 2 to 4 to 8 and so
+on, until there is a loss. Then it will continue as normal.</p>
+
+</div>
+
+</div>
+
+
+    <script>renderMathInElement(document.body, {delimiters:
+        [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\[", right: "\]", display: true}
+        ]
+    });</script>
+<script src="/livereload.js?port=1024&amp;mindelay=10"></script></body>
+</html>
